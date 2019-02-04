@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Router, navigate, Link } from '@reach/router';
 import firebase from './firestore';
+import _ from 'lodash'
 import './index.css'
+
 const db = firebase.firestore();
 const refDoc = db.collection('user').doc('joe');
 
@@ -11,17 +13,28 @@ class DocketEntry extends Component {
     constructor() {
         super();
         this.state = {
-            items: ''
+            items: []
         }
+        this.readUser=this.readUser.bind(this);
     }
 
-    componentWillMount() {
-        let items = []
-        refDoc.onSnapshot((doc) => { items.push(doc.data()) })
+
+    componentWillMount(){
+        this.readUser();
+    }
+    readUser() {
+        let userData = [];
+        // let you = [];
+        refDoc.onSnapshot((doc) => {
+             userData.push(doc.data());
+               
+        })
 
           this.setState({
-            items,
-            loaded: true
+         
+            items:userData,
+            loaded: true,
+            hrishi:true
           })
         }
       
