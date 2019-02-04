@@ -16,28 +16,12 @@ class DocketEntry extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            items:{},
-          companyName:'',
-          contactNumber : '',
-          firstName:'',
-          hourlyRate:'',
-          lastName:'',
-          overtimeRate:'',
-          position:'',
-          totalHours:'',
-          activityName:'',
-          ccNumber:'',
-          company:'',
-          id:'',
-          site:'',
-          
-
+            items: {},
+            activity: {}
         }
         this.readUser = this.readUser.bind(this);
         this.readActivity = this.readActivity.bind(this);
-        this.writeUser = this.writeUser.bind(this);
-
-
+        this.wellwell = this.wellwell.bind(this);
 
 
     }
@@ -46,16 +30,26 @@ class DocketEntry extends Component {
     componentWillMount() {
         this.readUser();
         this.readActivity();
-        
+
+    }
+
+
+wellwell(){
+    // let dos = this.state.items.map((boot,i) =>{
+    //     console.log(boot.companyName);
+    //     // let foc = boot.item.map((uno,i) =>{
+    //     //     console.log(uno.companyName);
+
+    //     // })
+    //     })
       
+     Object.keys(this.state.items).map((item)=> {
+         console.log(item.map)
+     })
 
+        
     }
-    componentDidMount(){
-
-    }
-
-
-     
+        
 
 
     readUser() {
@@ -63,24 +57,19 @@ class DocketEntry extends Component {
         // let you = [];
         refUser.onSnapshot((doc) => {
             userData.push(doc.data());
-            
+
         })
-                   
+
         this.setState({
-            items:userData,
-          
-        })       
+            // ud:userData,
+            items: userData,
+            loaded: true,
+            hrishi: true
+        })
+
+       
 
 
-    }
-
-    writeUser(){
-        console.log("write user")
-       let dos= this.state.items.map((boot,i)=>{
-          
-        console.log(boot.companyName);
-            })
-    
     }
 
     readActivity() {
@@ -133,7 +122,7 @@ class DocketEntry extends Component {
         return (
             <div>
                 DocketEntry for {this.props.userID}
-                <button onClick={this.writeUser}>please</button>
+                <button onClick={this.wellwell}>please</button>
 
             </div>
 
