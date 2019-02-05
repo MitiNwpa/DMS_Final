@@ -30,7 +30,8 @@ class DocketEntry extends Component {
             company: '',
             id: '',
             site: '',
-            pay: ''
+            pay: '',
+            status:'pending'
 
 
         }
@@ -190,7 +191,8 @@ class DocketEntry extends Component {
             company: this.state.company,
             id: ref.id,
             site: this.state.site,
-            payAmount: this.state.pay
+            payAmount: this.state.pay,
+            status:'pending'
         })
     }
     

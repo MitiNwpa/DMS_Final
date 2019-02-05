@@ -12,6 +12,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+li.pending{
+  background-color:grey;
+  margin: 20px;
+}
+
+li.approved{
+  background-color: green;
+}
+
+li.rejected{
+  background-color: red;
+
+}
+
+.nav{
+  background-color: blue;
+  height: 20px;
+}
 li{
   background-color: aquamarine;
   margin: 20px;
@@ -24,9 +42,4 @@ li.Accepted{
 li.rejected{
   background-color: red;
 
-}
-
-.nav{
-  background-color: blue;
-  height: 20px;
 }

@@ -9,6 +9,10 @@ import Navigation from './Navigation';
 import Home from './Home';
 import Activity from './Activity';
 import DocketEntry from './DocketEntry';
+import ListDockets from './ListDockets';
+import DocketDetails from './DocketDetails';
+import Approval from './Approval';
+import DocketDetailsApproval from './DocketDetailsApproval';
 
 
 ReactDOM.render(
@@ -19,7 +23,12 @@ ReactDOM.render(
             <Login path='/' />
             <Home path='/home' />
             <Activity path='/activity' />
-            <DocketEntry path='docketentry/:userID' />
+            <DocketEntry path='/docketentry/:userID' />
+            <ListDockets path='/listdockets' />
+            <DocketDetails path='/docketdetails/:userID' />
+            <Approval path='/approval' />
+            <DocketDetailsApproval path='docketdetailsapproval/:userID'/>
+
         </Router>
 
     </div>
