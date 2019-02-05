@@ -21,7 +21,7 @@ ReactDOM.render(
 
     <div>
         <Navigation />
-        <TimeEnter />
+   
         <Router>
             <Login path='/' />
             <Home path='/home' />

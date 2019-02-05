@@ -1,0 +1,18 @@
+<div>
+    DocketEntry for {this.props.userID}
+    <div>
+        <input type="time" name='startTime' value={this.state.startTime} onChange={this.updateInput} />
+        <input type="time" name='endTime' value={this.state.endTime} onChange={this.updateInput} />
+
+        <button onClick={this.calc}>calc</button>
+
+    </div>
+
+    <input type="text" name="totalHours" placeholder='Enter Hours' onChange={this.updateInput} value={this.state.totalHours} />
+    <Link to='/confirm'>
+    <button onClick={this.calcHours}>send</button>
+
+    </Link>
+    {/* <button onClick={this.addDocket}>Add docket</button> */}
+
+</div>

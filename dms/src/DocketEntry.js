@@ -3,6 +3,8 @@ import { Router, navigate, Link } from '@reach/router';
 import firebase from './firestore';
 import _ from 'lodash'
 import './index.css'
+var moment = require('moment');
+moment().format();
 
 const db = firebase.firestore();
 const refUser = db.collection('user').doc('joe');
@@ -31,7 +33,10 @@ class DocketEntry extends Component {
             id: '',
             site: '',
             pay: '',
-            status:'pending'
+            status:'pending',
+            startTime:'',
+            endTime:'',
+            breakTime:''
 
 
         }
@@ -39,6 +44,7 @@ class DocketEntry extends Component {
         this.readActivity = this.readActivity.bind(this);
         this.calcHours = this.calcHours.bind(this);
         this.addDocket = this.addDocket.bind(this);
+        this.calc=this.calc.bind(this)
         // this.add = this.add.bind(this);
 
 
@@ -58,23 +64,6 @@ class DocketEntry extends Component {
 
     }
 
-
-
-    // readUser() {
-    //     let userData = [];
-    //     // let you = [];
-    //     refUser.onSnapshot((doc) => {
-    //         userData.push(doc.data());
-
-    //     })
-
-    //     this.setState({
-    //         items:userData,
-
-    //     })       
-
-
-    // }
 
 
     readUser() {
@@ -107,49 +96,6 @@ class DocketEntry extends Component {
     }
 
 
-    // readActivity() {
-    //     let activityData = [];
-    //     const refAct=refActivity.doc(`${this.props.userID}`);
-
-    //     refAct.onSnapshot((doc) => {
-
-    //         // doc.forEach((item)=>{
-    //         //     console.log(item)
-    //         // })
-
-    //         activityData.push(doc.data());
-
-
-    //     })
-
-    //     this.setState({
-
-    //         activity: activityData,
-    //         loaded: true,
-    //         hrishi: true
-    //     })
-    // }
-
-
-
-
-    // readActivity() {
-    //     let activityData = [];
-    //     const refAct=refActivity.doc(`${this.props.userID}`);
-
-    //     refAct.onSnapshot((doc) => {
-    //         activityData.push(doc.data());
-
-
-    //     })
-
-    //     this.setState({
-
-    //         activity: activityData,
-    //         loaded: true,
-    //         hrishi: true
-    //     })
-    // }
     updateInput = e => {
         this.setState({
             [e.target.name]: e.target.value
@@ -171,6 +117,23 @@ class DocketEntry extends Component {
         // this.addDocket();
 
     }
+    
+calc(){
+    var start =moment(this.state.startTime, 'HH::mm');
+    var end =moment(this.state.endTime, 'HH::mm');
+    var breakT=(this.state.breakTime)/60;
+    var result= moment.duration(end.diff(start))
+    var hours = (result.asHours())-breakT;
+    let rate = this.state.hourlyRate;
+    let pay = rate * hours;
+
+    this.setState({
+        totalHours:hours,
+        pay: pay
+    }, () =>{
+        this.addDocket()})
+   
+}
 
 
     addDocket(){
@@ -192,7 +155,11 @@ class DocketEntry extends Component {
             id: ref.id,
             site: this.state.site,
             payAmount: this.state.pay,
-            status:'pending'
+            status:'pending',
+            startTime:this.state.startTime,
+            endTime:this.state.endTime,
+            breakTimethis:this.state.breakTime
+
         })
     }
     
@@ -205,23 +172,26 @@ class DocketEntry extends Component {
 
     render() {
         return (
-            <div>
-                DocketEntry for {this.props.userID}
+<div>
+    DocketEntry for {this.props.userID}
+    <div>
+        <input type="time" name='startTime' value={this.state.startTime} onChange={this.updateInput} />
+        <input type="time" name='endTime' value={this.state.endTime} onChange={this.updateInput} />
+        <input type="number" name='breakTime' value={this.state.breakTime} onChange={this.updateInput} />
 
-                <input
-                    type="text"
-                    name="totalHours"
-                    placeholder='Enter Hours'
-                    onChange={this.updateInput}
-                    value={this.state.totalHours}
-                />
-                <Link to='/confirm'>
-                <button onClick={this.calcHours}>send</button>
 
-                </Link>
-                {/* <button onClick={this.addDocket}>Add docket</button> */}
+        <button onClick={this.calc}>calc</button>
 
-            </div>
+    </div>
+
+    <input type="text" name="totalHours" placeholder='Enter Hours' onChange={this.updateInput} value={this.state.totalHours} />
+    <Link to='/confirm'>
+    <button onClick={this.calcHours}>send</button>
+
+    </Link>
+    {/* <button onClick={this.addDocket}>Add docket</button> */}
+
+</div>
 
 
         )

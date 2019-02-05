@@ -7,15 +7,18 @@ class TimeEnter extends React.Component{
         super()
         this.state={
             hello:'',
-            time:''
+            time:'',
+            endTime:''
         }
         this.readTime=this.readTime.bind(this);
         this.updateInput=this.updateInput.bind(this)
+        this.calc=this.calc.bind(this)
+
 
     }
 
     componentDidMount(){
-        this.readTime();
+        // this.readTime();
     }
 
 readTime(){
@@ -38,13 +41,26 @@ updateInput = e => {
 
 }
 
+calc(){
+    var start =moment(this.state.time, 'HH::mm');
+    var end =moment(this.state.endTime, 'HH::mm');
+    var result= moment.duration(end.diff(start))
+    var hours = result.asHours();
+    console.log(start,end,result,hours)
+}
 
 render(){
     return(
         <div>
-            <input type="time" value={this.state.time} required></input>
+            <input type="time" 
+            name='time'
+            value={this.state.time} onChange={this.updateInput} />
+                   <input type="time" 
+            name='endTime'
+            value={this.state.endTime} onChange={this.updateInput} />
+            
+           <button onClick={this.calc}>calc</button>
         
-         {/* <input type="time" value={start.format('HH:mm:ss')} /> */}
         </div>
     )
 }
