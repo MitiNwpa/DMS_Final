@@ -33,37 +33,6 @@ class Approval extends Component{
         })
       }
 
-      deleteDocket = (e) => {
-        refDoc.doc(e.target.value).delete().then(function() {
-          console.log("Document successfully deleted!");
-        }).catch(function(error) {
-          console.error("Error removing document: ", error);
-        });
-      }
-
-      holdDocket = (e) => {
-        refDoc.doc(e.target.value).update({
-            'status' :"pending"
-           
-        })
-      }
-
-      approveDocket = (e) => {
-        refDoc.doc(e.target.value).update({
-            'status' :"approved"
-           
-        })
-              
-    }
-
-    rejectDocket = (e) => {
-        refDoc.doc(e.target.value).update({
-            'status' :"rejected"
-            
-        }
-        
-        )
-    }
 
       renderDockets () {
         const ListItem = this.state.items.map((item, index) => {
@@ -72,11 +41,7 @@ class Approval extends Component{
               {item.email}
               <br/>
               {item.company}
-
-              <button value={item.id} onClick={this.rejectDocket}>X</button>
-              <button value={item.id} onClick={this.approveDocket}> ✓</button>
-              <button value={item.id} onClick={this.holdDocket}> ||</button>
-              
+             
               <button onClick={()=>navigate(`/docketdetailsapproval/${item.id}`)}>
               <div>
                 

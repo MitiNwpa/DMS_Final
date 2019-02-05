@@ -8,21 +8,25 @@ import * as serviceWorker from './serviceWorker';
 import Navigation from './Navigation';
 import Home from './Home';
 import Activity from './Activity';
+import ActivityEnter from './ActivityEnter';
 import DocketEntry from './DocketEntry';
 import ListDockets from './ListDockets';
 import DocketDetails from './DocketDetails';
 import Approval from './Approval';
 import DocketDetailsApproval from './DocketDetailsApproval';
+import TimeEnter from './TimeEnter';
 
 
 ReactDOM.render(
 
     <div>
         <Navigation />
+        <TimeEnter />
         <Router>
             <Login path='/' />
             <Home path='/home' />
             <Activity path='/activity' />
+            <ActivityEnter path='/activityenter' />
             <DocketEntry path='/docketentry/:userID' />
             <ListDockets path='/listdockets' />
             <DocketDetails path='/docketdetails/:userID' />

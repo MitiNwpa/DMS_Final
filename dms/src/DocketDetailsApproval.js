@@ -21,7 +21,8 @@ constructor(props){
         company: '',
         id: '',
         site: '',
-        status:'pending'
+        status:'pending',
+        comment:''
     }
     this.readDocket=this.readDocket.bind(this);
 }
@@ -56,7 +57,40 @@ componentWillMount(){
             })
         })
     }
+    deleteDocket = (e) => {
+        refDoc.doc(e.target.value).delete().then(function() {
+          console.log("Document successfully deleted!");
+        }).catch(function(error) {
+          console.error("Error removing document: ", error);
+        });
+      }
 
+      holdDocket = (e) => {
+        refDoc.doc(e.target.value).update({
+            'status' :"pending"
+           
+        })
+      }
+
+      approveDocket = (e) => {
+        refDoc.doc(e.target.value).update({
+            'status' :"approved"
+           
+        })        
+    }
+
+    rejectDocket = (e) => {
+        refDoc.doc(e.target.value).update({
+            'status' :"rejected"
+         })
+    }
+
+    updateInput = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+
+    }
 
 
 
@@ -71,7 +105,16 @@ render(){
 
             company name{this.state.companyName}
             <br />
-            i can 
+            total payment ${this.state.payAmount}
+            <br />
+            i can do everything
+            <button value={this.state.id} onClick={this.rejectDocket}>X</button>
+              <button value={this.state.id} onClick={this.approveDocket}> ✓</button>
+              <button value={this.state.id} onClick={this.holdDocket}> ||</button>
+
+              {/* <textarea name="comment" id="" cols="30" rows="10" onChange={this.updateInput} value={this.state.comment}>
+              </textarea>
+              <button onClick={this.addComment} value='comment'>Add Comment</button> */}
 
 
         </div>
