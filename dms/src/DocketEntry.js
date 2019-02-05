@@ -11,9 +11,6 @@ const refUser = db.collection('user').doc('joe');
 const refActivity = db.collection('activity');
 const refDocket = db.collection('docket');
 
-
-
-
 class DocketEntry extends Component {
 
     constructor(props) {
@@ -37,31 +34,17 @@ class DocketEntry extends Component {
             startTime:'',
             endTime:'',
             breakTime:''
-
-
         }
         this.readUser = this.readUser.bind(this);
         this.readActivity = this.readActivity.bind(this);
-        this.calcHours = this.calcHours.bind(this);
         this.addDocket = this.addDocket.bind(this);
         this.calc=this.calc.bind(this)
-        // this.add = this.add.bind(this);
-
-
-
-
-
-
     }
 
 
     componentWillMount() {
         this.readUser();
         this.readActivity();
-        
-
-
-
     }
 
 
@@ -103,20 +86,6 @@ class DocketEntry extends Component {
 
     }
 
-    calcHours() {
-        console.log('calc renderer')
-        let rate = this.state.hourlyRate;
-        let wHours = this.state.totalHours;
-        let pay = rate * wHours;
-
-        this.setState({
-            pay: pay
-        }, () =>{
-            this.addDocket()})
-        
-        // this.addDocket();
-
-    }
     
 calc(){
     var start =moment(this.state.startTime, 'HH::mm');
@@ -162,36 +131,41 @@ calc(){
 
         })
     }
-    
-
-
-
-
-
-
-
+ 
     render() {
         return (
-<div>
-    DocketEntry for {this.props.userID}
-    <div>
-        <input type="time" name='startTime' value={this.state.startTime} onChange={this.updateInput} />
-        <input type="time" name='endTime' value={this.state.endTime} onChange={this.updateInput} />
-        <input type="number" name='breakTime' value={this.state.breakTime} onChange={this.updateInput} />
+        <div>
+            DocketEntry for {this.props.userID}
+            <div>
+                <input type="time"
+                 name='startTime' 
+                 value={this.state.startTime} 
+                 onChange={this.updateInput} />
+
+                <input type="time" 
+                name='endTime' 
+                value={this.state.endTime} 
+                onChange={this.updateInput} />
 
 
-        <button onClick={this.calc}>calc</button>
+                <input type="number" 
+                name='breakTime' 
+                value={this.state.breakTime} 
+                onChange={this.updateInput} />
 
-    </div>
 
-    <input type="text" name="totalHours" placeholder='Enter Hours' onChange={this.updateInput} value={this.state.totalHours} />
-    <Link to='/confirm'>
-    <button onClick={this.calcHours}>send</button>
+                <button onClick={this.calc}>Agree to terms</button>
 
-    </Link>
-    {/* <button onClick={this.addDocket}>Add docket</button> */}
+            </div>
 
-</div>
+            
+            <Link to='/confirm'>
+            <button>send</button>
+
+            </Link>
+            {/* <button onClick={this.addDocket}>Add docket</button> */}
+
+        </div>
 
 
         )
