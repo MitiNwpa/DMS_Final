@@ -138,36 +138,45 @@ calc(){
         return (
         <div><Navigation pageName="Docket Entry"/>
 
-            DocketEntry for {this.props.userID}
-            <div>
+            DocketEntry for {this.state.activityName}
+            <div className='docketentry'>
+        
+
+                 <div>
+                <label for="startTime">Enter Start Time</label>
                 <input type="time"
                  name='startTime' 
                  value={this.state.startTime} 
-                 onChange={this.updateInput} />
-
+                 onChange={this.updateInput} /> 
+                 </div>
+               
+                <br/>
+                
+                <div>
+                <label for="startTime">Enter End Time</label>                 
                 <input type="time" 
                 name='endTime' 
                 value={this.state.endTime} 
-                onChange={this.updateInput} />
-
-
-                <input type="number" 
+                onChange={this.updateInput} />  
+                </div>
+              
+                <br/>
+                <div>
+                <label for="breakTime">Break(mins)</label>     
+                <input className='breaktime'
+                type="number" 
                 name='breakTime' 
                 value={this.state.breakTime} 
                 onChange={this.updateInput} />
-
+                </div>
+            
+              
 
                 <button onClick={this.calc}>Agree to terms</button>
-
-            </div>
-
-            
-            <Link to='/confirm'>
-            <button>send</button>
-
-            </Link>
-            {/* <button onClick={this.addDocket}>Add docket</button> */}
-
+                <Link to='/confirm'>
+                    <button>Send</button>
+                </Link>
+            </div>         
         </div>
 
 

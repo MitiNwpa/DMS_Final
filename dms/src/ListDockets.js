@@ -58,21 +58,22 @@ class ListDockets extends Component {
       if (item.status === 'pending') {
         return (
           <li key={item.id} id={item.id} className={item.status}>
-            {item.email}
-            <br />
-            {item.company}
 
-            <button value={item.id} onClick={this.deleteDocket}>X</button>
+
+            <div>
+            <h5>Company Name : {item.companyName}</h5>
+                  <h5>Activity : {item.activityName}</h5>
+                  <h5>Approval : {item.status}</h5>
+
+            </div>
+            <button className='delete' value={item.id} onClick={this.deleteDocket}>X</button>
             {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button onClick={() => navigate(`/docketdetails/${item.id}`)}>
+            <button className='list' onClick={() => navigate(`/docketdetails/${item.id}`)}>
               <div>
 
               </div>
-              start</button>
+              View</button>
 
-            <div>
-              approval status is {item.status}
-            </div>
           </li>
         )
       }
@@ -85,21 +86,20 @@ class ListDockets extends Component {
       if (item.status === 'approved') {
         return (
           <li key={item.id} id={item.id} className={item.status}>
-            {item.email}
-            <br />
-            {item.company}
 
-            <button value={item.id} onClick={this.deleteDocket}>X</button>
+<div>
+<h5>Company Name : {item.companyName}</h5>
+                  <h5>Activity : {item.activityName}</h5>
+                  <h5>Approval : {item.status}</h5>
+
+            </div>
+            <button className='delete' value={item.id} onClick={this.deleteDocket}>X</button>
             {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button onClick={() => navigate(`/docketdetails/${item.id}`)}>
+            <button className='list' onClick={() => navigate(`/docketdetails/${item.id}`)}>
               <div>
 
               </div>
-              start</button>
-
-            <div>
-              approval status is {item.status}
-            </div>
+              View</button>        
           </li>
         )
       }
@@ -112,21 +112,23 @@ class ListDockets extends Component {
       if (item.status === 'rejected') {
         return (
           <li key={item.id} id={item.id} className={item.status}>
-            {item.email}
-            <br />
-            {item.company}
+              <div>
+                  <h5>Company Name : {item.companyName}</h5>
+                  <h5>Activity : {item.activityName}</h5>
+                  <h5>Approval : {item.status}</h5>
 
-            <button value={item.id} onClick={this.deleteDocket}>X</button>
+
+            
+            </div>
+            <button className='delete' value={item.id} onClick={this.deleteDocket}>X</button>
             {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button onClick={() => navigate(`/docketdetails/${item.id}`)}>
+            <button className='list' onClick={() => navigate(`/docketdetails/${item.id}`)}>
               <div>
 
               </div>
-              start</button>
+              View</button>
 
-            <div>
-              approval status is {item.status}
-            </div>
+       
           </li>
         )
       }
@@ -135,16 +137,19 @@ class ListDockets extends Component {
 
     return (
       <ul>
-        <div>Pending
+        <div>
+            <h4>Pending</h4>
           {PendingDocket}
 
         </div>
 
-        <div>Approved 
+        <div>
+            <h4>Approved</h4> 
           {ApprovedDocket}
         </div>
         <div>
-          Rejected
+            <h4>Rejected</h4>
+          
           {RejectedDocket}
 
         </div>

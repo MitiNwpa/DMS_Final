@@ -22,8 +22,12 @@ constructor(props){
         company: '',
         id: '',
         site: '',
-        status:'pending',
-        comment:''
+        status:'',
+        comment:'',
+        startTime:'',
+        endTime:'',
+        break:'',
+        ccNumber:''
     }
     this.readDocket=this.readDocket.bind(this);
 }
@@ -44,6 +48,7 @@ componentWillMount(){
                 company: snapshot.data().company,
                 id: snapshot.data().id,
                 site: snapshot.data().site,
+                ccNumber:snapshot.data().ccNumber,
                 companyName: snapshot.data().companyName,
                 contactNumber: snapshot.data().contactNumber,
                 firstName: snapshot.data().firstName,
@@ -53,6 +58,11 @@ componentWillMount(){
                 position: snapshot.data().position,
                 payAmount: snapshot.data().payAmount,
                 totalHours : snapshot.data().totalHours,
+                startTime:snapshot.data().startTime,
+                endTime:snapshot.data().endTime,
+                breakTimethis:snapshot.data().breakTimethis,
+                status:snapshot.data().status,
+                
 
 
             })
@@ -98,29 +108,46 @@ componentWillMount(){
 
 render(){
     return(
+
+
         <div>
-            <Navigation pageName="Docket Details"/>
-            its me your boi number  {this.props.userID}
+              <Navigation pageName="Docket Details"/>
+       
+        <div className='docketDetails'>
+          
+        Company name {this.state.companyName}
             <br />
-            The activity name {this.state.activityName}
+            Name {this.state.firstName}
+            <br />
+            Activity {this.state.activityName}
+            <br />
+            CostCode {this.state.ccNumber}
+            <br />
+            Start Time {this.state.startTime}
+            <br />
+            End Time {this.state.endTime}
+            <br />
+            Break {this.state.breakTimethis} mins
+            <br />
+            Status {this.state.status}
+            <br />
+            Payment Due ${this.state.payAmount}
             <br />
 
-            company name{this.state.companyName}
-            <br />
-            total payment ${this.state.payAmount}
-            <br />
-            i can do everything
-            <button value={this.state.id} onClick={this.rejectDocket}>X</button>
-              <button value={this.state.id} onClick={this.approveDocket}> ✓</button>
-              <button value={this.state.id} onClick={this.holdDocket}> ||</button>
+            <div className='approveButtons'> 
+            <button className='reject' value={this.state.id} onClick={this.rejectDocket}>X</button>
+              <button className='approve' value={this.state.id} onClick={this.approveDocket}> ✓</button>
+              <button className='pending' value={this.state.id} onClick={this.holdDocket}>II</button>
 
+            </div>
+           
               {/* <textarea name="comment" id="" cols="30" rows="10" onChange={this.updateInput} value={this.state.comment}>
               </textarea>
               <button onClick={this.addComment} value='comment'>Add Comment</button> */}
 
 
         </div>
-   
+    </div>
     )
 }
 }

@@ -23,7 +23,11 @@ constructor(props){
         company: '',
         id: '',
         site: '',
-        status:'pending'
+        status:'',
+        startTime:'',
+        endTime:'',
+        break:'',
+        
     }
     this.readDocket=this.readDocket.bind(this);
 }
@@ -53,6 +57,12 @@ componentWillMount(){
                 position: snapshot.data().position,
                 payAmount: snapshot.data().payAmount,
                 totalHours : snapshot.data().totalHours,
+                startTime:snapshot.data().startTime,
+                endTime:snapshot.data().endTime,
+                breakTimethis:snapshot.data().breakTimethis
+
+
+
 
 
             })
@@ -65,21 +75,28 @@ componentWillMount(){
 
 render(){
     return(
-        <div>
-                        <Navigation pageName="Docket Details"/>
-
-                <div>
-            its me your boi number  {this.props.userID}
+<div>
+    <Navigation pageName="Docket Details" />
+    <div className='docketDetails'>
+     
+            Company name {this.state.companyName}
             <br />
-            The activity name {this.state.activityName}
+            Name {this.state.firstName}
             <br />
-
-            company name{this.state.companyName}
+            Activity {this.state.activityName}
             <br />
-
-
-        </div> 
-        </div>
+            Start Time {this.state.startTime}
+            <br />
+            End Time {this.state.endTime}
+            <br />
+            Break {this.state.breakTimethis} mins
+            <br />
+            Status {this.state.status}
+            <br />
+     
+    </div>
+</div>
+      
    
    
     )

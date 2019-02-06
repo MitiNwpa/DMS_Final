@@ -32,19 +32,7 @@ ul{
   /* text-align: center; */
 }
 
-li.pending{
-  background-color:grey;
 
-}
-
-li.approved{
-  background-color: green;
-
-}
-
-li.rejected{
-  background-color: red;
-}
 
 .nav{
   height: 50px;
@@ -54,9 +42,16 @@ li.rejected{
 
 input[type=time] {
   padding:5px; 
-  border:2px solid rgb(0, 89, 255); 
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
+  border:1px solid rgb(0, 89, 255); 
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-left:auto;
+  margin-right:0;  
+}
+
+input{
+  border: none;
+  background-color:rgba(0, 0, 255, 0.082);
 }
 
 button{
@@ -76,6 +71,13 @@ button{
   box-shadow: 2px 2px 4px rgb(138, 143, 221);
 }
 
+label{
+  font-size: 12px;
+  float: left;
+  padding-left: 17px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
 
 /* _                 _       
 | |               (_)      
@@ -144,6 +146,13 @@ h4#login{
   margin: 0;
   margin-bottom: 20px;
 }
+
+h5{
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+
 h6{
   margin: 0;
   padding: 0;
@@ -204,3 +213,144 @@ h4{
 \_| |_/\___|\__|_| \_/ |_|\__|\__, |
                               __/ |
                              |___/  */
+
+
+
+
+
+
+/* ______ _____ _____  _   __ _____ _____   _____ _   _ _____________   __
+|  _  \  _  /  __ \| | / /|  ___|_   _| |  ___| \ | |_   _| ___ \ \ / /
+| | | | | | | /  \/| |/ / | |__   | |   | |__ |  \| | | | | |_/ /\ V / 
+| | | | | | | |    |    \ |  __|  | |   |  __|| . ` | | | |    /  \ /  
+| |/ /\ \_/ / \__/\| |\  \| |___  | |   | |___| |\  | | | | |\ \  | |  
+|___/  \___/ \____/\_| \_/\____/  \_/   \____/\_| \_/ \_/ \_| \_| \_/   */
+                                                                        
+                                                                                                    
+div.docketentry{
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 40%;
+position: absolute;
+background-color: white;
+box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
+}
+
+
+input.breaktime{
+  margin-left:auto;
+   margin-right:0;  
+   border:none;
+  width: 30%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding:5px; 
+  border:1px solid rgb(0, 89, 255); 
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+}
+
+
+
+/* ______           _        _     _     _     _   
+|  _  \         | |      | |   | |   (_)   | |  
+| | | |___   ___| | _____| |_  | |    _ ___| |_ 
+| | | / _ \ / __| |/ / _ \ __| | |   | / __| __|
+| |/ / (_) | (__|   <  __/ |_  | |___| \__ \ |_ 
+|___/ \___/ \___|_|\_\___|\__| \_____/_|___/\__| */
+                                                
+                                                
+
+
+
+li.pending{
+  background-color:rgba(225, 228, 46, 0.445);
+
+}
+
+li.approved{
+  background-color: rgb(92, 194, 92);
+
+}
+
+li.rejected{
+  background-color: rgba(255, 0, 0, 0.411);
+}
+
+button.delete{
+  width: 10%;
+  background-color: #f61f1fb4;
+  margin-right: 10px;
+}
+
+
+/* ______           _        _    ______     _        _ _     
+|  _  \         | |      | |   |  _  \   | |      (_) |    
+| | | |___   ___| | _____| |_  | | | |___| |_ __ _ _| |___ 
+| | | / _ \ / __| |/ / _ \ __| | | | / _ \ __/ _` | | / __|
+| |/ / (_) | (__|   <  __/ |_  | |/ /  __/ || (_| | | \__ \
+|___/ \___/ \___|_|\_\___|\__| |___/ \___|\__\__,_|_|_|___/ */
+                                                           
+                                                           
+div.docketDetails{
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 40%;
+position: absolute;
+background-color: white;
+box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
+}
+
+
+
+/*______ _____ _____  _   __ _____ _____  ______ _____ _____ ___  _____ _      _____    ___  __________________ _____  _   _  ___   _     
+|  _  \  _  /  __ \| | / /|  ___|_   _| |  _  \  ___|_   _/ _ \|_   _| |    /  ___|  / _ \ | ___ \ ___ \ ___ \  _  || | | |/ _ \ | |    
+| | | | | | | /  \/| |/ / | |__   | |   | | | | |__   | |/ /_\ \ | | | |    \ `--.  / /_\ \| |_/ / |_/ / |_/ / | | || | | / /_\ \| |    
+| | | | | | | |    |    \ |  __|  | |   | | | |  __|  | ||  _  | | | | |     `--. \ |  _  ||  __/|  __/|    /| | | || | | |  _  || |    
+| |/ /\ \_/ / \__/\| |\  \| |___  | |   | |/ /| |___  | || | | |_| |_| |____/\__/ / | | | || |   | |   | |\ \\ \_/ /\ \_/ / | | || |____
+|___/  \___/ \____/\_| \_/\____/  \_/   |___/ \____/  \_/\_| |_/\___/\_____/\____/  \_| |_/\_|   \_|   \_| \_|\___/  \___/\_| |_/\_____/                                                                                                                                       
+ */
+
+
+div.approveButtons{
+text-align: center;
+margin-top: 15px;
+display: inline-flex;
+}
+
+button.reject{
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: red;
+}
+button.approve{
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: green;
+
+}
+button.pending{
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: rgb(223, 223, 94);
+
+}

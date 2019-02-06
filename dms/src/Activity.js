@@ -71,7 +71,7 @@ class Activity extends React.Component{
             <div>
                 <Navigation pageName="Activity Selection"/>
 
-                <p>This is Activity Selection</p>
+                <h4>This is Activity Selection</h4>
                   <div>
                     {this.renderActivityList()}
                 </div>
