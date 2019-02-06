@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import { Router, navigate ,Link } from '@reach/router';
 import firebase from './firestore';
+import Navigation from './Navigation';
+
 const db = firebase.firestore();
 const refDoc = db.collection('user').doc('joe');
 
@@ -34,17 +36,22 @@ console.log(doc.data().lastName);
   render(){
     return(
       <div>
-Welcome {this.state.firstName}  {this.state.lastName}    
+        <Navigation pageName="Home"/>
 
-<div>
-    Here are the sites You are currently working on
+ 
+
+<div className='home'>
+Welcome {this.state.firstName}  {this.state.lastName}   
+  <h4>Active Sites</h4>
+    
     <br />
    
                 <Link to='/activity'>
                 <button>High Street</button>
                 </Link>
+                <br />
                 <Link to='/activity'>
-                <button>Skye Road 2</button>
+                <button >Skye Road</button>
                 </Link>
 
 </div>

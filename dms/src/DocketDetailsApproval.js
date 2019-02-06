@@ -1,6 +1,7 @@
 import React from 'react';
 import 'firebase/firestore';
 import firebase from "./firestore";
+import Navigation from './Navigation';
 const db = firebase.firestore();
 const refDoc = db.collection('docket');
 
@@ -98,6 +99,7 @@ componentWillMount(){
 render(){
     return(
         <div>
+            <Navigation pageName="Docket Details"/>
             its me your boi number  {this.props.userID}
             <br />
             The activity name {this.state.activityName}

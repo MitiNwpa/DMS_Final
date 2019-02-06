@@ -3,6 +3,8 @@ import { Router, navigate, Link } from '@reach/router';
 import firebase from './firestore';
 import _ from 'lodash'
 import './index.css'
+import Navigation from './Navigation';
+
 var moment = require('moment');
 moment().format();
 
@@ -134,7 +136,8 @@ calc(){
  
     render() {
         return (
-        <div>
+        <div><Navigation pageName="Docket Entry"/>
+
             DocketEntry for {this.props.userID}
             <div>
                 <input type="time"

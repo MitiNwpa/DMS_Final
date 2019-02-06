@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import firebase from './firestore';
 import { navigate } from '@reach/router';
+import Navigation from './Navigation';
+
 
 
 const db = firebase.firestore();
@@ -41,7 +43,9 @@ class Approval extends Component{
               {item.email}
               <br/>
               {item.company}
-             
+              <div>
+                  approval status is {item.site}
+              </div>
               <button onClick={()=>navigate(`/docketdetailsapproval/${item.id}`)}>
               <div>
                 
@@ -49,9 +53,7 @@ class Approval extends Component{
               view
       </button>
 
-              <div>
-                  approval status is {item.site}
-              </div>
+             
             </li>
           )
         })
@@ -66,12 +68,17 @@ class Approval extends Component{
  
     render(){
         return(
-            <div style={divStyle}>
+          <div>
+                        <Navigation pageName="Docket Approval"/>
+
+             <div style={divStyle}>
                 Approval stage
                 <br />
                 I am the site engineeeerrrr
                 {this.renderDockets()}
             </div>
+          </div>
+           
         )
     }
 }

@@ -2,6 +2,8 @@ import React from 'react';
 import {Link} from '@reach/router';
 import firebase from './firestore'
 import { navigate } from '@reach/router';
+import Navigation from './Navigation';
+
 const db = firebase.firestore();
 const refDoc = db.collection('activity');
 
@@ -42,7 +44,7 @@ class Activity extends React.Component{
                     <br/>
                    Assigned Company {item.company}
                     <br/>
-                    <button onClick={() => navigate(`/docketentry/${item.id}`)}>
+                    <button className='list' onClick={() => navigate(`/docketentry/${item.id}`)}>
                         Select
                     </button>
 
@@ -67,6 +69,8 @@ class Activity extends React.Component{
     render(){
         return(
             <div>
+                <Navigation pageName="Activity Selection"/>
+
                 <p>This is Activity Selection</p>
                   <div>
                     {this.renderActivityList()}

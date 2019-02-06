@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Router, navigate ,Link } from '@reach/router';
 import firebase from './firestore';
+import Navigation from './Navigation';
 
 
 class Login extends Component{
@@ -20,17 +21,37 @@ constructor(props){
 
   render(){
     return(
-      <div>
-        hello
-        <input type="text"
+      <div className='loginbg'>
+           <Navigation pageName="JHG DMS"/>
+            <div className='login'>
+            
+
+        <h4 id='login'>Welcome to DMS</h4>
+        
+        {/* <label className='login' for="uName">UserName</label> */}
+        
+        <input className='login' 
+        type="text"
+        name='uName'
          placeholder='Username'/>
-        <input type="text" 
+{/* <br/>
+<label className='login' for="pName">Password</label> */}
+        <input className='login'  
+        type="text"
+        name= 'pName'
         placeholder='Password'/>
+        <br />
+    
 <Link to='/home'>
-<button>Login In</button>
+<button id='login'>Login</button>
 </Link>
+<span>
+          <h6>Forgot Password</h6>
+        </span>
      
+      </div>  
       </div>
+
 
       
     )

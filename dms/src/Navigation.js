@@ -7,11 +7,17 @@ import './index.css'
 
 
 class Navigation extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      pageName:''
+    }
+  }
 
     render(){
     return(
       <div className='nav'>
-
+          welcome to {this.props.pageName}
       </div>
 
       

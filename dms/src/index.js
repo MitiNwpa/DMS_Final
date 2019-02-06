@@ -20,7 +20,7 @@ import TimeEnter from './TimeEnter';
 ReactDOM.render(
 
     <div>
-        <Navigation />
+        {/* <Navigation /> */}
    
         <Router>
             <Login path='/' />

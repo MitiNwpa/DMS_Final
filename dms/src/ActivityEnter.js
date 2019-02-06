@@ -2,6 +2,8 @@ import React from 'react';
 import 'firebase/firestore';
 import firebase from "./firestore";
 import { Link } from '@reach/router';
+import Navigation from './Navigation';
+
 
 
 const db = firebase.firestore();
@@ -59,7 +61,9 @@ class ActivityEnter extends React.Component {
 
     render() {
 
-        return (
+        return (<div>
+                        <Navigation pageName="Enter Activity"/>
+
             <div style={divStyle}>
                 <br />
                 Activity name {this.state.activityName}
@@ -109,6 +113,8 @@ class ActivityEnter extends React.Component {
                     {/* </Link>            */}
                 </form>
             </div>
+        </div>
+            
         )
     }
 }
