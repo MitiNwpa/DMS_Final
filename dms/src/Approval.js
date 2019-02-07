@@ -64,9 +64,9 @@ class Approval extends Component{
                         <Navigation pageName="Docket Approval"/>
 
              <div className='approval'>
-                Approval stage
+             <h3>Approval stage</h3>
                 <br />
-                I am the site engineeeerrrr
+                <h3></h3>
                 {this.renderDockets()}
             </div>
           </div>

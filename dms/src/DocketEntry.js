@@ -138,10 +138,13 @@ calc(){
         return (
         <div><Navigation pageName="Docket Entry"/>
 
-            DocketEntry for {this.state.activityName}
             <div className='docketentry'>
         
 
+<h3>Docket Entry for {this.state.activityName} at {this.state.site}</h3>
+<br/>
+<h3>Date: 08/02/19</h3>
+<br/>
                  <div>
                 <label for="startTime">Enter Start Time</label>
                 <input type="time"
