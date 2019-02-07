@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import firebase from './firestore'
 import './index.css';
 import { navigate } from '@reach/router';
+import Navigation from './Navigation';
 
 const db = firebase.firestore();
 const refDoc = db.collection('docket');
@@ -180,7 +181,9 @@ class ListDockets extends Component {
 
   render() {
     return (
+
       <div>
+        <Navigation pageName="Docket List" />
           {this.renderDockets()}
       </div>
     )

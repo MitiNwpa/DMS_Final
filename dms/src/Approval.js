@@ -8,14 +8,6 @@ import Navigation from './Navigation';
 const db = firebase.firestore();
 const refDoc = db.collection('docket');
 
-
-const divStyle = {
-  color: 'red',
-  border: '50px solid pink'
-};
-
-
-// .where("cName", '==', 'hrishi')
 class Approval extends Component{
     constructor(){
         super();
@@ -40,13 +32,13 @@ class Approval extends Component{
         const ListItem = this.state.items.map((item, index) => {
           return (
             <li key={index}>
-              {item.email}
-              <br/>
-              {item.company}
-              <div>
-                  approval status is {item.site}
-              </div>
-              <button onClick={()=>navigate(`/docketdetailsapproval/${item.id}`)}>
+               <div>
+            <h5>Company Name : {item.company}</h5>
+                  <h5>Activity : {item.activityName}</h5>
+                  <h5>Approval : {item.status}</h5>
+
+            </div>
+              <button className='view' onClick={()=>navigate(`/docketdetailsapproval/${item.id}`)}>
               <div>
                 
               </div>
@@ -68,10 +60,10 @@ class Approval extends Component{
  
     render(){
         return(
-          <div>
+          <div className='father'>
                         <Navigation pageName="Docket Approval"/>
 
-             <div style={divStyle}>
+             <div className='approval'>
                 Approval stage
                 <br />
                 I am the site engineeeerrrr

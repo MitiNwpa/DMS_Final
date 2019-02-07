@@ -238,7 +238,7 @@ div.docketentry{
   bottom: 0;
   left: 0;
   width: 60%;
-  height: 40%;
+  height: 60%;
 position: absolute;
 background-color: white;
 box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
@@ -330,7 +330,6 @@ box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
 
 div.approveButtons{
 text-align: center;
-margin-top: 15px;
 display: inline-flex;
 }
 
@@ -353,4 +352,36 @@ button.pending{
   margin: 5px;
   background-color: rgb(223, 223, 94);
 
+}
+h3{
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+/* 
+  ___  __________________ _____  _   _  ___   _     
+/ _ \ | ___ \ ___ \ ___ \  _  || | | |/ _ \ | |    
+/ /_\ \| |_/ / |_/ / |_/ / | | || | | / /_\ \| |    
+|  _  ||  __/|  __/|    /| | | || | | |  _  || |    
+| | | || |   | |   | |\ \\ \_/ /\ \_/ / | | || |____
+\_| |_/\_|   \_|   \_| \_|\___/  \___/\_| |_/\_____/
+                                                    */
+   
+                                                    
+div.father{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}                                                    
+div.approval{
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+button.view{
+  width: 20%;
 }

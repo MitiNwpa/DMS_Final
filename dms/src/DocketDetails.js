@@ -59,7 +59,8 @@ componentWillMount(){
                 totalHours : snapshot.data().totalHours,
                 startTime:snapshot.data().startTime,
                 endTime:snapshot.data().endTime,
-                breakTimethis:snapshot.data().breakTimethis
+                breakTimethis:snapshot.data().breakTimethis,
+                status:snapshot.data().status
 
 
 

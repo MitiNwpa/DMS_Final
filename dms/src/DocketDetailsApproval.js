@@ -131,7 +131,8 @@ render(){
             <br />
             Status {this.state.status}
             <br />
-            Payment Due ${this.state.payAmount}
+            <h3> Payment Due ${this.state.payAmount}</h3>
+           
             <br />
 
             <div className='approveButtons'> 
