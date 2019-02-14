@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from './firestore'
-import './index.css';
+// import './index.css';
 import { navigate } from '@reach/router';
 import Navigation from './Navigation';
 

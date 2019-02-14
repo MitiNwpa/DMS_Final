@@ -4,7 +4,7 @@ import { Router, navigate ,Link } from '@reach/router';
 import firebase from './firestore';
 import Sidebar from './Sidebar';
 
-import './index.css'
+// import './index.css'
 
 
 

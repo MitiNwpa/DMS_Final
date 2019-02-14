@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Router, navigate, Link } from '@reach/router';
 import firebase from './firestore';
 import _ from 'lodash'
-import './index.css'
+// import './index.css'
 import Navigation from './Navigation';
 
 var moment = require('moment');

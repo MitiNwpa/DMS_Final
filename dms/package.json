@@ -27,6 +27,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "terser": "^3.14.1"
+    "terser": "^3.14.1",
+    "node-sass": "^4.5.3"
   }
 }

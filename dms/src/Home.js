@@ -31,14 +31,11 @@ console.log(doc.data().lastName);
        
     })
 }
-  
 
   render(){
     return(
       <div>
         <Navigation pageName="Home"/>
-
- 
 
 <div className='home'>
 Welcome {this.state.firstName}  {this.state.lastName}   
@@ -46,7 +43,7 @@ Welcome {this.state.firstName}  {this.state.lastName}
     
     <br />
    
-                <Link to='/activity'>
+                   <Link to='/activity'>
                 <button>High Street</button>
                 </Link>
                 <br />

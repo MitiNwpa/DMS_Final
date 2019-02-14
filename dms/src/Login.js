@@ -37,7 +37,7 @@ constructor(props){
 {/* <br/>
 <label className='login' for="pName">Password</label> */}
         <input className='login'  
-        type="text"
+        type="password"
         name= 'pName'
         placeholder='Password'/>
         <br />
