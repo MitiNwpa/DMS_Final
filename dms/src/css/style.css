@@ -1,45 +1,37 @@
 html {
-    font-family: 'Roboto' , sans-serif;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    margin-top: 60px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  li{
-    background-color:rgba(171, 207, 248, 0.356);
-    margin: 10px 10px;
-    list-style-type: none;
-    padding: 5px;
-    border-radius: 15px;
-    padding: 15px;
-  
-  }
-  button.list{
-  width: 20%;
-  }
-  
-  ul{
-    margin: 0;
-    padding: 0;
-    /* text-align: center; */
-  }
-  h4{
-    margin-top: 20px;
-    padding: 0;
-  }
-  
-  
-  
-  /* .nav{
+  font-family: 'Roboto' , sans-serif; }
+
+body {
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+li {
+  background-color: rgba(171, 207, 248, 0.356);
+  margin: 10px 10px;
+  list-style-type: none;
+  padding: 5px;
+  border-radius: 15px;
+  padding: 15px; }
+
+button.list {
+  width: 20%; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  /* text-align: center; */ }
+
+h4 {
+  margin-top: 20px;
+  padding: 0; }
+
+/* .nav{
     height: 80px;
     background-color: blue;
     color: white;
@@ -62,92 +54,75 @@ html {
     line-height:51px;
     vertical-align:middle;
   } */
-  .nav{
-    height: 60px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  
-    /* overflow: hidden; */
-    /* background-color: #333; */
-    position: fixed;
-    top: 0; 
-    width: 100%;
-    z-index: 200;
-  
-  }
-  .nav_ham{
-  
-  }
-  .nav_sidebar{
-    position: absolute;
-    align:center;
-    align-items: center;
-    float: left;
-    /* width: 33.33%; */
-    margin-left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    z-index: 200;
-  }
-  .nav_sidebar h4{
-    color: white;
-    z-index: 200;
-  
-  
-  }
-  
-  input[type=time] {
-    padding:5px; 
-    border:1px solid rgb(0, 89, 255); 
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-    margin-left:auto;
-    margin-right:0;  
-  }
-  
-  input{
-    border: none;
-    background-color:rgba(0, 0, 255, 0.082);
-  }
-  
-  
-   button{
-    display: inline-block;
-    width: 60%;
-    border: none;
-    margin-top: 10px;
-    text-decoration: none;
-    background: #0069ed;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 14px;
-    height: 30px;
-    border-radius: 15px;
-    cursor: pointer;
-    text-align: center;
-    /* box-shadow: 2px 2px 4px rgb(138, 143, 221); */
-  } 
-  
-  
-  
-  
-  label{
-    font-size: 12px;
-    float: left;
-    padding-left: 17px;
-    margin-top: 5px;
-    margin-bottom: 3px;
-  }
-  
-  #root{
-    position: relative;
-    display: block;
-  }
-  
-  /* _                 _       
+.nav {
+  height: 60px;
+  background-color: blue;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* overflow: hidden; */
+  /* background-color: #333; */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 200; }
+
+.nav_sidebar {
+  position: absolute;
+  align: center;
+  align-items: center;
+  float: left;
+  /* width: 33.33%; */
+  margin-left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: 200; }
+
+.nav_sidebar h4 {
+  color: white;
+  z-index: 200; }
+
+input[type=time] {
+  padding: 5px;
+  border: 1px solid #0059ff;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: 0; }
+
+input {
+  border: none;
+  background-color: rgba(0, 0, 255, 0.082); }
+
+button {
+  display: inline-block;
+  width: 60%;
+  border: none;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  /* box-shadow: 2px 2px 4px rgb(138, 143, 221); */ }
+
+label {
+  font-size: 12px;
+  float: left;
+  padding-left: 17px;
+  margin-top: 5px;
+  margin-bottom: 3px; }
+
+#root {
+  position: relative;
+  display: block; }
+
+/* _                 _       
   | |               (_)      
   | |     ___   __ _ _ _ __  
   | |    / _ \ / _` | | '_ \ 
@@ -155,123 +130,101 @@ html {
   |______\___/ \__, |_|_| |_|
                 __/ |        
                |___/   */
-  
-  
-  input.login{
-    border:none;
-    width: 80%;
-    border-radius: 15px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.082);
-    margin-bottom: 10px;
-  }
-  input.login::-webkit-input-placeholder {
-    font-size: 12px;
-    padding: 10px;
-  }
-  input[type=text]{
-    padding-left: 10px;
-  }
-  button#login{
-      display: inline-block;
-      width: 60%;
-      border: none;
-      margin-top: 10px;
-      text-decoration: none;
-      background: #0069ed;
-      color: #ffffff;
-      font-family: sans-serif;
-      font-size: 14px;
-      height: 30px;
-      border-radius: 15px;
-      cursor: pointer;
-      text-align: center;
-      box-shadow: 2px 2px 4px rgb(138, 143, 221);
-    
-  }
-  
-  div.login{
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
+input.login {
+  border: none;
+  width: 80%;
+  border-radius: 15px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.082);
+  margin-bottom: 10px; }
+
+input.login::-webkit-input-placeholder {
+  font-size: 12px;
+  padding: 10px; }
+
+input[type=text] {
+  padding-left: 10px; }
+
+button#login {
+  display: inline-block;
+  width: 60%;
+  border: none;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 4px #8a8fdd; }
+
+div.login {
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
   margin-top: 50%;
   transform: translateY(25%);
-    width: 60%;
-    height: 40%;
+  width: 60%;
+  height: 40%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-  
-  
-  }
-  h4#login{
-    font-weight: 1000;
-    font-size: 18px;
-    margin: 0;
-    margin-bottom: 20px;
-  }
-  
-  h5{
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
-  }
-  
-  h6{
-    margin: 0;
-    padding: 0;
-    margin-top:10px;
-  }
-  
-  label.login{
-    font-size: 10px;
-    float: left;
-    padding-left: 17px;
-    margin-top: 5px;
-    margin-bottom: 3px;
-  
-  }
-  
-  
-  /* _   _ ________  ___ _____ 
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
+
+h4#login {
+  font-weight: 1000;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 20px; }
+
+h5 {
+  margin: 0;
+  padding: 0;
+  font-size: 15px; }
+
+h6 {
+  margin: 0;
+  padding: 0;
+  margin-top: 10px; }
+
+label.login {
+  font-size: 10px;
+  float: left;
+  padding-left: 17px;
+  margin-top: 5px;
+  margin-bottom: 3px; }
+
+/* _   _ ________  ___ _____ 
   | | | |  _  |  \/  ||  ___|
   | |_| | | | | .  . || |__  
   |  _  | | | | |\/| ||  __| 
   | | | \ \_/ / |  | || |___ 
   \_| |_/\___/\_|  |_/\____/  */
-                             
-  div.home{
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-    top: 25vh;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 60%;
-    height: 40%;
+div.home {
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  top: 25vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 40%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-  }                 
-  h4{
-    color: black;
-    font-size: 20px;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* ___       _   _       _ _         
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
+
+h4 {
+  color: black;
+  font-size: 20px; }
+
+/* ___       _   _       _ _         
   / _ \     | | (_)     (_) |        
   / /_\ \ ___| |_ ___   ___| |_ _   _ 
   |  _  |/ __| __| \ \ / / | __| | | |
@@ -279,151 +232,112 @@ html {
   \_| |_/\___|\__|_| \_/ |_|\__|\__, |
                                 __/ |
                                |___/  */
-  
-  
-  
-  
-  
-  
-  /* ______ _____ _____  _   __ _____ _____   _____ _   _ _____________   __
+/* ______ _____ _____  _   __ _____ _____   _____ _   _ _____________   __
   |  _  \  _  /  __ \| | / /|  ___|_   _| |  ___| \ | |_   _| ___ \ \ / /
   | | | | | | | /  \/| |/ / | |__   | |   | |__ |  \| | | | | |_/ /\ V / 
   | | | | | | | |    |    \ |  __|  | |   |  __|| . ` | | | |    /  \ /  
   | |/ /\ \_/ / \__/\| |\  \| |___  | |   | |___| |\  | | | | |\ \  | |  
   |___/  \___/ \____/\_| \_/\____/  \_/   \____/\_| \_/ \_/ \_| \_| \_/   */
-                                                                          
-                                                                                                      
-  div.docketentry{
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-    right: 0;
-    margin: 10% 20px 0 20px;
-    width: auto;
-    height: 60%;
+div.docketentry {
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  right: 0;
+  margin: 10% 20px 0 20px;
+  width: auto;
+  height: 60%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.829);
-  }
-  
-  
-  input.breaktime{
-    margin-left:auto;
-     margin-right:0;  
-     border:none;
-    width: 30%;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    padding:5px; 
-    border:1px solid rgb(0, 89, 255); 
-    -webkit-border-radius: 6px;
-    border-radius: 6px;
-  }
-  
-  
-  
-  /* ______           _        _     _     _     _   
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.829); }
+
+input.breaktime {
+  margin-left: auto;
+  margin-right: 0;
+  border: none;
+  width: 30%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #0059ff;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+
+/* ______           _        _     _     _     _   
   |  _  \         | |      | |   | |   (_)   | |  
   | | | |___   ___| | _____| |_  | |    _ ___| |_ 
   | | | / _ \ / __| |/ / _ \ __| | |   | / __| __|
   | |/ / (_) | (__|   <  __/ |_  | |___| \__ \ |_ 
   |___/ \___/ \___|_|\_\___|\__| \_____/_|___/\__| */
-                                                  
-                                                  
-  
-  
-  
-  li.pending{
-    background-color:rgba(225, 228, 46, 0.445);
-  
-  }
-  
-  li.approved{
-    background-color: rgb(92, 194, 92);
-  
-  }
-  
-  li.rejected{
-    background-color: rgba(255, 0, 0, 0.411);
-  }
-  
-  button.delete{
-    width: 10%;
-    background-color: #f61f1fb4;
-    margin-right: 10px;
-  }
-  
-  
-  /* ______           _        _    ______     _        _ _     
+li.pending {
+  background-color: rgba(225, 228, 46, 0.445); }
+
+li.approved {
+  background-color: #5cc25c; }
+
+li.rejected {
+  background-color: rgba(255, 0, 0, 0.411); }
+
+button.delete {
+  width: 10%;
+  background-color: #f61f1fb4;
+  margin-right: 10px; }
+
+/* ______           _        _    ______     _        _ _     
   |  _  \         | |      | |   |  _  \   | |      (_) |    
   | | | |___   ___| | _____| |_  | | | |___| |_ __ _ _| |___ 
   | | | / _ \ / __| |/ / _ \ __| | | | / _ \ __/ _` | | / __|
   | |/ / (_) | (__|   <  __/ |_  | |/ /  __/ || (_| | | \__ \
   |___/ \___/ \___|_|\_\___|\__| |___/ \___|\__\__,_|_|_|___/ */
-                                                             
-                                                             
-  div.docketDetails{
-    width: auto;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    margin: auto;
-    top: 0%;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 60%;
-    height: 40%;
+div.docketDetails {
+  width: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  top: 0%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  height: 40%;
   position: absolute;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-  }
-  
-  
-  
-  /*______ _____ _____  _   __ _____ _____  ______ _____ _____ ___  _____ _      _____    ___  __________________ _____  _   _  ___   _     
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
+
+/*______ _____ _____  _   __ _____ _____  ______ _____ _____ ___  _____ _      _____    ___  __________________ _____  _   _  ___   _     
   |  _  \  _  /  __ \| | / /|  ___|_   _| |  _  \  ___|_   _/ _ \|_   _| |    /  ___|  / _ \ | ___ \ ___ \ ___ \  _  || | | |/ _ \ | |    
   | | | | | | | /  \/| |/ / | |__   | |   | | | | |__   | |/ /_\ \ | | | |    \ `--.  / /_\ \| |_/ / |_/ / |_/ / | | || | | / /_\ \| |    
   | | | | | | | |    |    \ |  __|  | |   | | | |  __|  | ||  _  | | | | |     `--. \ |  _  ||  __/|  __/|    /| | | || | | |  _  || |    
   | |/ /\ \_/ / \__/\| |\  \| |___  | |   | |/ /| |___  | || | | |_| |_| |____/\__/ / | | | || |   | |   | |\ \\ \_/ /\ \_/ / | | || |____
   |___/  \___/ \____/\_| \_/\____/  \_/   |___/ \____/  \_/\_| |_/\___/\_____/\____/  \_| |_/\_|   \_|   \_| \_|\___/  \___/\_| |_/\_____/                                                                                                                                       
    */
-  
-  
-  div.approveButtons{
+div.approveButtons {
   text-align: center;
-  display: inline-flex;
-  }
-  
-  button.reject{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: red;
-  }
-  button.approve{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: green;
-  
-  }
-  button.pending{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: rgb(223, 223, 94);
-  
-  }
-  h3{
-    padding: 0;
-    margin: 0;
-  }
-  
-  
-  
-  
-  /* 
+  display: inline-flex; }
+
+button.reject {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: red; }
+
+button.approve {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: green; }
+
+button.pending {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: #dfdf5e; }
+
+h3 {
+  padding: 0;
+  margin: 0; }
+
+/* 
     ___  __________________ _____  _   _  ___   _     
   / _ \ | ___ \ ___ \ ___ \  _  || | | |/ _ \ | |    
   / /_\ \| |_/ / |_/ / |_/ / | | || | | / /_\ \| |    
@@ -431,96 +345,71 @@ html {
   | | | || |   | |   | |\ \\ \_/ /\ \_/ / | | || |____
   \_| |_/\_|   \_|   \_| \_|\___/  \___/\_| |_/\_____/
                                                       */
-     
-                                                      
-  /* div.father{
+/* div.father{
     text-align: center;
     margin: 0;
     padding: 0;
   }                                                     */
-  div.approval{
-    margin: 0;
-    padding: 0px 20px;
-    text-align: left;
-  }
-  
-  button.view{
-    width: 20%;
-  }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* Individual item */
-  .bm-item {
-    display: inline-block;
-  
-    /* Our sidebar item styling */
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #d1d1d1;
-    transition: color 0.2s;
-  }
-  
-  /* Change color on hover */
-  .bm-item:hover {
-    color: white;
-  }
-  
-  /* The rest copied directly from react-burger-menu docs */
-  
-  /* Position and sizing of burger button */
-  .bm-burger-button {
-    position: relative;
-    width: 30px;
-    height: 25px;
-    left: 15px;
-    top: 15px;
-  }
-  
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #ffffff;
-  }
-  
-  /* Position and sizing of clickable cross button */
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    position: fixed;
-    width: 30px;
-    height: 25px;
-    background: #bdc3c7;
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-    background: #373a47;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-  
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
-    fill: #373a47;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }
+div.approval {
+  margin: 0;
+  padding: 0px 20px;
+  text-align: left; }
+
+button.view {
+  width: 20%; }
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  /* Our sidebar item styling */
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #d1d1d1;
+  transition: color 0.2s; }
+
+/* Change color on hover */
+.bm-item:hover {
+  color: white; }
+
+/* The rest copied directly from react-burger-menu docs */
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: 30px;
+  height: 25px;
+  left: 15px;
+  top: 15px; }
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #ffffff; }
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px; }
+
+/* Color/shape of close button cross */
+.bm-cross {
+  position: fixed;
+  width: 30px;
+  height: 25px;
+  background: #bdc3c7; }
+
+/* General sidebar styles */
+.bm-menu {
+  background: #373a47;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em; }
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47; }
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad; }
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3); }

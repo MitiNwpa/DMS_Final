@@ -12,7 +12,8 @@
     "react-scripts": "2.1.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "start": "react-scripts start --parallel compile:sass",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -27,7 +28,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "terser": "^3.14.1",
-    "node-sass": "^4.5.3"
+    "node-sass": "^4.11.0",
+    "terser": "^3.14.1"
   }
 }

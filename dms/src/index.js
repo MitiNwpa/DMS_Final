@@ -2,18 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, navigate, Link } from '@reach/router';
 import './css/style.css'
-import Login from './Login';
-import * as serviceWorker from './serviceWorker';
-import Navigation from './Navigation';
-import Home from './Home';
-import Activity from './Activity';
-import ActivityEnter from './ActivityEnter';
-import DocketEntry from './DocketEntry';
-import ListDockets from './ListDockets';
-import DocketDetails from './DocketDetails';
-import Approval from './Approval';
-import DocketDetailsApproval from './DocketDetailsApproval';
-import TimeEnter from './TimeEnter';
+import Login from './pages/Login';
+import * as serviceWorker from './pages/serviceWorker';
+import Navigation from './pages/Navigation';
+import Home from './pages/Home';
+import Activity from './pages/Activity';
+import ActivityEnter from './pages/ActivityEnter';
+import DocketEntry from './pages/DocketEntry';
+import ListDockets from './pages/ListDockets';
+import DocketDetails from './pages/DocketDetails';
+import Approval from './pages/Approval';
+import DocketDetailsApproval from './pages/DocketDetailsApproval';
+import TimeEnter from './pages/TimeEnter';
 
 
 ReactDOM.render(
