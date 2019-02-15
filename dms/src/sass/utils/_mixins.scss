@@ -1,0 +1,11 @@
+@mixin button_bg {
+  background-image: linear-gradient(
+    to right,
+    #77a1d3 0%,
+    #79cbca 51%,
+    #77a1d3 100%
+  );
+}
+.btn-grad:hover {
+  background-position: right center;
+}

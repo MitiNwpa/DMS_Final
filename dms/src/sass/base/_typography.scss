@@ -23,10 +23,7 @@ html {
     padding: 15px;
   
   }
-  button.list{
-  width: 20%;
-  }
-  
+
   ul{
     margin: 0;
     padding: 0;
@@ -36,68 +33,7 @@ html {
     margin-top: 20px;
     padding: 0;
   }
-  
-  
-  
-  /* .nav{
-    height: 80px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  
-  .nav_sidebar{
-    float: left;
-    width: 50%;
-    vertical-align: middle;
-    position:absolute;
-    text-align:center;
-    background-color:black;
-  
-  }
-  .nav_sidebar h6{
-    margin:auto;
-    line-height:51px;
-    vertical-align:middle;
-  } */
-  .nav{
-    height: 60px;
-    background-color: blue;
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  
-    /* overflow: hidden; */
-    /* background-color: #333; */
-    position: fixed;
-    top: 0; 
-    width: 100%;
-    z-index: 200;
-  
-  }
-  .nav_ham{
-  
-  }
-  .nav_sidebar{
-    position: absolute;
-    align:center;
-    align-items: center;
-    float: left;
-    /* width: 33.33%; */
-    margin-left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    z-index: 200;
-  }
-  .nav_sidebar h4{
-    color: white;
-    z-index: 200;
-  
-  
-  }
+
   
   input[type=time] {
     padding:5px; 
@@ -172,23 +108,7 @@ html {
   input[type=text]{
     padding-left: 10px;
   }
-  button#login{
-      display: inline-block;
-      width: 60%;
-      border: none;
-      margin-top: 10px;
-      text-decoration: none;
-      background: #0069ed;
-      color: #ffffff;
-      font-family: sans-serif;
-      font-size: 14px;
-      height: 30px;
-      border-radius: 15px;
-      cursor: pointer;
-      text-align: center;
-      box-shadow: 2px 2px 4px rgb(138, 143, 221);
-    
-  }
+
   
   div.login{
     width: auto;
@@ -344,12 +264,12 @@ html {
   }
   
   li.rejected{
-    background-color: rgba(255, 0, 0, 0.411);
+    background-color: rgb(245, 19, 19);
   }
   
   button.delete{
     width: 10%;
-    background-color: #f61f1fb4;
+    background-color: #e02f2fb4;
     margin-right: 10px;
   }
   
@@ -395,26 +315,7 @@ html {
   display: inline-flex;
   }
   
-  button.reject{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: red;
-  }
-  button.approve{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: green;
-  
-  }
-  button.pending{
-    width: 30px;
-    border-radius: 15px;
-    margin: 5px;
-    background-color: rgb(223, 223, 94);
-  
-  }
+
   h3{
     padding: 0;
     margin: 0;
@@ -444,9 +345,7 @@ html {
     text-align: left;
   }
   
-  button.view{
-    width: 20%;
-  }
+
   
   
   
@@ -455,72 +354,3 @@ html {
   
   
   
-  
-  /* Individual item */
-  .bm-item {
-    display: inline-block;
-  
-    /* Our sidebar item styling */
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: #d1d1d1;
-    transition: color 0.2s;
-  }
-  
-  /* Change color on hover */
-  .bm-item:hover {
-    color: white;
-  }
-  
-  /* The rest copied directly from react-burger-menu docs */
-  
-  /* Position and sizing of burger button */
-  .bm-burger-button {
-    position: relative;
-    width: 30px;
-    height: 25px;
-    left: 15px;
-    top: 15px;
-  }
-  
-  
-  /* Color/shape of burger icon bars */
-  .bm-burger-bars {
-    background: #ffffff;
-  }
-  
-  /* Position and sizing of clickable cross button */
-  .bm-cross-button {
-    height: 24px;
-    width: 24px;
-  }
-  
-  /* Color/shape of close button cross */
-  .bm-cross {
-    position: fixed;
-    width: 30px;
-    height: 25px;
-    background: #bdc3c7;
-  }
-  
-  /* General sidebar styles */
-  .bm-menu {
-    background: #373a47;
-    padding: 2.5em 1.5em 0;
-    font-size: 1.15em;
-  }
-  
-  /* Morph shape necessary with bubble or elastic */
-  .bm-morph-shape {
-    fill: #373a47;
-  }
-  
-  /* Wrapper for item list */
-  .bm-item-list {
-    color: #b8b7ad;
-  }
-  
-  /* Styling of overlay */
-  .bm-overlay {
-    background: rgba(0, 0, 0, 0.3);
-  }

@@ -1,0 +1,60 @@
+button {
+  display: inline-block;
+  width: 60%;
+  border: none;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #0069ed;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  /* box-shadow: 2px 2px 4px rgb(138, 143, 221); */
+}
+
+button.list {
+  width: 20%;
+  @include button_bg;
+}
+
+button#login {
+  display: inline-block;
+  width: 60%;
+  border: none;
+  margin-top: 10px;
+  text-decoration: none;
+  background: #9900ff;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px;
+  height: 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgb(138, 143, 221);
+}
+
+button.reject {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: red;
+}
+button.approve {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: green;
+}
+button.pending {
+  width: 30px;
+  border-radius: 15px;
+  margin: 5px;
+  background-color: rgb(223, 223, 94);
+}
+button.view {
+  width: 20%;
+}

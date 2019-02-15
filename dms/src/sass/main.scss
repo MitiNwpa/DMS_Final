@@ -1,3 +1,8 @@
+@import "utils/colors.scss";
+@import "utils/functions";
+@import "utils/mixins";
+@import "utils/variables";
+
 @import "base/typography";
 
 @import "components/buttons";
@@ -13,10 +18,4 @@
 @import "pages/listDockets";
 @import "pages/login";
 @import "pages/siteSelect";
-
-@import "utils/colors.scss";
-@import "utils/functions";
-@import "utils/mixins";
-@import "utils/variables";
-
 

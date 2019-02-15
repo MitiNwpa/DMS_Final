@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, navigate, Link } from '@reach/router';
-import './css/style.css'
+// import './css/style.css'
+import './sass/main.scss'
+
 import Login from './pages/Login';
 import * as serviceWorker from './pages/serviceWorker';
 import Navigation from './pages/Navigation';
