@@ -34,6 +34,7 @@ class Approval extends Component{
             <li key={index}>
                <div>
             <h5>Company Name : {item.company}</h5>
+            <h5>Docket Number : {item.docketNumber}</h5>
                   <h5>Activity : {item.activityName}</h5>
                   <h5>Approval : {item.status}</h5>
 

@@ -27,6 +27,7 @@ constructor(props){
         startTime:'',
         endTime:'',
         break:'',
+        docketNumber:''
         
     }
     this.readDocket=this.readDocket.bind(this);
@@ -60,11 +61,8 @@ componentWillMount(){
                 startTime:snapshot.data().startTime,
                 endTime:snapshot.data().endTime,
                 breakTimethis:snapshot.data().breakTimethis,
-                status:snapshot.data().status
-
-
-
-
+                status:snapshot.data().status,
+                docketNumber:snapshot.data().docketNumber
 
             })
         })
@@ -93,6 +91,9 @@ render(){
             Break {this.state.breakTimethis} mins
             <br />
             Status {this.state.status}
+            <br />
+            <br />
+            Docket Number {this.state.docketNumber}
             <br />
      
     </div>
