@@ -25,31 +25,38 @@ button {
       // background: #0069ed;
     }
   }
-}
-
-button.list {
+&.list {
   width: 20%;
-  @include button_bg;
+  // @include button_bg;
 }
 
-button.reject {
-  width: 30px;
-  border-radius: 15px;
+&.reject {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   margin: 5px;
   background-color: red;
 }
-button.approve {
-  width: 30px;
-  border-radius: 15px;
+&.approve {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   margin: 5px;
   background-color: green;
 }
-button.pending {
-  width: 30px;
-  border-radius: 15px;
+&.pending {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
   margin: 5px;
   background-color: rgb(223, 223, 94);
 }
-button.view {
+&.view {
   width: 20%;
 }
+
+
+  
+}
+
+

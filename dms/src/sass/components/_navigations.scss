@@ -12,20 +12,20 @@
   top: 0;
   width: 100%;
   z-index: 200;
-}
 
-.nav_sidebar {
-  position: absolute;
-  align: center;
-  align-items: center;
-  float: left;
-  /* width: 33.33%; */
-  margin-left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-  z-index: 200;
-}
-.nav_sidebar h4 {
-  color: white;
-  z-index: 200;
+  &_sidebar {
+    position: absolute;
+    align: center;
+    align-items: center;
+    float: left;
+    /* width: 33.33%; */
+    margin-left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 200;
+  }
+  &_sidebar h4 {
+    color: white;
+    z-index: 200;
+  }
 }

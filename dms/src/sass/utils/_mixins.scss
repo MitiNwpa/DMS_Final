@@ -1,4 +1,6 @@
 @mixin button_bg {
+  background-position: center;
+  
   background-image: linear-gradient(
     to right,
     #1a2980 0%,
