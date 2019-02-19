@@ -36,7 +36,7 @@ class DocketEntry extends Component {
       startTime: "",
       endTime: "",
       breakTime: "",
-      docketNumber: ""
+      docketNumber: 0
     };
     this.readUser = this.readUser.bind(this);
     this.readActivity = this.readActivity.bind(this);
@@ -46,9 +46,9 @@ class DocketEntry extends Component {
   }
 
   componentWillMount() {
-    this.readUser();
-    this.readActivity();
     this.readDocketNumber();
+    this.readActivity();
+    this.readUser();
   }
 
   readDocketNumber() {
@@ -119,31 +119,31 @@ class DocketEntry extends Component {
 
     const ref = refDocket.doc();
     ref.set({
-      companyName: this.state.companyName,
-      contactNumber: this.state.contactNumber,
-      firstName: this.state.firstName,
-      hourlyRate: this.state.hourlyRate,
-      lastName: this.state.lastName,
-      overtimeRate: this.state.overtimeRate,
-      position: this.state.position,
-      totalHours: this.state.totalHours,
-      activityName: this.state.activityName,
-      ccNumber: this.state.ccNumber,
-      company: this.state.company,
-      id: ref.id,
-      site: this.state.site,
-      payAmount: this.state.pay,
-      status: "pending",
-      startTime: this.state.startTime,
-      endTime: this.state.endTime,
-      breakTimethis: this.state.breakTime,
-      docketNumber: this.state.docketNumber
-    });
-
-    db.collection("docketNumber").doc("docketNumber");
-    refDocketNumber.set({
-      number: this.state.docketNumber + 1
-    });
+        companyName: this.state.companyName,
+        contactNumber: this.state.contactNumber,
+        firstName: this.state.firstName,
+        hourlyRate: this.state.hourlyRate,
+        lastName: this.state.lastName,
+        overtimeRate: this.state.overtimeRate,
+        position: this.state.position,
+        totalHours: this.state.totalHours,
+        // activityName: this.state.activityName,
+        ccNumber: this.state.ccNumber,
+        company: this.state.company,
+        id: ref.id,
+        site: this.state.site,
+        payAmount: this.state.pay,
+        status: "pending",
+        startTime: this.state.startTime,
+        endTime: this.state.endTime,
+        breakTimethis: this.state.breakTime,
+        docketNumber: this.state.docketNumber
+      });
+      
+        db.collection("docketNumber").doc("docketNumber").set({
+          number:(this.state.docketNumber + 1)
+       
+      });
   }
 
   render() {
@@ -158,7 +158,7 @@ class DocketEntry extends Component {
           <br />
           <h3>Date: 08/02/19</h3>
           <br />
-          <form action="">
+          {/* <form> */}
             <div>
               <label for="startTime">Enter Start Time</label>
               <input
@@ -196,11 +196,13 @@ class DocketEntry extends Component {
               />
             </div>
 
-            <button onClick={this.calc}>Agree to terms</button>
-            <Link to="/confirm">
-              <button>Send</button>
-            </Link>
-          </form>
+            <button onClick={this.calc}>
+              Agree to terms
+            </button>
+          {/* </form> */}
+          <Link to="/confirm">
+            <button>Send</button>
+          </Link>
         </div>
       </div>
     );

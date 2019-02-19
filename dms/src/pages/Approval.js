@@ -3,9 +3,6 @@ import firebase from "./firestore";
 import { navigate } from "@reach/router";
 import Navigation from "./Navigation";
 
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
-admin.initializeApp();
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
 
@@ -22,11 +19,6 @@ class Approval extends Component {
   }
 
   componentWillMount() {
-    db.collection("docket").onWrite( z =>{
-      this.calcSum();
-    });
-
-
     refDoc.onSnapshot(docSnapShot => {
       let items = [];
       docSnapShot.forEach(doc => {
@@ -101,6 +93,7 @@ class Approval extends Component {
           <br />
           <h3 />
           {this.renderDockets()}
+   
         </div>
       </div>
     );
