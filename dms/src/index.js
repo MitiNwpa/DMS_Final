@@ -15,6 +15,8 @@ import ListDockets from './pages/ListDockets';
 import DocketDetails from './pages/DocketDetails';
 import Approval from './pages/Approval';
 import DocketDetailsApproval from './pages/DocketDetailsApproval';
+import Dashboard from './pages/Dashboard';
+
 import TimeEnter from './pages/TimeEnter';
 
 
@@ -33,6 +35,7 @@ ReactDOM.render(
             <DocketDetails path='/docketdetails/:userID' />
             <Approval path='/approval' />
             <DocketDetailsApproval path='docketdetailsapproval/:userID'/>
+            <Dashboard path='/dashboard'/>
 
         </Router>
 

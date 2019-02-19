@@ -14,8 +14,6 @@ class Approval extends Component {
       sumArray:[],
       sum: 0
     };
-
-    this.calcSum = this.calcSum.bind(this);
   }
 
   componentWillMount() {
@@ -29,32 +27,10 @@ class Approval extends Component {
         loaded: true
       });
     });
-
-
   }
 
 
-  calcSum() {
-    var sumArray=[];
 
-    refDoc.where("payAmount", ">", 0).get().then(snapshot => {
-      snapshot.forEach(doc => {
-
-        sumArray.push(doc.data().payAmount)
-
-        // this.setState({
-        //   tempSum: (doc.data().payAmount)
-        // });
-      });
-      this.setState({
-        sumArray
-      })
-      var sim1 = sumArray.reduce(function(a, b) { return a + b; }, 0);
-      this.setState({
-        sum:sim1
-      })
-    });
-  }
 
   renderDockets() {
     const ListItem = this.state.items.map((item, index) => {
@@ -88,7 +64,7 @@ class Approval extends Component {
         <Navigation pageName="Docket Approval" />
 
         <div className="approval">
-        <h1>SUM :$ {this.state.sum}</h1>
+
           <h3>Approval stage</h3>
           <br />
           <h3 />

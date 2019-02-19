@@ -13,11 +13,14 @@ const refUser = db.collection("user").doc("joe");
 const refActivity = db.collection("activity");
 const refDocket = db.collection("docket");
 const refDocketNumber = db.collection("docketNumber").doc("docketNumber");
+var today = new Date(),
+date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
 
 class DocketEntry extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      date: date,
       companyName: "",
       contactNumber: "",
       firstName: "",
@@ -36,7 +39,8 @@ class DocketEntry extends Component {
       startTime: "",
       endTime: "",
       breakTime: "",
-      docketNumber: 0
+      docketNumber: 0,
+      timeStamp:0
     };
     this.readUser = this.readUser.bind(this);
     this.readActivity = this.readActivity.bind(this);
@@ -49,6 +53,7 @@ class DocketEntry extends Component {
     this.readDocketNumber();
     this.readActivity();
     this.readUser();
+ 
   }
 
   readDocketNumber() {
@@ -115,8 +120,7 @@ class DocketEntry extends Component {
   }
 
   addDocket() {
-    // e.preventDefault();
-
+   // e.preventDefault();
     const ref = refDocket.doc();
     ref.set({
         companyName: this.state.companyName,
@@ -137,7 +141,8 @@ class DocketEntry extends Component {
         startTime: this.state.startTime,
         endTime: this.state.endTime,
         breakTimethis: this.state.breakTime,
-        docketNumber: this.state.docketNumber
+        docketNumber: this.state.docketNumber,
+        timeStamp:firebase.firestore.FieldValue.serverTimestamp()
       });
       
         db.collection("docketNumber").doc("docketNumber").set({
@@ -156,10 +161,15 @@ class DocketEntry extends Component {
             Docket Entry for {this.state.activityName} at {this.state.site}
           </h3>
           <br />
-          <h3>Date: 08/02/19</h3>
+          <h3>Date:{this.state.date}</h3>
           <br />
           {/* <form> */}
             <div>
+              {/* <p>date is {datee}</p> */}
+            {/* <input type="date" id="start" name="start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31"/> */}
+
               <label for="startTime">Enter Start Time</label>
               <input
                 type="time"
