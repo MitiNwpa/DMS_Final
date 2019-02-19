@@ -95,8 +95,8 @@ class DocketEntry extends Component {
   };
 
   calc() {
-    var start = moment(this.state.startTime, "HH::mm");
-    var end = moment(this.state.endTime, "HH::mm");
+    var start = moment(this.state.startTime, "HH::mm A");
+    var end = moment(this.state.endTime, "HH::mm A");
     var breakT = this.state.breakTime / 60;
     var result = moment.duration(end.diff(start));
     var hours = result.asHours() - breakT;
@@ -140,7 +140,7 @@ class DocketEntry extends Component {
       docketNumber: this.state.docketNumber
     });
 
-    const refDocketNumber = db.collection("docketNumber").doc("docketNumber");
+    db.collection("docketNumber").doc("docketNumber");
     refDocketNumber.set({
       number: this.state.docketNumber + 1
     });
@@ -159,47 +159,48 @@ class DocketEntry extends Component {
           <h3>Date: 08/02/19</h3>
           <br />
           <form action="">
-          <div>
-            <label for="startTime">Enter Start Time</label>
-            <input
-              type="time"
-              name="startTime"
-              value={this.state.startTime}
-              onChange={this.updateInput}
-              required
-            />
-          </div>
+            <div>
+              <label for="startTime">Enter Start Time</label>
+              <input
+                type="time"
+                name="startTime"
+                value={this.state.startTime}
+                onChange={this.updateInput}
+                required
+              />
+            </div>
 
-          <br />
+            <br />
 
-          <div>
-            <label for="startTime">Enter End Time</label>
-            <input
-              type="time"
-              name="endTime"
-              value={this.state.endTime}
-              onChange={this.updateInput}
-              required
-            />
-          </div>
+            <div>
+              <label for="startTime">Enter End Time</label>
+              <input
+                type="time"
+                name="endTime"
+                value={this.state.endTime}
+                onChange={this.updateInput}
+                required
+              />
+            </div>
 
-          <br />
-          <div>
-            <label for="breakTime">Break(mins)</label>
-            <input
-              className="breaktime"
-              type="number"
-              name="breakTime"
-              value={this.state.breakTime}
-              onChange={this.updateInput}
-              required
-            />
-          </div>
+            <br />
+            <div>
+              <label for="breakTime">Break(mins)</label>
+              <input
+                className="breaktime"
+                type="number"
+                name="breakTime"
+                value={this.state.breakTime}
+                onChange={this.updateInput}
+                required
+              />
+            </div>
 
-          <button onClick={this.calc}>Agree to terms</button>
-          <Link to="/confirm">
-            <button>Send</button>
-          </Link></form>
+            <button onClick={this.calc}>Agree to terms</button>
+            <Link to="/confirm">
+              <button>Send</button>
+            </Link>
+          </form>
         </div>
       </div>
     );
