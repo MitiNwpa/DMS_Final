@@ -1,0 +1,21 @@
+.sig {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  // transform: translate(-50%,-50%);
+
+  &__Canvas {
+    // top: 50%;
+    // left: 50%;
+    transform: translate(-50%);
+    position: absolute;
+    display: block;
+    background-color: purple;
+    // width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border: 2px solid black;
+  }
+}

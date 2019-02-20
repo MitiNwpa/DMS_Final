@@ -53,9 +53,8 @@ class DocketDetails extends React.Component {
         hour = hour ? hour : 12;
         var min = mainDate.getMinutes();
         min = min < 10 ? '0'+min : min;
-        var sec = mainDate.getSeconds();
         const today=`${myDay}-${myMonth}-${myYear}`;
-        const time = `${hour}-${min}-${sec}-${ampm}`
+        const time = `${hour}:${min} ${ampm}`
 
         console.log( myDay)
         console.log( myMonth)

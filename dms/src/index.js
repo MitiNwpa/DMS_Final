@@ -16,15 +16,16 @@ import DocketDetails from './pages/DocketDetails';
 import Approval from './pages/Approval';
 import DocketDetailsApproval from './pages/DocketDetailsApproval';
 import Dashboard from './pages/Dashboard';
-
 import TimeEnter from './pages/TimeEnter';
+import Confirmation from './pages/Confirmation';
+
 
 
 ReactDOM.render(
 
     <div>
         {/* <Navigation /> */}
-   
+    
         <Router>
             <Login path='/' />
             <Home path='/home' />
@@ -36,6 +37,7 @@ ReactDOM.render(
             <Approval path='/approval' />
             <DocketDetailsApproval path='docketdetailsapproval/:userID'/>
             <Dashboard path='/dashboard'/>
+            <Confirmation path='/confirmation/:userID/:approvalState' />
 
         </Router>
 

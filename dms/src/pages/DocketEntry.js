@@ -131,7 +131,7 @@ class DocketEntry extends Component {
         overtimeRate: this.state.overtimeRate,
         position: this.state.position,
         totalHours: this.state.totalHours,
-        // activityName: this.state.activityName,
+        activityName: this.state.activityName,
         ccNumber: this.state.ccNumber,
         company: this.state.company,
         id: ref.id,
