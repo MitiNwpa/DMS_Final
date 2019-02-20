@@ -31,7 +31,7 @@ class DocketDetailsApproval extends React.Component {
       endTime: "",
       break: "",
       ccNumber: "",
-      comment: ""
+      comment:""
     };
     this.readDocket = this.readDocket.bind(this);
   }
@@ -101,20 +101,6 @@ class DocketDetailsApproval extends React.Component {
     });
   };
 
-  navigateConfirm = e => {
-    navigate(`/confirmation/${this.state.id}/${this.state.status}`, {
-      name: this.state.firstName
-    });
-  };
-
-  sendForConfirmation = e => {
-        const promise = this.setState({
-      [e.target.name]: e.target.value
-    },()=>this.navigateConfirm());
-  
-    //
-  };
-
   render() {
     return (
       <div>
@@ -140,35 +126,40 @@ class DocketDetailsApproval extends React.Component {
           <h3> Payment Due ${this.state.payAmount}</h3>
           <br />
           <div className="approveButtons">
-             <button
+            
+              <button onClick={()=> navigate(`/confirmation/${this.state.id}/${this.state.status}`, {name:this.state.firstName})}>
+           
+               testttttttttttttttttttttttttttttttttttttttttttttttttttt
+              </button>
+     
+            <button
               className="reject"
-              name="status"
-              value="reject"
-              onClick={this.sendForConfirmation}
+              value={this.state.id}
+              onClick={this.rejectDocket}
             >
               X
             </button>
-
-            <button
-              className="approve"
-              name="status"
-              value="approve"
-              onClick={this.sendForConfirmation}
+           
+            <button className="approve"
+              value={this.state.id}
+              onClick={this.approveDocket}
             >
               {" "}
               ✓
             </button>
-
+            
             <button
               className="pending"
-              name="status"
-              value="pending"
-              onClick={this.sendForConfirmation}
+              value={this.state.id}
+              onClick={this.holdDocket}
             >
               II
             </button>
             <br />
           </div>
+         
+          <textarea name="comment" id="comment" cols="30" rows="10" value={this.state.comment} onChange={this.updateInput} >
+              </textarea>
 
         </div>
       </div>

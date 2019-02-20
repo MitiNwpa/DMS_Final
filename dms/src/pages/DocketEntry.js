@@ -142,6 +142,8 @@ class DocketEntry extends Component {
         endTime: this.state.endTime,
         breakTimethis: this.state.breakTime,
         docketNumber: this.state.docketNumber,
+        supervisorComment:'',
+        engineerComment:'',
         timeStamp:firebase.firestore.FieldValue.serverTimestamp()
       });
       
