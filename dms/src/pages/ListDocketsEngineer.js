@@ -64,14 +64,11 @@ class ListDocketsEngineer extends Component {
               <h5>Hours Worked : {item.totalHours}</h5>
               <h5>Inclement Weather : this is pending, might have to assign it in the activity itself</h5>
               <h5>Cost Code : {item.ccNumber}</h5>
-
-
-
             </div>
 
             <button
               className="list"
-              onClick={() => navigate(`/docketdetails/${item.id}`)}
+              onClick={() => navigate(`/docketdetailsapproval/${item.id}`)}
             >
               <div />
               View
@@ -102,7 +99,7 @@ class ListDocketsEngineer extends Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Docket List" />
+        <Navigation pageName="Engineer Approval" />
         {this.renderDockets()}
       </div>
     );

@@ -11,7 +11,8 @@ class Confirmation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      status:this.props.status
+      status:this.props.status,
+      sComment:''
     };
     this.docketStatus=this.docketStatus.bind(this);
   }

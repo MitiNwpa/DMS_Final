@@ -61,7 +61,9 @@ class DocketDetailsApproval extends React.Component {
         startTime: snapshot.data().startTime,
         endTime: snapshot.data().endTime,
         breakTimethis: snapshot.data().breakTimethis,
-        status: snapshot.data().status
+        status: snapshot.data().status,
+        supervisorComment: snapshot.data().supervisorComment
+
       });
     });
   }
@@ -138,6 +140,8 @@ class DocketDetailsApproval extends React.Component {
           Status {this.state.status}
           <br />
           <h3> Payment Due ${this.state.payAmount}</h3>
+          <br />
+          <h3> Your Comments {this.state.supervisorComment}</h3>
           <br />
           <div className="approveButtons">
              <button

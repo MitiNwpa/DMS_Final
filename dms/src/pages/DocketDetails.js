@@ -86,7 +86,10 @@ class DocketDetails extends React.Component {
         status: snapshot.data().status,
         docketNumber: snapshot.data().docketNumber,
         dateCreated: today,
-        time:time
+        time:time,
+        supervisorComment: snapshot.data().supervisorComment,
+        engineerComment: snapshot.data().engineerComment
+
       });
     });
   }
@@ -114,6 +117,11 @@ class DocketDetails extends React.Component {
           Docket Number {this.state.docketNumber}
           <br />
           Date Created {this.state.dateCreated} at {this.state.time}
+          <br />
+          <br />
+          Supervisor Notes {this.state.supervisorComment}
+          <br />          <br />
+          Engineer Notes {this.state.engineerComment}
           <br />
         </div>
       </div>

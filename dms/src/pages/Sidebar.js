@@ -36,7 +36,15 @@ class Sidebar extends Component{
         <a className="menu-item" href="/approval">
           Approval
         </a>
-  
+        <a className="menu-item" href="/docketdetailsapproval">
+          Docket Details Approval
+        </a>
+        <a className="menu-item" href="/dashboard">
+          Dashboard
+        </a>
+        <a className="menu-item" href="/listdocketsengineer">
+          List Dockets Engineer
+        </a>
       </Menu>
 
       
