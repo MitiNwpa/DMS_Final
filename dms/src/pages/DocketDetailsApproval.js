@@ -3,7 +3,6 @@ import "firebase/firestore";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
 import { Link, navigate } from "@reach/router";
-import SignatureCanvas from "react-signature-canvas";
 
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
@@ -30,8 +29,6 @@ class DocketDetailsApproval extends React.Component {
       startTime: "",
       endTime: "",
       break: "",
-      ccNumber: "",
-      comment: ""
     };
     this.readDocket = this.readDocket.bind(this);
   }
