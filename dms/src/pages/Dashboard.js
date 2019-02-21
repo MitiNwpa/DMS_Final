@@ -103,6 +103,9 @@ class Dashboard extends React.Component {
         console.log(`flag is ${flag}`);
       });
 
+      flag=0;
+
+
       if(flag===0){
         console.log("---------Im rendering-------");
         return(
