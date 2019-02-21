@@ -7,7 +7,7 @@ const refDoc = db.collection("docket");
 const refActivity = db.collection("activity");
 let addd = 9699;
 var holder=[];
-
+var flag=0;
 
 class Dashboard extends React.Component {
   constructor() {
@@ -17,8 +17,7 @@ class Dashboard extends React.Component {
       ccArray: [],
       sum: 0,
       testSum: 10,
-      loading: true,
-      hrishi:[]
+      loading: true
     };
 
     this.calcSum = this.calcSum.bind(this);
@@ -76,10 +75,9 @@ class Dashboard extends React.Component {
   }
 
   mapCostCodes() {
-     const CostCodeMap = this.state.ccArray.map((index, item) => {
-
+    flag=0;
+    const CostCodeMap = this.state.ccArray.map((index, item) => {
       const test = [];
-
       const promise = refDoc
         .where("ccNumber", "==", `${index}`)
         .get()
@@ -87,14 +85,11 @@ class Dashboard extends React.Component {
           snapshot.forEach(doc => {
             test.push(doc.data().payAmount);
           });
-
           console.log("---------START-------");
           console.log(test);
-
           addd = test.reduce(function(a, b) {
             return a + b;
           }, 0);
-
           holder[item] = addd;
           console.log(addd);
           console.log(`the key is ${item}`);
@@ -104,21 +99,36 @@ class Dashboard extends React.Component {
 
       promise.then(() => {
         console.log("---------END-------");
+        flag=1;
+        console.log(`flag is ${flag}`);
       });
 
-      console.log("---------Im rendering-------");
-      return (
+      flag=0;
+
+
+      if(flag===0){
+        console.log("---------Im rendering-------");
+        return(
           <div key={item}>
+            <h4>Loading</h4>
+          </div>
+        )
+      }
+
+      else if(flag===1){
+              console.log("---------Im rendering-------");
+      return (
+          <div>
             <li key={item}>
               the cost code is {index} cost is plij {holder[item]}
             </li>
           </div>
         );
-            
+      }
+
+      
     });
-
     console.log(`this is the costcodeMap ${CostCodeMap}`);
-
     return (
       <ul>
         <div>
@@ -131,6 +141,13 @@ class Dashboard extends React.Component {
 
   render() {
     console.log(`RENDERING`);
+    // if (this.state.loading) {
+    //   return (
+    //     <div>
+    //       <h4>Loading this bitch</h4>
+    //     </div>
+    //   );
+    // } else {
     return (
       <div>
         <Navigation pageName="Dashboard" />
