@@ -6,7 +6,8 @@ const db = firebase.firestore();
 const refDoc = db.collection("docket");
 const refActivity = db.collection("activity");
 let addd = 9699;
-var holder;
+var holder=[];
+var flag=0;
 
 class Dashboard extends React.Component {
   constructor() {
@@ -67,15 +68,14 @@ class Dashboard extends React.Component {
       });
       console.log(`cc aray is ${ccArray}`);
 
-      this.setState(
-        {
-          ccArray
-        }
-      );
+      this.setState({
+        ccArray
+      });
     });
   }
 
   mapCostCodes() {
+    flag=0;
     const CostCodeMap = this.state.ccArray.map((index, item) => {
       const test = [];
       const promise = refDoc
@@ -90,29 +90,42 @@ class Dashboard extends React.Component {
           addd = test.reduce(function(a, b) {
             return a + b;
           }, 0);
-          holder = addd;
+          holder[item] = addd;
           console.log(addd);
-          console.log(`the holder is ${holder}`);
-          console.log(`the cost code is step 2 ${index}`);
           console.log(`the key is ${item}`);
+          console.log(`the cost code is step 2 ${index}`);
+          console.log(`the cost at ${item} is ${holder[item]}`);
         });
 
       promise.then(() => {
         console.log("---------END-------");
-        return (
+        flag=1;
+        console.log(`flag is ${flag}`);
+      });
+
+      if(flag===0){
+        console.log("---------Im rendering-------");
+        return(
           <div>
-          <li key={item}>
-            the cost code is {index} cost is plij {holder}
-          </li>
+            <h4>Loading</h4>
           </div>
-  
+        )
+      }
+
+      else if(flag===1){
+              console.log("---------Im rendering-------");
+      return (
+          <div>
+            <li key={item}>
+              the cost code is {index} cost is plij {holder[item]}
+            </li>
+          </div>
         );
-         });
-    
-    
-    
+      }
+
+      
     });
-console.log(`this is the costcodeMap ${CostCodeMap}`)
+    console.log(`this is the costcodeMap ${CostCodeMap}`);
     return (
       <ul>
         <div>

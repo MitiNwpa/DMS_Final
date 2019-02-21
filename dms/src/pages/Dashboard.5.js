@@ -6,7 +6,7 @@ const db = firebase.firestore();
 const refDoc = db.collection("docket");
 const refActivity = db.collection("activity");
 let addd = 9699;
-var holder;
+let holder;
 
 class Dashboard extends React.Component {
   constructor() {
@@ -67,11 +67,9 @@ class Dashboard extends React.Component {
       });
       console.log(`cc aray is ${ccArray}`);
 
-      this.setState(
-        {
-          ccArray
-        }
-      );
+      this.setState({
+        ccArray
+      });
     });
   }
 
@@ -92,27 +90,25 @@ class Dashboard extends React.Component {
           }, 0);
           holder = addd;
           console.log(addd);
-          console.log(`the holder is ${holder}`);
-          console.log(`the cost code is step 2 ${index}`);
           console.log(`the key is ${item}`);
+          console.log(`the cost code is step 2 ${index}`);
+          console.log(`the holder is ${holder}`);
         });
 
       promise.then(() => {
         console.log("---------END-------");
-        return (
-          <div>
-          <li key={item}>
-            the cost code is {index} cost is plij {holder}
-          </li>
-          </div>
-  
-        );
       });
-    
-    
-    
+
+      return (
+          <div>
+            <li key={item}>
+              the cost code is {index} cost is plij {holder}
+            </li>
+          </div>
+        );
+      
     });
-console.log(`this is the costcodeMap ${CostCodeMap}`)
+    console.log(`this is the costcodeMap ${CostCodeMap}`);
     return (
       <ul>
         <div>
