@@ -70,6 +70,9 @@ class Dashboard extends React.Component {
       this.setState(
         {
           ccArray
+        },
+        () => {
+          this.mapCostCodes();
         }
       );
     });
@@ -85,7 +88,7 @@ class Dashboard extends React.Component {
           snapshot.forEach(doc => {
             test.push(doc.data().payAmount);
           });
-          console.log("---------START-------");
+
           console.log(test);
           addd = test.reduce(function(a, b) {
             return a + b;
@@ -95,24 +98,22 @@ class Dashboard extends React.Component {
           console.log(`the holder is ${holder}`);
           console.log(`the cost code is step 2 ${index}`);
           console.log(`the key is ${item}`);
-        });
+        },(()=>{
+          console.log(`am i infinite`);
+          this.setState({
+            loading: false
+          });
+          console.log(`should happen`);
+        }));
 
-      promise.then(() => {
-        console.log("---------END-------");
-        return (
-          <div>
-          <li key={item}>
-            the cost code is {index} cost is plij {holder}
-          </li>
-          </div>
-  
-        );
-         });
-    
-    
-    
+      console.log(`i am returning${index}`);
+      return (
+        <li key={item}>
+          the cost code is {index} cost is plij {holder}
+        </li>
+      );
     });
-console.log(`this is the costcodeMap ${CostCodeMap}`)
+   
     return (
       <ul>
         <div>
@@ -125,25 +126,26 @@ console.log(`this is the costcodeMap ${CostCodeMap}`)
 
   render() {
     console.log(`RENDERING`);
-    // if (this.state.loading) {
-    //   return (
-    //     <div>
-    //       <h4>Loading this bitch</h4>
-    //     </div>
-    //   );
-    // } else {
-    return (
-      <div>
-        <Navigation pageName="Dashboard" />
+    if (this.state.loading) {
+      return (
         <div>
-          <h1>SUM :$ {this.state.sum}</h1>
-          <p>This is the Dashboard 1234</p>
-          {/* <button onClick={this.mapCostCodes} /> */}
-          <div>{this.mapCostCodes()}</div>
-          {/* {console.log(`holder issssssss ${holder}`)} */}
+          <h4>Loading this bitch</h4>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <Navigation pageName="Dashboard" />
+          <div>
+            <h1>SUM :$ {this.state.sum}</h1>
+            <p>This is the Dashboard 1234</p>
+            {/* <button onClick={this.mapCostCodes} /> */}
+            <div>{this.mapCostCodes()}</div>
+            {console.log(`holder issssssss ${holder}`)}
+          </div>
+        </div>
+      );
+    }
   }
 }
 

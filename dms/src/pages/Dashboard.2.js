@@ -15,16 +15,16 @@ class Dashboard extends React.Component {
       sumArray: [],
       ccArray: [],
       sum: 0,
-      testSum: 10,
-      loading: true
+      testSum: 10
     };
 
     this.calcSum = this.calcSum.bind(this);
     this.listCostCodes = this.listCostCodes.bind(this);
     this.mapCostCodes = this.mapCostCodes.bind(this);
+    this.clear = this.clear.bind(this);
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.calcSum();
   }
 
@@ -51,9 +51,7 @@ class Dashboard extends React.Component {
           {
             sum: finalSum
           },
-          () => {
-            this.listCostCodes();
-          }
+          this.listCostCodes
         );
       });
   }
@@ -65,15 +63,26 @@ class Dashboard extends React.Component {
       snapshot.forEach(doc => {
         ccArray.push(doc.data().ccNumber);
       });
-      console.log(`cc aray is ${ccArray}`);
 
-      this.setState(
-        {
-          ccArray
-        }
-      );
+      this.setState({
+        ccArray
+      });
     });
   }
+
+  clear() {
+    this.setState({
+      tempArray: 0,
+      tempSum: 0
+    });
+  }
+
+
+  mapMe(){
+
+  }
+
+
 
   mapCostCodes() {
     const CostCodeMap = this.state.ccArray.map((index, item) => {
@@ -85,7 +94,7 @@ class Dashboard extends React.Component {
           snapshot.forEach(doc => {
             test.push(doc.data().payAmount);
           });
-          console.log("---------START-------");
+
           console.log(test);
           addd = test.reduce(function(a, b) {
             return a + b;
@@ -95,24 +104,17 @@ class Dashboard extends React.Component {
           console.log(`the holder is ${holder}`);
           console.log(`the cost code is step 2 ${index}`);
           console.log(`the key is ${item}`);
+
         });
 
-      promise.then(() => {
-        console.log("---------END-------");
-        return (
-          <div>
+      console.log(`the cost code is step 2 ${index}`);
+      return (
           <li key={item}>
             the cost code is {index} cost is plij {holder}
           </li>
-          </div>
-  
-        );
-         });
-    
-    
-    
+       );
     });
-console.log(`this is the costcodeMap ${CostCodeMap}`)
+
     return (
       <ul>
         <div>
@@ -124,23 +126,16 @@ console.log(`this is the costcodeMap ${CostCodeMap}`)
   }
 
   render() {
-    console.log(`RENDERING`);
-    // if (this.state.loading) {
-    //   return (
-    //     <div>
-    //       <h4>Loading this bitch</h4>
-    //     </div>
-    //   );
-    // } else {
+    console.log(`please man the holder is $`);
     return (
       <div>
         <Navigation pageName="Dashboard" />
         <div>
           <h1>SUM :$ {this.state.sum}</h1>
           <p>This is the Dashboard 1234</p>
-          {/* <button onClick={this.mapCostCodes} /> */}
-          <div>{this.mapCostCodes()}</div>
-          {/* {console.log(`holder issssssss ${holder}`)} */}
+          <button onClick={this.mapCostCodes} />
+          {/* <div>{this.mapCostCodes()}</div> */}
+          {console.log(`holder issssssss ${holder}`)}
         </div>
       </div>
     );
