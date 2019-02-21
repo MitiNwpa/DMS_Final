@@ -5,10 +5,6 @@ import Navigation from "./Navigation";
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
 const refActivity = db.collection("activity");
-let addd=9699;
-var holder;
-
-
 
 class Dashboard extends React.Component {
   constructor() {
@@ -17,20 +13,20 @@ class Dashboard extends React.Component {
       sumArray: [],
       ccArray: [],
       sum: 0,
-      testSum: 10
+      tempSum: 0,
+      tempArray:[]
     };
 
     this.calcSum = this.calcSum.bind(this);
     this.listCostCodes = this.listCostCodes.bind(this);
     this.mapCostCodes = this.mapCostCodes.bind(this);
-    this.clear = this.clear.bind(this); 
- 
+    this.clear = this.clear.bind(this);
   }
 
-componentWillMount(){
-  this.calcSum();
-
-}
+  componentDidMount() {
+    this.calcSum();
+    this.listCostCodes();
+  }
 
   calcSum() {
     let sumArray = [];
@@ -51,12 +47,9 @@ componentWillMount(){
           return a + b;
         }, 0);
 
-        this.setState(
-          {
-            sum: finalSum
-          },
-          this.listCostCodes
-        );
+        this.setState({
+          sum: finalSum
+        });
       });
   }
 
@@ -72,7 +65,18 @@ componentWillMount(){
         ccArray
       });
     });
+
+
+    return(
+
+        this.mapCostCodes()
+    
+    )
   }
+
+
+
+
 
   clear() {
     this.setState({
@@ -83,30 +87,36 @@ componentWillMount(){
 
   mapCostCodes() {
     const CostCodeMap = this.state.ccArray.map((index, item) => {
-      const test = [];
+      let tempArray = [];
+
       refDoc
         .where("ccNumber", "==", `${index}`)
         .get()
         .then(snapshot => {
           snapshot.forEach(doc => {
-            test.push(doc.data().payAmount);
+            tempArray.push(doc.data().payAmount);
           });
 
+          this.setState({
+            tempArray,
+            finalSum:[]
+          });
 
-            console.log(test)
-         addd = test.reduce(function(a, b) {
+          let finalSum = tempArray.reduce(function(a, b) {
             return a + b;
           }, 0);
-          holder=addd;
-          console.log(addd);
-          console.log(`the holder is ${holder}`)
+
+          this.setState({
+            tempSum: finalSum,
+            tempArray:[]
+          });
         });
 
       console.log(`the cost code is ${index}`);
       return (
         <div key={item.id} id={item.id}>
           <li key={item.id}>
-            the cost code is {index} cost is plij {holder}
+            the cost code is {index} cost is {this.state.tempSum}
           </li>
         </div>
       );
@@ -123,16 +133,14 @@ componentWillMount(){
   }
 
   render() {
-    console.log(`please man the holder is $`)
     return (
       <div>
         <Navigation pageName="Dashboard" />
         <div>
           <h1>SUM :$ {this.state.sum}</h1>
+
           <p>This is the Dashboard 1234</p>
-          <button onClick={this.mapCostCodes}></button>
-          {/* <div>{this.mapCostCodes}</div> */}
-          {console.log(`holder issssssss ${holder}`)}
+          <div>{this.listCostCodes()}</div>
         </div>
       </div>
     );
