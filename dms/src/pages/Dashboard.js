@@ -21,7 +21,8 @@ class Dashboard extends React.Component {
       loading: true,
       test:[],
       neee:[],
-      flag:0
+      flag:0,
+      random:[1,2,3,4,5,6]
 
     };
 
@@ -36,7 +37,9 @@ class Dashboard extends React.Component {
 
   componentDidMount() {
     this.calcSum();
+    this.calcCost();
   }
+
 
   calcSum() {
     let sumArray = [];
@@ -130,7 +133,7 @@ calcCost(){
     return(
         <div key={item}>
           <li key={item}>
-            the cost code of {index} cost is {holder[item]}  
+            the cost code of {index} cost is {this.state.neee[item]}  
           </li>
         </div>
       );
@@ -178,7 +181,6 @@ this.setState({
           <button type="button" onClick={this.handleClick}>
           cliccck
           </button>
-          {/* <div>{this.mapCostCodes()}</div> */}
           {/* {console.log(`holder issssssss ${holder}`)} */}
         </div>
       </div>
@@ -191,8 +193,11 @@ this.setState({
         <div>
           <h1>SUM :$ {this.state.sum}</h1>
           <p>This is the Dashboard sdfasd</p>
+          <button type="button" onClick={this.calcCost}>
+    refresh
+          </button>
           {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
-          <div>{this.mapCostCodes}</div>
+          <div>{this.mapCostCodes()}</div>
           {/* {console.log(`holder issssssss ${holder}`)} */}
         </div>
       </div>
