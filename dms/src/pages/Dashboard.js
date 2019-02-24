@@ -6,8 +6,7 @@ const db = firebase.firestore();
 const refDoc = db.collection("docket");
 const refActivity = db.collection("activity");
 let addd = 9699;
-const holder=[];
-
+const holder = [];
 
 class Dashboard extends React.Component {
   constructor() {
@@ -15,15 +14,13 @@ class Dashboard extends React.Component {
     this.state = {
       sumArray: [],
       ccArray: [],
-      costArray:[],
+      costArray: [],
       sum: 0,
       testSum: 10,
       loading: true,
-      test:[],
-      neee:[],
-      flag:0,
-      random:[1,2,3,4,5,6]
-
+      test: [],
+      neee: [],
+      flag: 0
     };
 
     this.calcSum = this.calcSum.bind(this);
@@ -31,7 +28,7 @@ class Dashboard extends React.Component {
     this.mapCostCodes = this.mapCostCodes.bind(this);
     this.calcCost = this.calcCost.bind(this);
     this.handleClick = this.handleClick.bind(this);
-
+    this.handleClick_1 = this.handleClick_1.bind(this);
 
   }
 
@@ -39,7 +36,6 @@ class Dashboard extends React.Component {
     this.calcSum();
     this.calcCost();
   }
-
 
   calcSum() {
     let sumArray = [];
@@ -80,77 +76,73 @@ class Dashboard extends React.Component {
       });
       console.log(`cc aray is ${ccArray}`);
 
-      this.setState({
-        ccArray
-      }, ()=> {
-        this.calcCost();
-      });
+      this.setState(
+        {
+          ccArray
+        },
+        () => {
+          this.calcCost();
+        }
+      );
     });
   }
 
+  calcCost() {
+    const CostCodeMap = this.state.ccArray.map((index, item) => {
+      const testy = [];
+      const promise = refDoc
+        .where("ccNumber", "==", `${index}`)
+        .get()
+        .then(snapshot => {
+          snapshot.forEach(doc => {
+            testy.push(doc.data().payAmount);
+            console.log("---------START-------");
 
-calcCost(){
-  const CostCodeMap = this.state.ccArray.map((index, item) => {
+            console.log("i have set the state");
+          });
 
-    const testy = [];
-    const promise = refDoc
-      .where("ccNumber", "==", `${index}`)
-      .get()
-      .then(snapshot => {
-        snapshot.forEach(doc => {
-          testy.push(doc.data().payAmount);
-          console.log("---------START-------");
+          addd = testy.reduce(function(a, b) {
+            return a + b;
+          }, 0);
 
-          console.log("i have set the state")
+          holder[item] = addd;
+          this.setState({
+            neee: holder,
+            CostCodeMap
+          });
+          console.log(`this is the final sum bruhssss ${this.state.neee}`);
+          console.log(addd);
+          console.log(`the key is ${item}`);
+          console.log(`the cost code is step 2 ${index}`);
+          console.log(`the holder cost at ${item} is ${holder[item]}`);
+          // console.log(`neee at is ${this.state.neee.index[3]}`);
         });
 
-        addd = testy.reduce(function(a, b) {
-          return a + b;
-        }, 0);
-
-        holder[item] = addd;
-        this.setState({
-          neee:holder,
-          CostCodeMap
-        })
-        console.log(`this is the final sum bruhssss ${this.state.neee}`)
-        console.log(addd);
-        console.log(`the key is ${item}`);
-        console.log(`the cost code is step 2 ${index}`);
-        console.log(`the holder cost at ${item} is ${holder[item]}`);
-        // console.log(`neee at is ${this.state.neee.index[3]}`);
-
+      promise.then(() => {
+        console.log("---------END-------");
       });
 
-    promise.then(() => {
-      console.log("---------END-------");
+      console.log("---------Im rendering-------");
 
-      
-    });
-
-    console.log("---------Im rendering-------");
-
-    return(
+      return (
         <div key={item}>
           <li key={item}>
-            the cost code of {index} cost is {this.state.neee[item]}  
+            the cost code of {index} cost is {this.state.neee[item]}
           </li>
         </div>
       );
-          
-  });
+    });
 
-  this.setState({
-    CostCodeMap
-  })
-
+    this.setState({
+      CostCodeMap
+    });
   }
 
   mapCostCodes() {
-  //    const hello=[]
-  //  const mapper = this.state.CostCodeMap.map((index,item)=>{
+    //    const hello=[]
+    //  const mapper = this.state.CostCodeMap.map((index,item)=>{
 
-  //  })
+    //  })
     return (
       <ul>
         <div>
@@ -161,56 +153,74 @@ calcCost(){
     );
   }
 
-  handleClick = ()=>{
-console.log("working");
-this.setState({
-  flag:1
-})
-  }
+  handleClick = () => {
+    console.log("working");
+    this.setState({
+      flag: 1
+    });
+    
+  };
+  handleClick_1= () => {
+    console.log("working");
+    this.setState({
+      flag: 2
+    });
+    this.calcCost();
+  
+  };
 
   render() {
     console.log(`DOM UPDATE`);
 
-    if(this.state.flag == 0){
+    if (this.state.flag == 0) {
       return (
-      <div>
-        <Navigation pageName="Dashboard" />
         <div>
-          <h1>SUM :$ {this.state.sum}</h1>
-          <p>This is the Dashboard sdfasd</p>
-          <button type="button" onClick={this.handleClick}>
-          cliccck
-          </button>
-          {/* {console.log(`holder issssssss ${holder}`)} */}
+          <Navigation pageName="Dashboard" />
+          <div>
+            <h1>SUM :$ {this.state.sum}</h1>
+            <p>This is the Dashboard sdfasd</p>
+            <button type="button" onClick={this.handleClick}>
+              Project
+            </button>
+            {/* {console.log(`holder issssssss ${holder}`)} */}
+          </div>
         </div>
-      </div>
-    )
+      );
     }
-    else{
+    if (this.state.flag == 1) {
       return (
-      <div>
-        <Navigation pageName="Dashboard" />
         <div>
-          <h1>SUM :$ {this.state.sum}</h1>
-          <p>This is the Dashboard sdfasd</p>
-          <button type="button" onClick={this.calcCost}>
-    refresh
-          </button>
-          {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
-          <div>{this.mapCostCodes()}</div>
-          {/* {console.log(`holder issssssss ${holder}`)} */}
+          <Navigation pageName="Dashboard" />
+          <div>
+            <h1>SUM :$ {this.state.sum}</h1>
+            <p>This is the Dashboard sdfasd</p>
+            <button type="button" onClick={this.handleClick_1}>
+              Cost to Date
+            </button>
+            {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
+            {/* <div>{this.mapCostCodes()}</div> */}
+            {/* {console.log(`holder issssssss ${holder}`)} */}
+          </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      return (
+        <div>
+          <Navigation pageName="Dashboard" />
+          <div>
+            <h1>SUM :$ {this.state.sum}</h1>
+            <p>This is the Dashboard sdfasd</p>
+            <button type="button" onClick={this.calcCost}>
+              refresh
+            </button>
+            {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
+            <div>{this.mapCostCodes()}</div>
+            {/* {console.log(`holder issssssss ${holder}`)} */}
+          </div>
+        </div>
+      );
     }
-
-
-
-
-
-    
   }
 }
-
 
 export default Dashboard;

@@ -133,14 +133,14 @@ class DocketDetailsApproval extends React.Component {
               </button>
      
             <button
-              className="reject"
+              className="rejected"
               value={this.state.id}
               onClick={this.rejectDocket}
             >
               X
             </button>
            
-            <button className="approve"
+            <button className="approved"
               value={this.state.id}
               onClick={this.approveDocket}
             >

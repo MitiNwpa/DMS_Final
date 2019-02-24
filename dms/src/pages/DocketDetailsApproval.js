@@ -142,18 +142,18 @@ class DocketDetailsApproval extends React.Component {
           <br />
           <div className="approveButtons">
              <button
-              className="reject"
+              className="rejected"
               name="status"
-              value="reject"
+              value="rejected"
               onClick={this.sendForConfirmation}
             >
               X
             </button>
 
             <button
-              className="approve"
+              className="approved"
               name="status"
-              value="approve"
+              value="approvd"
               onClick={this.sendForConfirmation}
             >
               {" "}
