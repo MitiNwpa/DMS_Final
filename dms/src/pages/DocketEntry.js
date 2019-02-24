@@ -211,6 +211,11 @@ class DocketEntry extends Component {
             <button onClick={this.calc}>
               Agree to terms
             </button>
+            <button>
+             test
+            </button>
+      
+
           {/* </form> */}
           <Link to="/confirm">
             <button>Send</button>

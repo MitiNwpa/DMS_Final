@@ -1,19 +1,15 @@
 html {
-  font-family: "Roboto", sans-serif;
-}
+  font-family: 'Roboto' , sans-serif; }
 
 body {
   margin: 0;
   padding: 0;
   margin-top: 60px;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
 
 li {
   background-color: rgba(171, 207, 248, 0.356);
@@ -21,33 +17,28 @@ li {
   list-style-type: none;
   padding: 5px;
   border-radius: 15px;
-  padding: 15px;
-}
+  padding: 15px; }
 
 ul {
   margin: 0;
   padding: 0;
-  /* text-align: center; */
-}
+  /* text-align: center; */ }
 
 h4 {
   margin-top: 20px;
-  padding: 0;
-}
+  padding: 0; }
 
-input[type="time"] {
+input[type=time] {
   padding: 5px;
   border: 1px solid #0059ff;
   -webkit-border-radius: 6px;
   border-radius: 6px;
   margin-left: auto;
-  margin-right: 0;
-}
+  margin-right: 0; }
 
 input {
   border: none;
-  background-color: rgba(0, 0, 255, 0.082);
-}
+  background-color: rgba(0, 0, 255, 0.082); }
 
 button {
   display: inline-block;
@@ -63,21 +54,18 @@ button {
   border-radius: 15px;
   cursor: pointer;
   text-align: center;
-  /* box-shadow: 2px 2px 4px rgb(138, 143, 221); */
-}
+  /* box-shadow: 2px 2px 4px rgb(138, 143, 221); */ }
 
 label {
   font-size: 12px;
   float: left;
   padding-left: 17px;
   margin-top: 5px;
-  margin-bottom: 3px;
-}
+  margin-bottom: 3px; }
 
 #root {
   position: relative;
-  display: block;
-}
+  display: block; }
 
 /* _                 _       
   | |               (_)      
@@ -93,17 +81,14 @@ input.login {
   border-radius: 15px;
   height: 30px;
   background-color: rgba(0, 0, 0, 0.082);
-  margin-bottom: 10px;
-}
+  margin-bottom: 10px; }
 
 input.login::-webkit-input-placeholder {
   font-size: 12px;
-  padding: 10px;
-}
+  padding: 10px; }
 
-input[type="text"] {
-  padding-left: 10px;
-}
+input[type=text] {
+  padding-left: 10px; }
 
 div.login {
   width: auto;
@@ -117,35 +102,30 @@ div.login {
   height: 40%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-}
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
 
 h4#login {
   font-weight: 1000;
   font-size: 18px;
   margin: 0;
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 h5 {
   margin: 0;
   padding: 0;
-  font-size: 15px;
-}
+  font-size: 15px; }
 
 h6 {
   margin: 0;
   padding: 0;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 label.login {
   font-size: 10px;
   float: left;
   padding-left: 17px;
   margin-top: 5px;
-  margin-bottom: 3px;
-}
+  margin-bottom: 3px; }
 
 /* _   _ ________  ___ _____ 
   | | | |  _  |  \/  ||  ___|
@@ -167,13 +147,11 @@ div.home {
   height: 40%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-}
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
 
 h4 {
   color: black;
-  font-size: 20px;
-}
+  font-size: 20px; }
 
 /* ___       _   _       _ _         
   / _ \     | | (_)     (_) |        
@@ -199,8 +177,7 @@ div.docketentry {
   height: 60%;
   position: relative;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.829);
-}
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.829); }
 
 input.breaktime {
   margin-left: auto;
@@ -212,8 +189,7 @@ input.breaktime {
   padding: 5px;
   border: 1px solid #0059ff;
   -webkit-border-radius: 6px;
-  border-radius: 6px;
-}
+  border-radius: 6px; }
 
 /* ______           _        _     _     _     _   
   |  _  \         | |      | |   | |   (_)   | |  
@@ -222,22 +198,18 @@ input.breaktime {
   | |/ / (_) | (__|   <  __/ |_  | |___| \__ \ |_ 
   |___/ \___/ \___|_|\_\___|\__| \_____/_|___/\__| */
 li.pending {
-  background-color: rgba(225, 228, 46, 0.445);
-}
+  background-color: rgba(225, 228, 46, 0.445); }
 
 li.approved {
-  background-color: #5cc25c;
-}
+  background-color: #5cc25c; }
 
 li.rejected {
-  background-color: #f51313;
-}
+  background-color: #f51313; }
 
 button.delete {
   width: 10%;
   background-color: #e02f2fb4;
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 /* ______           _        _    ______     _        _ _     
   |  _  \         | |      | |   |  _  \   | |      (_) |    
@@ -259,8 +231,7 @@ div.docketDetails {
   height: 40%;
   position: absolute;
   background-color: white;
-  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329);
-}
+  box-shadow: 2px 2px 10px rgba(195, 195, 195, 0.329); }
 
 /*______ _____ _____  _   __ _____ _____  ______ _____ _____ ___  _____ _      _____    ___  __________________ _____  _   _  ___   _     
   |  _  \  _  /  __ \| | / /|  ___|_   _| |  _  \  ___|_   _/ _ \|_   _| |    /  ___|  / _ \ | ___ \ ___ \ ___ \  _  || | | |/ _ \ | |    
@@ -271,13 +242,11 @@ div.docketDetails {
    */
 div.approveButtons {
   text-align: center;
-  display: inline-flex;
-}
+  display: inline-flex; }
 
 h3 {
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 /* 
     ___  __________________ _____  _   _  ___   _     
@@ -295,8 +264,7 @@ h3 {
 div.approval {
   margin: 0;
   padding: 0px 20px;
-  text-align: left;
-}
+  text-align: left; }
 
 button {
   display: inline-block;
@@ -313,47 +281,39 @@ button {
   cursor: pointer;
   text-align: center;
   transition: all 0.5s ease-out;
-  box-shadow: 2px 2px 4px #8a8fdd;
-}
-button#login {
-  background-position: center;
-  background: #0069ed;
-}
-button#login:hover {
-  background-position: right;
-  box-shadow: 12px 12px 40px #8a8fdd;
-}
-button.list {
-  width: 20%;
-}
-button.reject {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: red;
-}
-button.approve {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: green;
-}
-button.pending {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: #dfdf5e;
-}
-button.view {
-  width: 20%;
-}
+  box-shadow: 2px 2px 4px #d3d6fc; }
+  button#login {
+    background-position: center;
+    background: #0069ed; }
+    button#login:hover {
+      background-position: right;
+      box-shadow: 12px 12px 40px #8a8fdd; }
+  button.list {
+    width: 20%; }
+  button.reject {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+    background-color: red; }
+  button.approve {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+    background-color: green; }
+  button.pending {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin: 5px;
+    background-color: #dfdf5e; }
+  button.view {
+    width: 20%; }
 
 .nav {
   height: 60px;
-  background-color: #3d3cf3;
+  background-color: #3D3Cf3;
   color: white;
   display: flex;
   flex-direction: row;
@@ -363,23 +323,20 @@ button.view {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 200;
-}
-.nav_sidebar {
-  position: absolute;
-  align: center;
-  align-items: center;
-  float: left;
-  /* width: 33.33%; */
-  margin-left: 50%;
-  text-align: center;
-  transform: translateX(-50%);
-  z-index: 200;
-}
-.nav_sidebar h4 {
-  color: white;
-  z-index: 200;
-}
+  z-index: 200; }
+  .nav_sidebar {
+    position: absolute;
+    align: center;
+    align-items: center;
+    float: left;
+    /* width: 33.33%; */
+    margin-left: 50%;
+    text-align: center;
+    transform: translateX(-50%);
+    z-index: 200; }
+  .nav_sidebar h4 {
+    color: white;
+    z-index: 200; }
 
 /* Individual item */
 .bm-item {
@@ -388,13 +345,11 @@ button.view {
   text-decoration: none;
   margin-bottom: 10px;
   color: #d1d1d1;
-  transition: color 0.2s;
-}
+  transition: color 0.2s; }
 
 /* Change color on hover */
 .bm-item:hover {
-  color: white;
-}
+  color: white; }
 
 /* The rest copied directly from react-burger-menu docs */
 /* Position and sizing of burger button */
@@ -403,46 +358,53 @@ button.view {
   width: 30px;
   height: 25px;
   left: 15px;
-  top: 15px;
-}
+  top: 15px; }
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #ffffff;
-}
+  background: #ffffff; }
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
   height: 24px;
-  width: 24px;
-}
+  width: 24px; }
 
 /* Color/shape of close button cross */
 .bm-cross {
   position: fixed;
   width: 30px;
   height: 25px;
-  background: #bdc3c7;
-}
+  background: #bdc3c7; }
 
 /* General sidebar styles */
 .bm-menu {
   background: #373a47;
   padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
-}
+  font-size: 1.15em; }
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: #373a47;
-}
+  fill: #373a47; }
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
-}
+  color: #b8b7ad; }
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+  background: rgba(0, 0, 0, 0.3); }
+
+.sig {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  width: 200px; }
+  .sig__Canvas {
+    transform: translate(-50%);
+    position: absolute;
+    display: block;
+    background-color: purple;
+    height: 200px;
+    margin-top: 10px;
+    border: 2px solid black; }

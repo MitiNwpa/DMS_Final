@@ -14,7 +14,6 @@ button {
   text-align: center;
   transition: all 0.5s ease-out;
   box-shadow: 2px 2px 4px rgb(211, 214, 252);
-
   &#login {
     @include button_bg;
 

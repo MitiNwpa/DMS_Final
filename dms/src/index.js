@@ -19,6 +19,7 @@ import Dashboard from './pages/Dashboard';
 import TimeEnter from './pages/TimeEnter';
 import Confirmation from './pages/Confirmation';
 import ListDocketsEngineer from './pages/ListDocketsEngineer';
+import BottomNavigation from './pages/BottomNavigation';
 
 
 
@@ -41,7 +42,7 @@ ReactDOM.render(
             <Confirmation path='/confirmation/:userID/:status' />
             <ListDocketsEngineer path='/listdocketsengineer' />
         </Router>
-
+<BottomNavigation />
     </div>
 
 , document.getElementById('root'));
