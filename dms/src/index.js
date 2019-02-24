@@ -27,6 +27,10 @@ ReactDOM.render(
 
     <div>
         {/* <Navigation /> */}
+    <div>
+        <h1>HRISHISHISHISHISHISHSIHSIHSIHS</h1>\
+        <img src="..\img\hotel-1.jpg" alt="" className=""/>
+    </div>
     
         <Router>
             <Login path='/' />
@@ -42,7 +46,6 @@ ReactDOM.render(
             <Confirmation path='/confirmation/:userID/:status' />
             <ListDocketsEngineer path='/listdocketsengineer' />
         </Router>
-<BottomNavigation />
     </div>
 
 , document.getElementById('root'));

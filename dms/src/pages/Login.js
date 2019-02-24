@@ -22,7 +22,6 @@ constructor(props){
   render(){
     return(
       <div className='loginbg'>
-           <Navigation pageName="JHG DMS"/>
             <div className='login'>
             
 

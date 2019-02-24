@@ -1,11 +1,11 @@
+@import "base/base";
+@import "base/typography";
+
 @import "utils/colors.scss";
 @import "utils/functions";
 @import "utils/mixins";
 @import "utils/variables";
 
-@import "base/typography";
-
-@import "components/bottom-navigation";
 @import "components/buttons";
 @import "components/navigations";
 @import "components/sidebar";
@@ -19,4 +19,6 @@
 @import "pages/listDockets";
 @import "pages/login";
 @import "pages/siteSelect";
+
+
 

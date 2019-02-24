@@ -1,31 +1,25 @@
-.nav {
-  height: 60px;
-  background-color: $c-blue-dark;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  /* overflow: hidden; */
-  /* background-color: #333; */
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 200;
-
-  &_sidebar {
-    position: absolute;
-    align: center;
+.navigation {
+    background-color: red;
+    // overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 260px;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    flex: 1;
     align-items: center;
-    float: left;
-    /* width: 33.33%; */
-    margin-left: 50%;
-    text-align: center;
-    transform: translateX(-50%);
-    z-index: 200;
-  }
-  &_sidebar h4 {
-    color: white;
-    z-index: 200;
-  }
+    justify-content: space-around;
+    border-radius: 10px 10px 0 0;
+    border-top: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 -1rem 3rem rgba(97, 171, 255, 0.3);
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+// fill: white;
+        // background-color: blue;
+    }
 }
+

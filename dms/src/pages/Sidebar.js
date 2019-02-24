@@ -3,11 +3,6 @@ import React, { Component } from 'react';
 import { Router, navigate ,Link } from '@reach/router';
 import firebase from './firestore';
 import { slide as Menu } from "react-burger-menu";
-
-import './burger.css'
-
-
-
 class Sidebar extends Component{
 
   
