@@ -13,19 +13,29 @@
     border-bottom-right-radius:8%;
     z-index: -1;
 
+    &__icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        fill: $cw;
+    }
+
+    &__logo-box{
+        position:absolute;
+        top:2rem;
+        left:2rem;
+
+    }
+    &__setting-box{
+        position:absolute;
+        top:2rem;
+        right:2rem;
+    }
+
     &__heading{
         margin-top: -3rem;
         text-transform: uppercase;
         font-weight: 700;
-        letter-spacing: .2rem;
-        position:relative;
-
-        &-logo-box{
-            position:absolute;
-            top:2rem;
-            left:2rem;
-        }
- 
+        letter-spacing: .2rem; 
     }
 }
 
@@ -46,7 +56,7 @@
     border-radius: 20px 20px 0 0;
     overflow: hidden;
     // border-top: 2px solid rgb(255, 255, 255);
-    // box-shadow: 0 -1rem 3rem rgba(97, 171, 255, 0.3);
+    box-shadow: 0 -.01rem 2rem rgba($cs, .1);
 
     &__container{
         flex: 1;
