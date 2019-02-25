@@ -42,31 +42,38 @@ class Home extends Component {
             </h2>
           </div>
           <div className="home__calendar" />
+          <div className="home__calendar" /> <div className="home__calendar" />{" "}
+          <div className="home__calendar" /> <div className="home__calendar" />{" "}
+          <div className="home__calendar" /> <div className="home__calendar" />{" "}
+          <div className="home__calendar" /> <div className="home__calendar" />{" "}
+          <div className="home__calendar" />
 
+          
           <div className="home__snapshot">
-            <div className="home__snapshot-heading">Docket Status</div>
+            {/* <div className="home__snapshot-heading">Docket Status</div> */}
 
             <div className="home__snapshot-status-box">
               <div className="home__snapshot-status-box-circle">
-                <h5 className="home__snapshot-status-box-circle-label">8</h5>
-                <span className="home__snapshot-status-box-circle-approved" />
+                <span className="home__snapshot-status-box-circle-shape approved">
+                  <h5 className="home__snapshot-status-box-circle-label">12</h5>
+                </span>
               </div>
+
               <h4 className="home__snapshot-status-box-label">Approved</h4>
             </div>
-
             <div className="home__snapshot-status-box">
               <div className="home__snapshot-status-box-circle">
-                <h5 className="home__snapshot-status-box-circle-label">4</h5>
-                <span className="home__snapshot-status-box-circle-pending" />
+                <span className="home__snapshot-status-box-circle-shape pending">
+                  <h5 className="home__snapshot-status-box-circle-label">8</h5>
+                </span>
               </div>
 
               <h4 className="home__snapshot-status-box-label">Pending</h4>
             </div>
-
             <div className="home__snapshot-status-box">
               <div className="home__snapshot-status-box-circle">
-                <span className="home__snapshot-status-box-circle-rejected">
-                  <h5 className="home__snapshot-status-box-circle-label">2</h5>
+                <span className="home__snapshot-status-box-circle-shape rejected">
+                  <h5 className="home__snapshot-status-box-circle-label">3</h5>
                 </span>
               </div>
 
