@@ -51,7 +51,6 @@ class Home extends Component {
                 <h5 className="home__snapshot-status-box-circle-label">8</h5>
                 <span className="home__snapshot-status-box-circle-approved" />
               </div>
-              
               <h4 className="home__snapshot-status-box-label">Approved</h4>
             </div>
 
