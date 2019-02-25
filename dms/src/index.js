@@ -25,13 +25,7 @@ import BottomNavigation from './pages/BottomNavigation';
 
 ReactDOM.render(
 
-    <div>
-        {/* <Navigation /> */}
-    <div>
-        <h1>HRISHISHISHISHISHISHSIHSIHSIHS</h1>\
-        <img src="..\img\hotel-1.jpg" alt="" className=""/>
-    </div>
-    
+    <div>  
         <Router>
             <Login path='/' />
             <Home path='/home' />
