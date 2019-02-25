@@ -1,59 +1,59 @@
-button {
-  display: inline-block;
-  width: 60%;
-  border: none;
-  margin-top: 10px;
-  text-decoration: none;
-  background: #0069ed;
-  color: #ffffff;
-  font-family: sans-serif;
-  font-size: 14px;
-  height: 30px;
-  border-radius: 15px;
-  cursor: pointer;
-  text-align: center;
-  transition: all 0.5s ease-out;
-  box-shadow: 2px 2px 4px rgb(211, 214, 252);
-  &#login {
-    @include button_bg;
+// button {
+//   display: inline-block;
+//   width: 60%;
+//   border: none;
+//   margin-top: 10px;
+//   text-decoration: none;
+//   background: #0069ed;
+//   color: #ffffff;
+//   font-family: sans-serif;
+//   font-size: 14px;
+//   height: 30px;
+//   border-radius: 15px;
+//   cursor: pointer;
+//   text-align: center;
+//   transition: all 0.5s ease-out;
+//   box-shadow: 2px 2px 4px rgb(211, 214, 252);
+//   &#login {
+//     @include button_bg;
 
-    &:hover {
-      background-position: right;
-      box-shadow: 12px 12px 40px rgb(138, 143, 221);
+//     &:hover {
+//       background-position: right;
+//       box-shadow: 12px 12px 40px rgb(138, 143, 221);
 
-      // background: #0069ed;
-    }
-  }
-&.list {
-  width: 20%;
-  // @include button_bg;
-}
+//       // background: #0069ed;
+//     }
+//   }
+// &.list {
+//   width: 20%;
+//   // @include button_bg;
+// }
 
-&.reject {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: red;
-}
-&.approve {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: green;
-}
-&.pending {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  margin: 5px;
-  background-color: rgb(223, 223, 94);
-}
-&.view {
-  width: 20%;
-}
+// &.reject {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   margin: 5px;
+//   background-color: red;
+// }
+// &.approve {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   margin: 5px;
+//   background-color: green;
+// }
+// &.pending {
+//   width: 50px;
+//   height: 50px;
+//   border-radius: 25px;
+//   margin: 5px;
+//   background-color: rgb(223, 223, 94);
+// }
+// &.view {
+//   width: 20%;
+// }
  
-}
+// }
 
 
