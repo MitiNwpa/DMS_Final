@@ -17,6 +17,39 @@ body {
   margin-top: 14.5rem;
   margin-bottom: 8.5rem; }
 
+.welcome {
+  overflow: hidden;
+  z-index: 10001;
+  height: 8rem;
+  top: 6.5rem;
+  width: 90%;
+  background-color: #fff;
+  padding: 0.3rem;
+  border-radius: 8px;
+  box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; }
+  .welcome-text {
+    font-size: 1.7rem;
+    font-weight: 500; }
+    .welcome-text-color {
+      font-weight: 700;
+      color: #0099ff; }
+
+.list {
+  height: 5rem;
+  margin-top: 2.5rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; }
+
 .navigation-heading {
   display: flex;
   height: 10rem;
@@ -114,6 +147,21 @@ body {
     height: 200px;
     margin-top: 10px;
     border: 2px solid black; }
+
+.activity {
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .activity__heading {
+    margin-top: 2.5rem; }
+  .activity__container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
 
 .home {
   z-index: 5000;

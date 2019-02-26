@@ -6,10 +6,12 @@
 @import "base/base";
 @import "base/typography";
 
+@import "components/list";
 @import "components/buttons";
 @import "components/navigations";
 @import "components/sidebar";
 @import "components/input";
+
 
 @import "pages/activity";
 @import "pages/activitySelection";

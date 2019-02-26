@@ -21,3 +21,31 @@ body {
     margin-bottom: 8.5rem;
   
   }
+
+
+
+  .welcome {
+    overflow: hidden;
+    z-index: 10001;
+    height: 8rem;
+    top: 6.5rem;
+    width: 90%;
+    background-color: $cw;
+    padding: 0.3rem;
+    border-radius: 8px;
+    box-shadow: $bxfull;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+
+    &-text {
+      // padding-left: 2rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      &-color {
+        font-weight: 700;
+        color: $cpl;
+      }
+    }
+  }
