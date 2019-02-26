@@ -26,7 +26,20 @@
   }
   &__border {
     width: 0.5rem;
-    background-color: $cgreen;
+    background-color: $cpl;
+
+    &-pending{
+      width: 0.5rem;
+      background-color: $cyellow;
+    }
+    &-approved{
+      width: 0.5rem;
+      background-color: $cgreen;
+    }
+    &-rejected{
+      width: 0.5rem;
+      background-color: $cred;
+    }
   }
 
   &__line {

@@ -60,21 +60,31 @@ class ListDockets extends Component {
           <li
             key={item.id}
             id={item.id}
-            className={list + " " + "list__" + item.status}
+            className="list"
+            onClick={() => navigate(`/docketdetails/${item.id}`)}
           >
-            <div>
-              <h5>Company Name : {item.companyName}</h5>
-              <h5>Docket Number : {item.docketNumber}</h5>
-              <h5>Activity : {item.activityName}</h5>
-              <h5>Approval : {item.status}</h5>
+            <span class="list__border-pending" />
+            <div className="list__container">
+              <span className="list__line">
+                <span class="list__key">Company :</span>
+                <span class="list__value">{item.companyName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Docket :</span>
+                <span class="list__value">{item.docketNumber}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Activity :</span>
+                <span class="list__value">{item.activityName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Status :</span>
+                <span class="list__value">{item.status}</span>
+              </span>
             </div>
-            <button
-              className="btn__list"
-              onClick={() => navigate(`/docketdetails/${item.id}`)}
-            >
-              <div />
-              View
-            </button>
           </li>
         );
       }
@@ -86,20 +96,31 @@ class ListDockets extends Component {
           <li
             key={item.id}
             id={item.id}
-            className={list + " " + "list__" + item.status}
+            className="list"
+            onClick={() => navigate(`/docketdetails/${item.id}`)}
           >
-            <div>
-              <h5>Company Name : {item.companyName}</h5>
-              <h5>Activity : {item.activityName}</h5>
-              <h5>Approval : {item.status}</h5>
+            <span class="list__border-approved" />
+            <div className="list__container">
+              <span className="list__line">
+                <span class="list__key">Company :</span>
+                <span class="list__value">{item.companyName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Docket :</span>
+                <span class="list__value">{item.docketNumber}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Activity :</span>
+                <span class="list__value">{item.activityName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Status :</span>
+                <span class="list__value">{item.status}</span>
+              </span>
             </div>
-            <button
-              className="btn__list"
-              onClick={() => navigate(`/docketdetails/${item.id}`)}
-            >
-              <div />
-              View
-            </button>
           </li>
         );
       }
@@ -111,20 +132,31 @@ class ListDockets extends Component {
           <li
             key={item.id}
             id={item.id}
-            className={list + " " + "list__" + item.status}
+            className="list"
+            onClick={() => navigate(`/docketdetails/${item.id}`)}
           >
-            <div>
-              <h5>Company Name : {item.companyName}</h5>
-              <h5>Activity : {item.activityName}</h5>
-              <h5>Approval : {item.status}</h5>
+            <span class="list__border-rejected" />
+            <div className="list__container">
+              <span className="list__line">
+                <span class="list__key">Company :</span>
+                <span class="list__value">{item.companyName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Docket :</span>
+                <span class="list__value">{item.docketNumber}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Activity :</span>
+                <span class="list__value">{item.activityName}</span>
+              </span>
+
+              <span className="list__line">
+                <span class="list__key">Status :</span>
+                <span class="list__value">{item.status}</span>
+              </span>
             </div>
-            <button
-              className="btn__list"
-              onClick={() => navigate(`/docketdetails/${item.id}`)}
-            >
-              <div />
-              View
-            </button>
           </li>
         );
       }
@@ -133,16 +165,31 @@ class ListDockets extends Component {
     return (
       <div class="listdockets__container-main">
         <div class="listdockets__container">
-          <h4>Pending</h4>
+
+          <div class="title__container">
+            <h4 className="title__text">Pending</h4>
+            <span class="title__line"></span>
+          </div>
+
           {PendingDocket}
         </div>
 
         <div class="listdockets__container">
-          <h4>Approved</h4>
+
+        <div class="title__container">
+            <h4 className="title__text">Approved</h4>
+            <span class="title__line"></span>
+          </div>
           {ApprovedDocket}
         </div>
+
+
         <div class="listdockets__container">
-          <h4>Rejected</h4>
+
+        <div class="title__container">
+            <h4 className="title__text">Rejected</h4>
+            <span class="title__line"></span>
+          </div>
           {RejectedDocket}
         </div>
       </div>
@@ -166,8 +213,8 @@ class ListDockets extends Component {
             <h2 class="welcome-text">
               Welcome, <span class="welcome-text-color">Poop</span>
             </h2>
-          </div>      
-          {this.renderDockets()}     
+          </div>
+          {this.renderDockets()}
         </div>
       </div>
     );
