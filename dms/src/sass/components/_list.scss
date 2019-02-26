@@ -1,12 +1,43 @@
-.list{
-    margin-top: 2.5rem;
-    width: 100%;
-    background-color: $cw;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: $bxfull;
+.list {
+  overflow: hidden;
+  margin-top: 2.5rem;
+  width: 100%;
+  background-color: $cw;
+  // padding: 2rem;
+  border-radius: 8px;
+  box-shadow: $bxfull;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 1.4rem;
+  transition: all .2s ease-in-out;
+
+ &:hover{
+  box-shadow: $bxlarge;
+  background-color:lighten( $cp, 52% );
+  transform: scale(1.05)
+}
+
+  &__container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  
+    font-size: 1.4rem;
+    margin: 1rem;
   }
+  &__border {
+    width: 0.5rem;
+    background-color: $cgreen;
+  }
+
+  &__line {
+    padding: 0.2rem;
+  }
+
+  &__key {
+    font-weight: 400;
+  }
+  &__value {
+    // display: inline-flex;
+    font-weight: 700;
+  }
+}

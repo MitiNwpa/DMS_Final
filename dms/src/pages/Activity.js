@@ -33,19 +33,26 @@ class Activity extends React.Component {
   renderActivityList() {
     const ActivityList = this.state.items.map((item, index) => {
       return (
-        <li key={item.id} id={item.id} className="list">
-          Activity : {item.activityName}
-          <br />
-          Site : {item.site}
-          <br />
-          Assigned Company : {item.company}
-          <br />
-          <button
-            className="btn__list"
-            onClick={() => navigate(`/docketentry/${item.id}`)}
-          >
-            Select
-          </button>
+        <li key={item.id} id={item.id} className="list" onClick={() => navigate(`/docketentry/${item.id}`)}>
+        <span class="list__border">
+        </span>
+        <div className="list__container">
+          <span className="list__line">
+            <span class="list__key">Activity :</span>
+          <span class="list__value">{item.activityName}</span>
+          </span>
+          
+          <span className="list__line">
+          <span class="list__key">Site :</span>
+          <span class="list__value">{item.site}</span>
+          </span>
+
+          <span className="list__line">
+          <span class="list__key">Company :</span>
+          <span class="list__value">{item.company}</span>
+          </span>   
+
+         </div>
         </li>
       );
     });
@@ -58,14 +65,13 @@ class Activity extends React.Component {
       <div>
         <Navigation pageName="Activity Selection" />
         <div class="activity">
-
           <div className="welcome">
             <h2 class="welcome-text">
               Welcome, <span class="welcome-text-color">Activity</span>
             </h2>
           </div>
-        
-          <h4 className="activity__heading">This is Activity Selection</h4>
+
+          {/* <h4 className="activity__heading">This is Activity Selection</h4> */}
           {this.renderActivityList()}
         </div>
       </div>

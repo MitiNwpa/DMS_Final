@@ -53,10 +53,15 @@ class ListDockets extends Component {
   };
 
   renderDockets() {
+    const list = "list";
     const PendingDocket = this.state.items.map((item, index) => {
       if (item.status === "pending") {
         return (
-          <li key={item.id} id={item.id} className={item.status}>
+          <li
+            key={item.id}
+            id={item.id}
+            className={list + " " + "list__" + item.status}
+          >
             <div>
               <h5>Company Name : {item.companyName}</h5>
               <h5>Docket Number : {item.docketNumber}</h5>
@@ -64,15 +69,7 @@ class ListDockets extends Component {
               <h5>Approval : {item.status}</h5>
             </div>
             <button
-              className="delete"
-              value={item.id}
-              onClick={this.deleteDocket}
-            >
-              X
-            </button>
-            {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button
-              className="list"
+              className="btn__list"
               onClick={() => navigate(`/docketdetails/${item.id}`)}
             >
               <div />
@@ -86,22 +83,18 @@ class ListDockets extends Component {
     const ApprovedDocket = this.state.items.map((item, index) => {
       if (item.status === "approved") {
         return (
-          <li key={item.id} id={item.id} className={item.status}>
+          <li
+            key={item.id}
+            id={item.id}
+            className={list + " " + "list__" + item.status}
+          >
             <div>
               <h5>Company Name : {item.companyName}</h5>
               <h5>Activity : {item.activityName}</h5>
               <h5>Approval : {item.status}</h5>
             </div>
             <button
-              className="delete"
-              value={item.id}
-              onClick={this.deleteDocket}
-            >
-              X
-            </button>
-            {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button
-              className="list"
+              className="btn__list"
               onClick={() => navigate(`/docketdetails/${item.id}`)}
             >
               <div />
@@ -115,22 +108,18 @@ class ListDockets extends Component {
     const RejectedDocket = this.state.items.map((item, index) => {
       if (item.status === "rejected") {
         return (
-          <li key={item.id} id={item.id} className={item.status}>
+          <li
+            key={item.id}
+            id={item.id}
+            className={list + " " + "list__" + item.status}
+          >
             <div>
               <h5>Company Name : {item.companyName}</h5>
               <h5>Activity : {item.activityName}</h5>
               <h5>Approval : {item.status}</h5>
             </div>
             <button
-              className="delete"
-              value={item.id}
-              onClick={this.deleteDocket}
-            >
-              X
-            </button>
-            {/* <button onClick={this.sendId(item)}>Show More</button> */}
-            <button
-              className="list"
+              className="btn__list"
               onClick={() => navigate(`/docketdetails/${item.id}`)}
             >
               <div />
@@ -142,22 +131,21 @@ class ListDockets extends Component {
     });
 
     return (
-      <ul>
-        <div>
+      <div class="listdockets__container-main">
+        <div class="listdockets__container">
           <h4>Pending</h4>
           {PendingDocket}
         </div>
 
-        <div>
+        <div class="listdockets__container">
           <h4>Approved</h4>
           {ApprovedDocket}
         </div>
-        <div>
+        <div class="listdockets__container">
           <h4>Rejected</h4>
-
           {RejectedDocket}
         </div>
-      </ul>
+      </div>
     );
   }
 
@@ -173,7 +161,14 @@ class ListDockets extends Component {
     return (
       <div>
         <Navigation pageName="Docket List" />
-        {this.renderDockets()}
+        <div class="listdockets">
+          <div className="welcome">
+            <h2 class="welcome-text">
+              Welcome, <span class="welcome-text-color">Poop</span>
+            </h2>
+          </div>      
+          {this.renderDockets()}     
+        </div>
       </div>
     );
   }

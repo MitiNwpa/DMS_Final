@@ -1,0 +1,26 @@
+<li key={item.id} id={item.id} className="list" onClick={() => navigate(`/docketentry/${item.id}`)}>
+<span class="list__border">
+</span>
+<div className="list__container">
+  <span className="list__line">
+    <span class="list__key">Company :</span>
+  <span class="list__value">{item.companyName}</span>
+  </span>
+  
+  <span className="list__line">
+  <span class="list__key">Docket :</span>
+  <span class="list__value">{item.docketNumber}</span>
+  </span>
+
+  <span className="list__line">
+  <span class="list__key">Activity :</span>
+  <span class="list__value">{item.activityName}</span>
+  </span>   
+
+  <span className="list__line">
+    <span class="list__key">Status :</span>
+    <span class="list__value">{item.status}</span>
+    </span> 
+
+ </div>
+</li>

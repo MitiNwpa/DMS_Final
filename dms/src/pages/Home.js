@@ -42,11 +42,7 @@ class Home extends Component {
             </h2>
           </div>
           <div className="home__calendar" />
-          <div className="home__calendar" /> <div className="home__calendar" />{" "}
-          <div className="home__calendar" /> <div className="home__calendar" />{" "}
-          <div className="home__calendar" /> <div className="home__calendar" />{" "}
-          <div className="home__calendar" /> <div className="home__calendar" />{" "}
-          <div className="home__calendar" />
+
 
           
           <div className="home__snapshot">
