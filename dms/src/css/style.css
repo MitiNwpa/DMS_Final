@@ -214,6 +214,13 @@ body {
     justify-content: center;
     align-items: center; }
 
+.docketentry {
+  z-index: 5000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .home {
   z-index: 5000;
   display: flex;

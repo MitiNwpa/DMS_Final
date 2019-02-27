@@ -159,18 +159,21 @@ class DocketEntry extends Component {
         <Navigation pageName="Docket Entry" />
 
         <div className="docketentry">
-          <h3>
+        <div className="welcome">
+            <h2 class="welcome-text">
+              Welcome, <span class="welcome-text-color">Docket Entry</span>
+            </h2>
+          </div>
+
+          {/* <h3>
             Docket Entry for {this.state.activityName} at {this.state.site}
-          </h3>
+          </h3> */}
           <br />
           <h3>Date:{this.state.date}</h3>
           <br />
           {/* <form> */}
             <div>
-              {/* <p>date is {datee}</p> */}
-            {/* <input type="date" id="start" name="start"
-       value="2018-07-22"
-       min="2018-01-01" max="2018-12-31"/> */}
+
 
               <label for="startTime">Enter Start Time</label>
               <input
