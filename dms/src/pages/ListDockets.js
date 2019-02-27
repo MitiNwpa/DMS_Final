@@ -165,30 +165,26 @@ class ListDockets extends Component {
     return (
       <div class="listdockets__container-main">
         <div class="listdockets__container">
+          <div class="title__container">
+            <h4 className="title__text">Approved</h4>
+            <span class="title__line" />
+          </div>
+          {ApprovedDocket}
+        </div>
 
+        <div class="listdockets__container">
           <div class="title__container">
             <h4 className="title__text">Pending</h4>
-            <span class="title__line"></span>
+            <span class="title__line" />
           </div>
 
           {PendingDocket}
         </div>
 
         <div class="listdockets__container">
-
-        <div class="title__container">
-            <h4 className="title__text">Approved</h4>
-            <span class="title__line"></span>
-          </div>
-          {ApprovedDocket}
-        </div>
-
-
-        <div class="listdockets__container">
-
-        <div class="title__container">
+          <div class="title__container">
             <h4 className="title__text">Rejected</h4>
-            <span class="title__line"></span>
+            <span class="title__line" />
           </div>
           {RejectedDocket}
         </div>

@@ -19,3 +19,46 @@
     border: 2px solid black;
   }
 }
+
+.input {
+  width: 90%;
+  // background-color: pink;
+  &__text,
+  &__time {
+    font-size: 1.9rem;
+  }
+
+  &__parent {
+    margin-top: 1.5rem;
+    background-color: $cw;
+    border-radius: 8px;
+    padding: 2rem 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+  }
+  &__time {
+    text-align: center;
+    flex: 1;
+    width: 100%;
+    border-style: none;
+    padding: 1.5rem;
+    font-weight: 400;
+    width: 100%;
+    background-color: $cw;
+    border-radius: 8px;
+
+    &-break {
+      // font-size: 1.5rem;
+    }
+
+    &::-webkit-inner-spin-button {
+      display: none;
+      -webkit-appearance: none;
+    }
+  }
+}

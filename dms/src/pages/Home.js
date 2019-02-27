@@ -45,7 +45,7 @@ class Home extends Component {
 
 
           
-          <div className="home__snapshot">
+          <div className="home__snapshot" onClick={()=>{navigate(`/listdockets`)}}>
             {/* <div className="home__snapshot-heading">Docket Status</div> */}
 
             <div className="home__snapshot-status-box">

@@ -14,7 +14,8 @@ const refActivity = db.collection("activity");
 const refDocket = db.collection("docket");
 const refDocketNumber = db.collection("docketNumber").doc("docketNumber");
 var today = new Date(),
-date = today.getDate() + '-' + (today.getMonth() + 1) + '-' + today.getFullYear();
+  date =
+    today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
 
 class DocketEntry extends Component {
   constructor(props) {
@@ -36,24 +37,25 @@ class DocketEntry extends Component {
       site: "",
       pay: "",
       status: "pending",
-      startTime: "",
-      endTime: "",
-      breakTime: "",
+      startTime: "08:00",
+      endTime: "16:00",
+      breakTime: "30",
       docketNumber: 0,
-      timeStamp:0
+      timeStamp: 0
     };
     this.readUser = this.readUser.bind(this);
     this.readActivity = this.readActivity.bind(this);
     this.readDocketNumber = this.readDocketNumber.bind(this);
     this.addDocket = this.addDocket.bind(this);
     this.calc = this.calc.bind(this);
+    this.navigateBois = this.navigateBois.bind(this);
+
   }
 
   componentWillMount() {
     this.readDocketNumber();
     this.readActivity();
     this.readUser();
- 
   }
 
   readDocketNumber() {
@@ -120,37 +122,51 @@ class DocketEntry extends Component {
   }
 
   addDocket() {
-   // e.preventDefault();
+    // e.preventDefault();
     const ref = refDocket.doc();
     ref.set({
-        companyName: this.state.companyName,
-        contactNumber: this.state.contactNumber,
-        firstName: this.state.firstName,
-        hourlyRate: this.state.hourlyRate,
-        lastName: this.state.lastName,
-        overtimeRate: this.state.overtimeRate,
-        position: this.state.position,
-        totalHours: this.state.totalHours,
-        activityName: this.state.activityName,
-        ccNumber: this.state.ccNumber,
-        company: this.state.company,
-        id: ref.id,
-        site: this.state.site,
-        payAmount: this.state.pay,
-        status: "pending",
-        startTime: this.state.startTime,
-        endTime: this.state.endTime,
-        breakTimethis: this.state.breakTime,
-        docketNumber: this.state.docketNumber,
-        supervisorComment:'',
-        engineerComment:'',
-        timeStamp:firebase.firestore.FieldValue.serverTimestamp()
-      });
+      companyName: this.state.companyName,
+      contactNumber: this.state.contactNumber,
+      firstName: this.state.firstName,
+      hourlyRate: this.state.hourlyRate,
+      lastName: this.state.lastName,
+      overtimeRate: this.state.overtimeRate,
+      position: this.state.position,
+      totalHours: this.state.totalHours,
+      activityName: this.state.activityName,
+      ccNumber: this.state.ccNumber,
+      company: this.state.company,
+      id: ref.id,
+      site: this.state.site,
+      payAmount: this.state.pay,
+      status: "pending",
+      startTime: this.state.startTime,
+      endTime: this.state.endTime,
+      breakTimethis: this.state.breakTime,
+      docketNumber: this.state.docketNumber,
+      supervisorComment: "",
+      engineerComment: "",
+      timeStamp: firebase.firestore.FieldValue.serverTimestamp()
+    },
+    this.setState(
+      {
+        id:ref.id
+      }
+    )
+    );
+
+    db.collection("docketNumber")
+      .doc("docketNumber")
+      .set({
+        number: this.state.docketNumber + 1
+      })
+
+      this.navigateBois();
       
-        db.collection("docketNumber").doc("docketNumber").set({
-          number:(this.state.docketNumber + 1)
-       
-      });
+  }
+
+  navigateBois(){
+    navigate(`/listdockets`);
   }
 
   render() {
@@ -159,7 +175,7 @@ class DocketEntry extends Component {
         <Navigation pageName="Docket Entry" />
 
         <div className="docketentry">
-        <div className="welcome">
+          <div className="welcome">
             <h2 class="welcome-text">
               Welcome, <span class="welcome-text-color">Docket Entry</span>
             </h2>
@@ -168,18 +184,27 @@ class DocketEntry extends Component {
           {/* <h3>
             Docket Entry for {this.state.activityName} at {this.state.site}
           </h3> */}
-          <br />
+          {/* <br />
           <h3>Date:{this.state.date}</h3>
-          <br />
+          <br /> */}
           {/* <form> */}
-            <div>
+          <div class="input">
+            <div class="title__container">
+              <h4 className="title__text">Docket Entry</h4>
+              <span class="title__line" />
+            </div>
 
-
-              <label for="startTime">Enter Start Time</label>
+          <div class="input__parent">
+          <div className="input__container">
+              <div class="title__container_m0">
+                <h4 className="title__text">Start Time</h4>
+                {/* <span class="title__line" /> */}
+              </div>
               <input
                 type="time"
                 name="startTime"
                 value={this.state.startTime}
+                className="input__time"
                 onChange={this.updateInput}
                 required
               />
@@ -187,42 +212,45 @@ class DocketEntry extends Component {
 
             <br />
 
-            <div>
-              <label for="startTime">Enter End Time</label>
+            <div className="input__container">
+              <div class="title__container_m0">
+                <h4 className="title__text">End Time</h4>
+                {/* <span class="title__line" /> */}
+              </div>
               <input
                 type="time"
                 name="endTime"
                 value={this.state.endTime}
+                className="input__time"
                 onChange={this.updateInput}
                 required
               />
             </div>
-
             <br />
-            <div>
-              <label for="breakTime">Break(mins)</label>
+            <div className="input__container">
+              <div class="title__container_m0">
+                <h4 className="title__text">Break</h4>
+                {/* <span class="title__line" /> */}
+              </div>
               <input
-                className="breaktime"
                 type="number"
                 name="breakTime"
                 value={this.state.breakTime}
+                className="input__time input__time-break"
                 onChange={this.updateInput}
                 required
               />
             </div>
+          </div>
 
-            <button onClick={this.calc}>
-              Agree to terms
-            </button>
-            <button>
-             test
-            </button>
-      
+
+           
+          </div>
+
+          <button onClick={this.calc}>Agree to terms</button>
+
 
           {/* </form> */}
-          <Link to="/confirm">
-            <button>Send</button>
-          </Link>
         </div>
       </div>
     );
