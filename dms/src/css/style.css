@@ -50,18 +50,20 @@ body {
     width: 100%; }
   .title__text {
     font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
     left: 0;
     flex: 1; }
   .title__line {
-    margin-top: .5rem;
-    margin-bottom: -1rem;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
     height: 0.2rem;
     width: 100%;
     background-color: rgba(199, 198, 201, 0.2); }
 
 .list {
   overflow: hidden;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   width: 100%;
   background-color: #fff;
   border-radius: 8px;
@@ -69,7 +71,7 @@ body {
   display: flex;
   justify-content: flex-start;
   font-size: 1.4rem;
-  transition: all .2s ease-in-out; }
+  transition: all 0.2s ease-in-out; }
   .list:hover {
     box-shadow: 0 0 2.5rem rgba(3, 36, 166, 0.3);
     background-color: #f0f3ff;
@@ -130,7 +132,7 @@ body {
     margin-top: -3rem;
     text-transform: uppercase;
     font-weight: 700;
-    letter-spacing: .2rem; }
+    letter-spacing: 0.05rem; }
 
 .navigation {
   background-color: #fff;

@@ -1,8 +1,8 @@
 .title {
-display: flex;
+  display: flex;
 
   &__container {
-      margin-top: 1.5rem;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -12,15 +12,16 @@ display: flex;
   }
   &__text {
     font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
     left: 0;
     flex: 1;
   }
-  &__line{
-      margin-top: .5rem;
-      margin-bottom: -1rem;
+  &__line {
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
     height: 0.2rem;
     width: 100%;
-    background-color: rgba($cg,.2);
-
+    background-color: rgba($cg, 0.2);
   }
 }

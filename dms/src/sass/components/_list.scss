@@ -1,6 +1,6 @@
 .list {
   overflow: hidden;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   width: 100%;
   background-color: $cw;
   // padding: 2rem;
@@ -9,13 +9,13 @@
   display: flex;
   justify-content: flex-start;
   font-size: 1.4rem;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
- &:hover{
-  box-shadow: $bxlarge;
-  background-color:lighten( $cp, 52% );
-  transform: scale(1.05)
-}
+  &:hover {
+    box-shadow: $bxlarge;
+    background-color: lighten($cp, 52%);
+    transform: scale(1.05);
+  }
 
   &__container {
     display: flex;
@@ -28,15 +28,15 @@
     width: 0.5rem;
     background-color: $cpl;
 
-    &-pending{
+    &-pending {
       width: 0.5rem;
       background-color: $cyellow;
     }
-    &-approved{
+    &-approved {
       width: 0.5rem;
       background-color: $cgreen;
     }
-    &-rejected{
+    &-rejected {
       width: 0.5rem;
       background-color: $cred;
     }
