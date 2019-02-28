@@ -1,0 +1,22 @@
+.icon{
+    height: 3rem;
+    width: 3rem;
+
+&__box{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+&__green{
+    height: 3.5rem;
+    width: 3.5rem;
+    fill: $cgreen;
+    filter: drop-shadow( 0 0 .75rem rgba($cgreen,.6));
+}
+&__yellow{
+    fill: $cyellow;
+    filter: drop-shadow( 0 0 .75rem rgba($cyellow,.6));
+}
+
+}

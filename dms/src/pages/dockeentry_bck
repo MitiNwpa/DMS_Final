@@ -1,134 +1,30 @@
-import React, { Component } from 'react';
-import { Router, navigate, Link } from '@reach/router';
-import firebase from './firestore';
-import _ from 'lodash'
-import './index.css'
+      <br />
+              <div class="icon__box">
+                <div>
+                                    <svg
+                    className="icon icon__yellow"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                    <path d="M21.9 5H18V2c0-.55-.45-1-1-1s-1 .45-1 1v3h-3.9c-.59 0-1.05.51-1 1.1l.12 1.21C14.9 8.16 18 10.77 18 15l.02 8h1.7c.84 0 1.53-.65 1.63-1.47L22.89 6.1c.06-.59-.4-1.1-.99-1.1zM15 21H2c-.55 0-1 .45-1 1s.45 1 1 1h13c.55 0 1-.45 1-1s-.45-1-1-1zM2.1 15h12.8c.62 0 1.11-.56.99-1.16-.65-3.23-4.02-4.85-7.39-4.85s-6.73 1.62-7.39 4.85c-.12.6.38 1.16.99 1.16zM15 17H2c-.55 0-1 .45-1 1s.45 1 1 1h13c.55 0 1-.45 1-1s-.45-1-1-1z" />{" "}
+                  </svg>
+                </div>
+              <div className="input__container">
+     
 
-const db = firebase.firestore();
-const refUser = db.collection('user').doc('joe');
-const refActivity = db.collection('activity');
-
-
-
-
-class DocketEntry extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: {},
-            activity: {}
-        }
-        this.readUser = this.readUser.bind(this);
-        this.readActivity = this.readActivity.bind(this);
-        this.wellwell = this.wellwell.bind(this);
-
-
-    }
-
-
-    componentWillMount() {
-        this.readUser();
-        this.readActivity();
-
-    }
-
-
-wellwell(){
-    // let dos = this.state.items.map((boot,i) =>{
-    //     console.log(boot.companyName);
-    //     // let foc = boot.item.map((uno,i) =>{
-    //     //     console.log(uno.companyName);
-
-    //     // })
-    //     })
-      
-     Object.keys(this.state.items).map((item)=> {
-         console.log(item.map)
-     })
-
-        
-    }
-        
-
-
-    readUser() {
-        let userData = [];
-        // let you = [];
-        refUser.onSnapshot((doc) => {
-            userData.push(doc.data());
-
-        })
-
-        this.setState({
-            // ud:userData,
-            items: userData,
-            loaded: true,
-            hrishi: true
-        })
-
-       
-
-
-    }
-
-    readActivity() {
-        let activityData = [];
-        const refAct=refActivity.doc(`${this.props.userID}`);
-        
-        refAct.onSnapshot((doc) => {
-
-            // doc.forEach((item)=>{
-            //     console.log(item)
-            // })
-
-            activityData.push(doc.data());
-            
-
-        })
-
-        this.setState({
-
-            activity: activityData,
-            loaded: true,
-            hrishi: true
-        })
-    }
-
-
-
-
-    // readActivity() {
-    //     let activityData = [];
-    //     const refAct=refActivity.doc(`${this.props.userID}`);
-        
-    //     refAct.onSnapshot((doc) => {
-    //         activityData.push(doc.data());
-            
-
-    //     })
-
-    //     this.setState({
-
-    //         activity: activityData,
-    //         loaded: true,
-    //         hrishi: true
-    //     })
-    // }
-
-
-
-    render() {
-        return (
-            <div>
-                DocketEntry for {this.props.userID}
-                <button onClick={this.wellwell}>please</button>
-
-            </div>
-
-
-        )
-    }
-}
-
-export default DocketEntry;
+                </div>
+                <div class="title__container_m0">
+                  <h4 className="title__text">Break</h4>
+                  {/* <span class="title__line" /> */}
+                </div>
+                <input
+                  type="number"
+                  name="breakTime"
+                  value={this.state.breakTime}
+                  className="input__time input__time-break"
+                  onChange={this.updateInput}
+                  required
+                />

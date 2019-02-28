@@ -16,3 +16,20 @@ $bxlarge: 0 0 2.5rem rgba($cpd, .3);
 $bxgreen: 0 0 1rem rgba($cgreen, .5);
 $bxyellow:0 0 1rem rgba($cyellow, .5);
 $bxred:0 0 1rem rgba($cred, .5);
+
+
+.align{
+    &__center{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-content: center;
+        text-align: center;
+    }
+    &__center-row{
+        display: flex;
+        justify-content:center;
+        align-content: center;
+        text-align: center;
+    }
+}

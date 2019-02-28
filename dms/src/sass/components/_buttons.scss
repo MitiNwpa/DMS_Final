@@ -53,10 +53,19 @@
 // &.view {
 //   width: 20%;
 // }
- 
+
 // }
 
-
-btn__list{
-
+.btn {
+  width: 50%;
+  display: block;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: $cw;
+  font-weight: 500;
+  display: inline-block;
+  background-color: $cpl;
+  border-radius: 8px;
+  text-transform: uppercase;
 }

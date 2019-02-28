@@ -21,6 +21,9 @@
 }
 
 .input {
+  &__parent {
+    box-shadow: $bxfull;
+  }
   width: 90%;
   // background-color: pink;
   &__text,
@@ -35,8 +38,15 @@
     padding: 2rem 0;
   }
 
+  &__fields {
+    display: flex;
+    justify-content: space-around;
+  }
+
   &__container {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 8px;
     margin-bottom: 1.5rem;
@@ -46,10 +56,10 @@
     flex: 1;
     width: 100%;
     border-style: none;
-    padding: 1.5rem;
+    padding: 0.4rem;
     font-weight: 400;
     width: 100%;
-    background-color: $cw;
+    background-color: lighten($cg, 18%);
     border-radius: 8px;
 
     &-break {
