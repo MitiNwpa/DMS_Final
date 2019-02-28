@@ -278,7 +278,7 @@ class DocketEntry extends Component {
               </div>
               <div class="align__center-row">
                 <button onClick={this.calc} className="btn btn__submit">
-                  Agree to terms
+                  Submit
                 </button>
               </div>
             </div>

@@ -12,11 +12,11 @@
     height: 3.5rem;
     width: 3.5rem;
     fill: $cgreen;
-    filter: drop-shadow( 0 0 .75rem rgba($cgreen,.6));
+    filter: drop-shadow( 0 0 .6rem rgba($cgreen,.4));
 }
 &__yellow{
     fill: $cyellow;
-    filter: drop-shadow( 0 0 .75rem rgba($cyellow,.6));
+    filter: drop-shadow( 0 0 .6rem rgba($cyellow,.4));
 }
 
 }

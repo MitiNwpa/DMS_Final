@@ -87,7 +87,7 @@ body {
     background-color: rgba(199, 198, 201, 0.2); }
   .title__input {
     font-size: 1.4rem;
-    font-weight: 500;
+    font-weight: 700;
     letter-spacing: 0.05rem;
     left: 0;
     flex: 1;
@@ -135,17 +135,20 @@ body {
     font-weight: 700; }
 
 .btn {
+  margin-top: 1rem;
   width: 50%;
   display: block;
   padding: 1rem;
   border: none;
   outline: none;
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.5rem;
   display: inline-block;
-  background-color: #0099ff;
+  background-image: linear-gradient(to bottom, #0099ff, #66c2ff);
   border-radius: 8px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: .1rem; }
 
 .navigation-heading {
   display: flex;
@@ -271,7 +274,7 @@ body {
     flex: 1;
     width: 100%;
     border-style: none;
-    padding: 0.4rem;
+    padding: 1rem;
     font-weight: 400;
     width: 100%;
     background-color: #f5f5f6;
@@ -291,10 +294,10 @@ body {
     height: 3.5rem;
     width: 3.5rem;
     fill: #23ca23;
-    filter: drop-shadow(0 0 0.75rem rgba(35, 202, 35, 0.6)); }
+    filter: drop-shadow(0 0 0.6rem rgba(35, 202, 35, 0.4)); }
   .icon__yellow {
     fill: #ffbb00;
-    filter: drop-shadow(0 0 0.75rem rgba(255, 187, 0, 0.6)); }
+    filter: drop-shadow(0 0 0.6rem rgba(255, 187, 0, 0.4)); }
 
 .activity {
   z-index: 5000;

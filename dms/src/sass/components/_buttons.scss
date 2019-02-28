@@ -57,15 +57,19 @@
 // }
 
 .btn {
+  margin-top: 1rem;
   width: 50%;
   display: block;
   padding: 1rem;
   border: none;
   outline: none;
   color: $cw;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 1.5rem;
   display: inline-block;
-  background-color: $cpl;
+  //background-color: $cpl;
+  background-image: linear-gradient(to bottom,$cpl,lighten($cpl,20%));
   border-radius: 8px;
   text-transform: uppercase;
+  letter-spacing: .1rem;
 }
