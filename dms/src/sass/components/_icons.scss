@@ -1,22 +1,30 @@
-.icon{
-    height: 3rem;
-    width: 3rem;
+.icon {
+  height: 2.5rem;
+  width: 2.5rem;
 
-&__box{
-
+  &__box {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-&__green{
+  }
+  &__green {
     height: 3.5rem;
     width: 3.5rem;
     fill: $cgreen;
-    filter: drop-shadow( 0 0 .6rem rgba($cgreen,.4));
-}
-&__yellow{
+    filter: drop-shadow(0 0 0.6rem rgba($cgreen, 0.4));
+  }
+  &__yellow {
     fill: $cyellow;
-    filter: drop-shadow( 0 0 .6rem rgba($cyellow,.4));
-}
+    filter: drop-shadow(0 0 0.6rem rgba($cyellow, 0.4));
+  }
 
+  &__red {
+    fill: $cred;
+    filter: drop-shadow(0 0 0.6rem rgba($cred, 0.4));
+  }
+
+   &__blue{
+    fill: $cpl;
+    filter: drop-shadow(0 0 0.6rem rgba($cpl, 0.4));
+   }
 }

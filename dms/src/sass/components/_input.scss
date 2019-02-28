@@ -31,6 +31,19 @@
     font-size: 1.9rem;
   }
 
+  &__text-box-main{
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+  }
+
+  &__text-box{
+    display:flex;
+    align-items: center;
+  }
+
   &__parent {
     margin-top: 1.5rem;
     background-color: $cw;

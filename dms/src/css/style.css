@@ -93,6 +93,9 @@ body {
     flex: 1;
     text-align: center;
     margin-bottom: .5rem; }
+  .title__small {
+    font-size: 1.3rem;
+    font-weight: 500; }
 
 .list {
   overflow: hidden;
@@ -254,6 +257,15 @@ body {
     box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1); }
   .input__text, .input__time {
     font-size: 1.9rem; }
+  .input__text-box-main {
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem; }
+  .input__text-box {
+    display: flex;
+    align-items: center; }
   .input__parent {
     margin-top: 1.5rem;
     background-color: #fff;
@@ -284,8 +296,8 @@ body {
       -webkit-appearance: none; }
 
 .icon {
-  height: 3rem;
-  width: 3rem; }
+  height: 2.5rem;
+  width: 2.5rem; }
   .icon__box {
     display: flex;
     justify-content: center;
@@ -298,6 +310,12 @@ body {
   .icon__yellow {
     fill: #ffbb00;
     filter: drop-shadow(0 0 0.6rem rgba(255, 187, 0, 0.4)); }
+  .icon__red {
+    fill: #fd3a36;
+    filter: drop-shadow(0 0 0.6rem rgba(253, 58, 54, 0.4)); }
+  .icon__blue {
+    fill: #0099ff;
+    filter: drop-shadow(0 0 0.6rem rgba(0, 153, 255, 0.4)); }
 
 .activity {
   z-index: 5000;

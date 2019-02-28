@@ -193,6 +193,78 @@ class DocketEntry extends Component {
 
             <div class="input__parent">
               <div class="input__time-box">
+                <div className="input__text-box-main">
+                  <div className="input__text-box">
+                    <div class="icon__box">
+                      <svg
+                        className="icon icon__red"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 4.17 4.42 9.92 6.24 12.11.4.48 1.13.48 1.53 0C14.58 18.92 19 13.17 19 9c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                      </svg>
+                    </div>
+                    <h2 className="title__small">{this.state.site}</h2>
+                  </div>
+
+                  <div className="input__text-box">
+                    <div class="icon__box">
+                      <svg
+                        className="icon icon__blue"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path d="M19 4h-1V3c0-.55-.45-1-1-1s-1 .45-1 1v1H8V3c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V9h14v10zM7 11h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
+                      </svg>
+                    </div>
+                    <h2 className="title__small">{date}</h2>
+                  </div>
+                </div>
+
+                <div className="input__text-box-main">
+                  <div className="input__text-box">
+                    <div class="icon__box">
+                      <svg
+                        className="icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 4.17 4.42 9.92 6.24 12.11.4.48 1.13.48 1.53 0C14.58 18.92 19 13.17 19 9c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                      </svg>
+                    </div>
+                    <h2 className="title__small">{this.state.activityName}</h2>
+                  </div>
+
+                  <div className="input__text-box">
+                    <div class="icon__box">
+                      <svg
+                        className="icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                      >
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path fill="none" d="M0 0h24v24H0V0z" />
+                        <path d="M19 4h-1V3c0-.55-.45-1-1-1s-1 .45-1 1v1H8V3c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V9h14v10zM7 11h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
+                      </svg>
+                    </div>
+                    <h2 className="title__small">{this.state.docketNumber}</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input__time-box">
                 <div class="icon__box">
                   <div>
                     <svg
