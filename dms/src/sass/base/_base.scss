@@ -38,6 +38,11 @@ body {
     justify-content: center;
     align-items: center;
     position: fixed;
+    
+    &__spaced{
+      justify-content: space-between;
+    align-items: center;
+    }
 
     &-text {
       // padding-left: 2rem;

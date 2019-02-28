@@ -172,27 +172,8 @@ class DocketEntry extends Component {
         <Navigation pageName="Docket Entry" />
 
         <div className="docketentry">
-          <div className="welcome">
-            <h2 class="welcome-text">
-              Welcome, <span class="welcome-text-color">Docket Entry</span>
-            </h2>
-          </div>
-
-          {/* <h3>
-            Docket Entry for {this.state.activityName} at {this.state.site}
-          </h3> */}
-          {/* <br />
-          <h3>Date:{this.state.date}</h3>
-          <br /> */}
-          {/* <form> */}
-          <div class="input">
-            {/* <div class="title__container">
-              <h4 className="title__text">Docket Entry</h4>
-              <span class="title__line" />
-            </div> */}
-
-            <div class="input__parent">
-              <div class="input__time-box">
+          <div className="welcome welcome__spaced">
+          <div class="input__time-box">
                 <div className="input__text-box-main">
                   <div className="input__text-box">
                     <div class="icon__box">
@@ -238,9 +219,7 @@ class DocketEntry extends Component {
                         height="24"
                         viewBox="0 0 24 24"
                       >
-                        <path fill="none" d="M0 0h24v24H0V0z" />
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 4.17 4.42 9.92 6.24 12.11.4.48 1.13.48 1.53 0C14.58 18.92 19 13.17 19 9c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
-                      </svg>
+                        <path fill="none" d="M0 0h24v24H0V0z"/><path d="M14 6V4h-4v2h4zM4 9v9c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V9c0-.55-.45-1-1-1H5c-.55 0-1 .45-1 1zm16-3c1.11 0 2 .89 2 2v11c0 1.11-.89 2-2 2H4c-1.11 0-2-.89-2-2l.01-11c0-1.11.88-2 1.99-2h4V4c0-1.11.89-2 2-2h4c1.11 0 2 .89 2 2v2h4z"/>                      </svg>
                     </div>
                     <h2 className="title__small">{this.state.activityName}</h2>
                   </div>
@@ -248,21 +227,36 @@ class DocketEntry extends Component {
                   <div className="input__text-box">
                     <div class="icon__box">
                       <svg
-                        className="icon"
+                        className="icon icon__small"
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
                         height="24"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 20 20"
                       >
-                        <path fill="none" d="M0 0h24v24H0V0z" />
-                        <path fill="none" d="M0 0h24v24H0V0z" />
-                        <path d="M19 4h-1V3c0-.55-.45-1-1-1s-1 .45-1 1v1H8V3c0-.55-.45-1-1-1s-1 .45-1 1v1H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 15c0 .55-.45 1-1 1H6c-.55 0-1-.45-1-1V9h14v10zM7 11h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z" />
+                         <path fill="#0099ff" d="M5.41,21L6.12,17H2.12L2.47,15H6.47L7.53,9H3.53L3.88,7H7.88L8.59,3H10.59L9.88,7H15.88L16.59,3H18.59L17.88,7H21.88L21.53,9H17.53L16.47,15H20.47L20.12,17H16.12L15.41,21H13.41L14.12,17H8.12L7.41,21H5.41M9.53,9L8.47,15H14.47L15.53,9H9.53Z" />
                       </svg>
                     </div>
                     <h2 className="title__small">{this.state.docketNumber}</h2>
                   </div>
                 </div>
               </div>
+          </div>
+
+          {/* <h3>
+            Docket Entry for {this.state.activityName} at {this.state.site}
+          </h3> */}
+          {/* <br />
+          <h3>Date:{this.state.date}</h3>
+          <br /> */}
+          {/* <form> */}
+          <div class="input">
+            {/* <div class="title__container">
+              <h4 className="title__text">Docket Entry</h4>
+              <span class="title__line" />
+            </div> */}
+
+            <div class="input__parent">
+
 
               <div class="input__time-box">
                 <div class="icon__box">

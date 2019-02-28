@@ -31,8 +31,13 @@
     font-size: 1.9rem;
   }
 
+  &__time-box{
+
+    flex: 1;
+  }
   &__text-box-main{
     padding: 0 2rem;
+    flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -40,7 +45,9 @@
   }
 
   &__text-box{
+    // flex:1;
     display:flex;
+    // justify-content:space-around;
     align-items: center;
   }
 
