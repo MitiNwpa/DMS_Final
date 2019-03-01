@@ -1,0 +1,73 @@
+.docketdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__main {
+    margin-top: 1.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    // justify-content: center;
+    // align-items: center;
+    background-color: purple;
+  }
+
+  &__name {
+    padding: 2rem;
+    height: 8rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    background-color: aqua;
+
+    &-a {
+      background-color: red;
+      flex: 1;
+    }
+
+    &-b {
+      background-color: blue;
+      flex: 1;
+    }
+  }
+
+  &__time{
+    padding: 2rem;
+    height: 12rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    background-color: yellow;
+    &-a {
+        background-color: red;
+        flex: 1;
+      }
+  
+      &-b {
+        background-color: blue;
+        flex: 1;
+      }
+  }
+
+  &__notes{
+    padding: 2rem;
+    height: 25rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    background-color: orangered;
+    display: flex;
+    flex-direction: column;
+
+    &-supervisor{
+      flex: 1;
+      background-color: black;
+    }
+    &-engineer{
+      margin-top: 1.5rem;
+      flex: 1;
+      background-color: green;
+    }
+  }
+}

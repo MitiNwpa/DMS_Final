@@ -39,32 +39,28 @@ class DocketDetails extends React.Component {
   readDocket() {
     const promise = refDoc.doc(`${this.props.userID}`).get();
     promise.then(snapshot => {
+      const fireDate = snapshot.data().timeStamp;
+      console.log(fireDate);
+      const mainDate = fireDate.toDate();
+      console.log(mainDate);
+      const myDay = mainDate.getDate();
+      const myMonth = mainDate.getMonth() + 1;
+      const myYear = mainDate.getFullYear();
+      var hour = mainDate.getHours();
+      var ampm = hour >= 12 ? "pm" : "am";
+      hour = hour % 12;
+      hour = hour ? hour : 12;
+      var min = mainDate.getMinutes();
+      min = min < 10 ? "0" + min : min;
+      const today = `${myDay}-${myMonth}-${myYear}`;
+      const time = `${hour}:${min} ${ampm}`;
 
-        const fireDate=(snapshot.data().timeStamp);
-        console.log(fireDate)
-        const mainDate=fireDate.toDate();
-        console.log(mainDate)
-        const myDay=mainDate.getDate();
-        const myMonth=mainDate.getMonth()+1;
-        const myYear=mainDate.getFullYear();
-        var hour = mainDate.getHours();
-        var ampm = hour >= 12 ? 'pm' : 'am';
-        hour = hour % 12;
-        hour = hour ? hour : 12;
-        var min = mainDate.getMinutes();
-        min = min < 10 ? '0'+min : min;
-        const today=`${myDay}-${myMonth}-${myYear}`;
-        const time = `${hour}:${min} ${ampm}`
+      console.log(myDay);
+      console.log(myMonth);
+      console.log(myYear);
+      console.log(today);
+      console.log(time);
 
-        console.log( myDay)
-        console.log( myMonth)
-        console.log( myYear)
-        console.log( today)
-        console.log( time)
-
-
-
-        
       this.setState({
         activityName: snapshot.data().activityName,
         ccNumber: snapshot.data().ccNumber,
@@ -86,10 +82,9 @@ class DocketDetails extends React.Component {
         status: snapshot.data().status,
         docketNumber: snapshot.data().docketNumber,
         dateCreated: today,
-        time:time,
+        time: time,
         supervisorComment: snapshot.data().supervisorComment,
         engineerComment: snapshot.data().engineerComment
-
       });
     });
   }
@@ -98,31 +93,61 @@ class DocketDetails extends React.Component {
     return (
       <div>
         <Navigation pageName="Docket Details" />
-        <div className="docketDetails">
-          Company name {this.state.companyName}
-          <br />
-          Name {this.state.firstName}
-          <br />
-          Activity {this.state.activityName}
-          <br />
-          Start Time {this.state.startTime}
-          <br />
-          End Time {this.state.endTime}
-          <br />
-          Break {this.state.breakTimethis} mins
-          <br />
-          Status {this.state.status}
-          <br />
-          <br />
-          Docket Number {this.state.docketNumber}
-          <br />
-          Date Created {this.state.dateCreated} at {this.state.time}
-          <br />
-          <br />
-          Supervisor Notes {this.state.supervisorComment}
-          <br />          <br />
-          Engineer Notes {this.state.engineerComment}
-          <br />
+        <div className="docketdetails">
+          <div className="welcome">
+            <h2 class="welcome-text">
+              Docket No&nbsp;:&nbsp;
+              <span class="welcome-text-color">{this.state.docketNumber}</span>
+            </h2>
+          </div>
+          <div class="docketdetails__main">
+            <div className="docketdetails__name">
+              <div className="docketdetails__name-a" />
+              <div className="docketdetails__name-b" />
+            </div>
+
+            <div class="docketdetails__time">
+              <div className="docketdetails__time-a" />
+              <div className="docketdetails__time-b" />
+            </div>
+
+            <div class="docketdetails__time">
+              <div className="docketdetails__time-a" />
+              <div className="docketdetails__time-b" />
+            </div>
+
+            <div class="docketdetails__notes">
+              <div className="docketdetails__notes-supervisor" />
+              <div className="docketdetails__notes-engineer" />
+            </div>
+
+
+
+            {/* Company name {this.state.companyName}
+            <br />
+            Name {this.state.firstName}
+            <br />
+            Activity {this.state.activityName}
+            <br />
+            Start Time {this.state.startTime}
+            <br />
+            End Time {this.state.endTime}
+            <br />
+            Break {this.state.breakTimethis} mins
+            <br />
+            Status {this.state.status}
+            <br />
+            <br />
+            Docket Number {this.state.docketNumber}
+            <br />
+            Date Created {this.state.dateCreated} at {this.state.time}
+            <br />
+            <br />
+            Supervisor Notes {this.state.supervisorComment}
+            <br /> <br />
+            Engineer Notes {this.state.engineerComment}
+            <br /> */}
+          </div>
         </div>
       </div>
     );
