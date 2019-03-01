@@ -65,8 +65,8 @@ body {
     flex: 1;
     width: 100%; }
     .title__container_break {
-      margin-top: .5rem;
-      margin-bottom: .5rem; }
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
     .title__container_m0 {
       margin-top: 0rem;
       display: flex;
@@ -78,7 +78,6 @@ body {
   .title__text {
     font-size: 1.7rem;
     font-weight: 700;
-    letter-spacing: 0.05rem;
     left: 0;
     flex: 1; }
   .title__line {
@@ -95,17 +94,17 @@ body {
     left: 0;
     flex: 1;
     text-align: center;
-    margin-bottom: .5rem; }
+    margin-bottom: 0.5rem; }
   .title__small {
     margin-left: 1rem;
     font-size: 1.4rem;
     font-weight: 500; }
   .title__details {
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-weight: 700;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem; }
   .title__large {
-    font-weight: 500;
+    font-weight: 300;
     font-size: 3rem; }
 
 .list {
@@ -343,44 +342,64 @@ body {
     flex-direction: column;
     border-radius: 8px;
     overflow: hidden;
-    background-color: purple; }
+    background-color: #fff;
+    box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1); }
   .docketdetails__name {
-    padding: 2rem;
-    height: 6rem;
-    display: flex;
-    background-color: aqua; }
+    padding: 1rem 2rem;
+    display: flex; }
     .docketdetails__name-a {
-      background-color: red;
+      font-weight: 500;
       flex: 1; }
     .docketdetails__name-b {
-      background-color: aliceblue;
+      font-weight: 500;
       flex: 1; }
   .docketdetails__time {
     padding: 0 2rem;
     display: flex;
-    margin-bottom: 1.5rem;
-    background-color: yellow;
+    margin-bottom: 1rem;
     text-align: center; }
     .docketdetails__time-a {
-      background-color: red;
-      flex: 1; }
+      padding: .7rem;
+      background-color: #daf9da;
+      border-radius: 8px;
+      margin-right: 1rem;
+      flex: 1;
+      box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
     .docketdetails__time-b {
-      background-color: aliceblue;
-      flex: 1; }
+      padding: .7rem;
+      background-color: #daf9da;
+      border-radius: 8px;
+      flex: 1;
+      box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
   .docketdetails__notes {
-    padding: 2rem;
-    height: 25rem;
+    padding: 0 2rem;
     display: flex;
     margin-bottom: 1.5rem;
-    background-color: orangered;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    font-size: 1.5rem; }
     .docketdetails__notes-supervisor {
       flex: 1;
-      background-color: grey; }
+      padding: 1rem;
+      margin-top: 1rem;
+      background-color: #f3f3f3;
+      border-radius: 8px;
+      margin-bottom: 1.5rem; }
     .docketdetails__notes-engineer {
+      margin-top: 1rem;
       flex: 1;
-      background-color: green; }
+      padding: 1rem;
+      background-color: #f3f3f3;
+      border-radius: 8px; }
+
+.yellow {
+  background-color: #ffebb3; }
+
+.blue {
+  background-color: #b3e0ff; }
+
+.red {
+  background-color: #ffe7e7; }
 
 .activity {
   z-index: 5000;

@@ -9,11 +9,11 @@
     text-align: left;
     flex: 1;
     width: 100%;
-    &_break{
-      margin-top: .5rem;
-      margin-bottom: .5rem;
+    &_break {
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
     }
-    &_m0{
+    &_m0 {
       margin-top: 0rem;
       // margin-left: 1.5rem;
       display: flex;
@@ -27,11 +27,9 @@
   &__text {
     font-size: 1.7rem;
     font-weight: 700;
-    letter-spacing: 0.05rem;
+    // letter-spacing: 0.05rem;
     left: 0;
     flex: 1;
-    
-    
   }
   &__line {
     z-index: 9999999;
@@ -41,30 +39,30 @@
     width: 100%;
     background-color: rgba($cg, 0.2);
   }
-  &__input{
+  &__input {
     font-size: 1.4rem;
     font-weight: 700;
     letter-spacing: 0.05rem;
     left: 0;
     flex: 1;
     text-align: center;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
-  &__small{
-    margin-left:1rem;
+  &__small {
+    margin-left: 1rem;
     font-size: 1.4rem;
     font-weight: 500;
   }
 
-  &__details{
-    font-weight: 500;
-    font-size: 1.4rem;
-margin-bottom: 0.5rem
+  &__details {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
   }
 
-  &__large{
-    font-weight: 500;
+  &__large {
+    font-weight: 300;
     font-size: 3rem;
   }
 }

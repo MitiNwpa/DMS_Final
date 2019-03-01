@@ -94,10 +94,14 @@ class DocketDetails extends React.Component {
       <div>
         <Navigation pageName="Docket Details" />
         <div className="docketdetails">
-          <div className="welcome">
+          <div className="welcome details">
             <h2 class="welcome-text">
               Docket No&nbsp;:&nbsp;
               <span class="welcome-text-color">{this.state.docketNumber}</span>
+            </h2>
+            <h2 class="welcome-text">
+              Approval Status&nbsp;:&nbsp;
+              <span class="welcome-text-color">{this.state.status}</span>
             </h2>
           </div>
           <div class="docketdetails__main">
@@ -125,12 +129,12 @@ class DocketDetails extends React.Component {
             </div>
 
             <div class="docketdetails__time">
-              <div className="docketdetails__time-a">
+              <div className="docketdetails__time-a yellow">
                 <h2 class="title__details">Break(mins)</h2>
                 <h2 class="title__large">{this.state.breakTimethis}</h2>
               </div>
 
-              <div className="docketdetails__time-b">
+              <div className="docketdetails__time-b blue">
                 <h2 class="title__details">Total Hours</h2>
                 <h2 class="title__large">{this.state.totalHours}</h2>
               </div>
@@ -138,7 +142,7 @@ class DocketDetails extends React.Component {
 
             <div class="docketdetails__notes">
               <div>
-                <h4 className="title__text">Supervisor Notes</h4>
+                <h4 className="title__text">Supervisor Notes :</h4>
               </div>
               <div className="docketdetails__notes-supervisor">
               {this.state.supervisorComment}
