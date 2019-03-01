@@ -102,23 +102,55 @@ class DocketDetails extends React.Component {
           </div>
           <div class="docketdetails__main">
             <div className="docketdetails__name">
-              <div className="docketdetails__name-a" />
-              <div className="docketdetails__name-b" />
+              <div className="docketdetails__name-a">
+                <h2 class="title__details">Name : {this.state.firstName}</h2>
+              </div>
+              <div className="docketdetails__name-b">
+                <h2 class="title__details">
+                  Company : {this.state.companyName}
+                </h2>
+              </div>
             </div>
 
             <div class="docketdetails__time">
-              <div className="docketdetails__time-a" />
-              <div className="docketdetails__time-b" />
+              <div className="docketdetails__time-a">
+                <h2 class="title__details">Start Time</h2>
+                <h2 class="title__large">{this.state.startTime}</h2>
+              </div>
+
+              <div className="docketdetails__time-b">
+                <h2 class="title__details">End Time</h2>
+                <h2 class="title__large">{this.state.endTime}</h2>
+              </div>
             </div>
 
             <div class="docketdetails__time">
-              <div className="docketdetails__time-a" />
-              <div className="docketdetails__time-b" />
+              <div className="docketdetails__time-a">
+                <h2 class="title__details">Break(mins)</h2>
+                <h2 class="title__large">{this.state.breakTimethis}</h2>
+              </div>
+
+              <div className="docketdetails__time-b">
+                <h2 class="title__details">Total Hours</h2>
+                <h2 class="title__large">{this.state.totalHours}</h2>
+              </div>
             </div>
 
             <div class="docketdetails__notes">
-              <div className="docketdetails__notes-supervisor" />
-              <div className="docketdetails__notes-engineer" />
+              <div>
+                <h4 className="title__text">Supervisor Notes</h4>
+              </div>
+              <div className="docketdetails__notes-supervisor">
+              {this.state.supervisorComment}
+              </div>
+
+              <div>
+                <h4 className="title__text">Engineer Notes</h4>
+              </div>
+              <div className="docketdetails__notes-engineer">
+              
+              {this.state.engineerComment}
+              </div>
             </div>
 
 

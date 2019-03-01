@@ -100,6 +100,13 @@ body {
     margin-left: 1rem;
     font-size: 1.4rem;
     font-weight: 500; }
+  .title__details {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem; }
+  .title__large {
+    font-weight: 500;
+    font-size: 3rem; }
 
 .list {
   overflow: hidden;
@@ -323,6 +330,57 @@ body {
   .icon__blue {
     fill: #0099ff;
     filter: drop-shadow(0 0 0.6rem rgba(0, 153, 255, 0.4)); }
+
+.docketdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .docketdetails__main {
+    margin-top: 1.5rem;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: purple; }
+  .docketdetails__name {
+    padding: 2rem;
+    height: 6rem;
+    display: flex;
+    background-color: aqua; }
+    .docketdetails__name-a {
+      background-color: red;
+      flex: 1; }
+    .docketdetails__name-b {
+      background-color: aliceblue;
+      flex: 1; }
+  .docketdetails__time {
+    padding: 0 2rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    background-color: yellow;
+    text-align: center; }
+    .docketdetails__time-a {
+      background-color: red;
+      flex: 1; }
+    .docketdetails__time-b {
+      background-color: aliceblue;
+      flex: 1; }
+  .docketdetails__notes {
+    padding: 2rem;
+    height: 25rem;
+    display: flex;
+    margin-bottom: 1.5rem;
+    background-color: orangered;
+    display: flex;
+    flex-direction: column; }
+    .docketdetails__notes-supervisor {
+      flex: 1;
+      background-color: grey; }
+    .docketdetails__notes-engineer {
+      flex: 1;
+      background-color: green; }
 
 .activity {
   z-index: 5000;
