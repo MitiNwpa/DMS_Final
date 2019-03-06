@@ -19,7 +19,7 @@ class NavigationJH extends Component {
     return (
       <div>
         <div class="navigation-heading red">
-          <div class="navigation-heading__logo-box">
+          <div class="navigation-heading__logo-box navigation-heading__logo-box-large">
             <svg
               className="navigation-heading__icon navigation-heading__icon-large"
               xmlns="http://www.w3.org/2000/svg"

@@ -21,7 +21,7 @@
         fill: $cw;
         
         &-large{
-            width:5rem;
+            width:6rem;
         }
     }
 
@@ -29,6 +29,10 @@
         position:absolute;
         top:2rem;
         left:2rem;
+        &-large{
+            top:2rem;
+            left:1rem;
+        }
 
     }
     &__setting-box{
