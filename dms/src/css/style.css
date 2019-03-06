@@ -54,6 +54,9 @@ body {
       font-weight: 700;
       color: #0099ff; }
 
+.purple {
+  color: #7344b3; }
+
 .title {
   display: flex; }
   .title__container {
@@ -146,26 +149,72 @@ body {
     font-weight: 400; }
   .list__value {
     font-weight: 700; }
+    .list__value_big {
+      font-size: 1.7rem; }
+  .list__dashboard {
+    margin-top: 1.5rem;
+    width: inherit;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all 0.2s ease-in-out;
+    flex: 1;
+    padding: 2rem; }
+    .list__dashboard_bois {
+      width: 100%;
+      flex: 1; }
+    .list__dashboard_container {
+      display: flex;
+      justify-content: space-between; }
+      .list__dashboard_container-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column; }
+      .list__dashboard_container-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end; }
+        .list__dashboard_container-right-box {
+          margin-left: -40rem;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; }
+    .list__dashboard_progress {
+      margin-top: 1rem; }
   .list__percent {
-    width: calc(100%/3);
-    background-color: red;
-    height: 20px;
-    position: relative;
+    overflow: hidden;
+    width: calc(100%/1);
+    height: .5rem;
+    z-index: 20;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background: black;
+    background: #eeedee;
+    border-radius: 500px;
     background-repeat: no-repeat;
-    background-size: 12rem; }
+    background-size: 30rem;
+    box-shadow: 0 0 10px #00000031; }
     .list__percent_bg {
-      width: 100%;
-      position: absolute;
       background-color: transparent;
-      height: 10px;
+      height: 100%;
       z-index: 10;
       background-image: linear-gradient(to right, #23ca23, #ffbb00, #fd3a36);
-      background-size: inherit; }
+      background-size: inherit;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px #00000060; }
+      .list__percent_bg-text {
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.4rem;
+        display: none; }
 
 .btn {
   margin-top: 1rem;
@@ -349,6 +398,16 @@ body {
   .icon__blue {
     fill: #0099ff;
     filter: drop-shadow(0 0 0.6rem rgba(0, 153, 255, 0.4)); }
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .dashboard__bois {
+    flex: 1;
+    width: 90%;
+    margin-top: 1.5rem; }
 
 .docketdetails {
   display: flex;

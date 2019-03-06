@@ -52,38 +52,97 @@
   &__value {
     // display: inline-flex;
     font-weight: 700;
+    &_big{
+      font-size: 1.7rem;
+    }
   }
 
+
+  &__dashboard {
+    margin-top: 1.5rem;
+    width: inherit;
+    background-color: $cw;
+    border-radius: 8px;
+    box-shadow: $bxfull;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+    transition: all 0.2s ease-in-out;
+    flex: 1;
+    padding: 2rem;
+
+    &_bois{
+      width: 100%;
+      flex: 1;
+    }
+
+    &_container {
+      display: flex;
+      justify-content: space-between;
+     
+
+      &-left {
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        // background-color: pink;
+      }
+      &-right {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        // background-color: orangered;
+
+        &-box{
+          margin-left: -40rem;
+          display: flex;
+          flex-direction: column;
+          align-items:flex-start; 
+        }
+      }
+    }
+    &_progress{
+      margin-top: 1rem;
+    }
+  }
   &__percent {
     // display: block;
-    width: calc(100%/3);
-    background-color: red;
-    height: 20px;
-    position: relative;
+    overflow: hidden;
+    width: calc(100%/1);
+    height: .5rem;
+    z-index: 20;
+
     display: flex;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
-    background: black; 
+    background: lighten($cg,15%);
+    border-radius: 500px;
     background-repeat: no-repeat;
-    background-size:12rem;
+    background-size: 30rem;
+    box-shadow:0 0 10px #00000031;
 
     &_bg {
-      width: 100%;
-      position: absolute;
+      // width: 100%;
+      // position: absolute;
       background-color: transparent;
-      height: 10px;
+      height: 100%;
       z-index: 10;
-      background-image: linear-gradient(
-        to right,
-        $cgreen,
-        $cyellow,
-        $cred,
-      );
-      background-size:inherit;
+      background-image: linear-gradient(to right, $cgreen, $cyellow, $cred);
+      background-size: inherit;
+      display: flex;
+      justify-content: center;
+      box-shadow:0 0 10px #00000060;
 
- 
-
+      &-text{
+        color: $cw;
+        font-weight: 700;
+        font-size: 1.4rem;
+        display: none;
+      }
     }
   }
 }

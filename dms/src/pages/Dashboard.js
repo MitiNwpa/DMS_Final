@@ -21,7 +21,7 @@ class Dashboard extends React.Component {
       test: [],
       neee: [],
       flag: 0,
-      budget:[500,6144,500,600,700,800,6543,421,8704]
+      budget: [850, 600, 500, 600, 700, 800, 250, 421, 8704]
     };
 
     this.calcSum = this.calcSum.bind(this);
@@ -30,7 +30,6 @@ class Dashboard extends React.Component {
     this.calcCost = this.calcCost.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleClick_1 = this.handleClick_1.bind(this);
-
   }
 
   componentDidMount() {
@@ -70,16 +69,19 @@ class Dashboard extends React.Component {
 
   listCostCodes() {
     let ccArray = [];
+    let activityArray = [];
 
     refActivity.get().then(snapshot => {
       snapshot.forEach(doc => {
         ccArray.push(doc.data().ccNumber);
+        activityArray.push(doc.data().activityName);
       });
       console.log(`cc aray is ${ccArray}`);
 
       this.setState(
         {
-          ccArray
+          ccArray,
+          activityArray
         },
         () => {
           this.calcCost();
@@ -108,7 +110,7 @@ class Dashboard extends React.Component {
 
           holder[item] = addd;
           this.setState({
-            neee: holder,
+            neee: holder
             // CostCodeMap
           });
           console.log(`this is the final sum bruhssss ${this.state.neee}`);
@@ -124,28 +126,42 @@ class Dashboard extends React.Component {
       });
 
       console.log("---------Im rendering-------");
-      const percent=parseFloat(100-(((((this.state.budget[item])-(this.state.neee[item]))) / (this.state.budget[item])) *100)).toFixed(1);
+      const percent = parseFloat(
+        100 -
+          ((this.state.budget[item] - this.state.neee[item]) /
+            this.state.budget[item]) *
+            100
+      ).toFixed(1);
       var divStyle = {
-        width:`${percent}%`
-      }
-
+        width: `${percent}%`
+      };
 
       return (
-        <div key={item}>
-          <li className="list" key={item}>
-            the cost code of {index} cost is {this.state.neee[item]}
-            <br/>
-            and the budget is {this.state.budget[item]}
-            <br/>
-            budget remaining is {(this.state.budget[item])-(this.state.neee[item])}
-            <br/>
-            Budget Spent Percentage {percent}%
-            
-            <div className="list__percent">
-            <span className="list__percent_bg" style={divStyle}>{percent}%</span>
+        <li className="list__dashboard" key={item}>
+          <div className="list__dashboard_container">
+            <div className="list__dashboard_container-left">
+              <span className="list__value list__value_big purple">{index}</span>
+              <span className="list__key">{this.state.activityArray[item]}</span>
             </div>
-          </li>
-        </div>
+
+            <div className="list__dashboard_container-right">
+              <div className="list__dashboard_container-right-box">
+                <span className="list__value list__value_big purple">Budget</span>
+                <span className="list__key">
+                  ${this.state.neee[item]} / ${this.state.budget[item]}{" "}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="list__dashboard_progress">
+            <div className="list__percent">
+              <span className="list__percent_bg" style={divStyle}>
+                <span className="list__percent_bg-text">{percent}%</span>
+              </span>
+            </div>
+          </div>
+        </li>
       );
     });
 
@@ -162,7 +178,9 @@ class Dashboard extends React.Component {
     return (
       <ul>
         <div>
-          <h4>CostCode</h4>
+          <h4 className="title__text">CostCode Breakdown</h4>
+          <span class="title__line" />
+
           {this.state.CostCodeMap}
         </div>
       </ul>
@@ -174,15 +192,13 @@ class Dashboard extends React.Component {
     this.setState({
       flag: 1
     });
-    
   };
-  handleClick_1= () => {
+  handleClick_1 = () => {
     console.log("working");
     this.setState({
       flag: 2
     });
     this.calcCost();
-  
   };
 
   render() {
@@ -192,8 +208,14 @@ class Dashboard extends React.Component {
       return (
         <div>
           <NavigationJH pageName="Dashboard" />
-          <div>
-            <h1>SUM :$ {this.state.sum}</h1>
+
+          <div className="dashboard">
+            <div className="welcome">
+              <h2 class="welcome-text">
+                Welcome, <span class="welcome-text-color purple">Poop</span>
+              </h2>
+            </div>
+            <h1>SUM :${this.state.sum}</h1>
             <p>This is the Dashboard sdfasd</p>
             <button type="button" onClick={this.handleClick}>
               Project
@@ -207,7 +229,13 @@ class Dashboard extends React.Component {
       return (
         <div>
           <NavigationJH pageName="Dashboard" />
-          <div>
+
+          <div className="dashboard">
+            <div className="welcome">
+              <h2 class="welcome-text">
+                Welcome, <span class="welcome-text-color purple">Poop</span>
+              </h2>
+            </div>
             <h1>SUM :$ {this.state.sum}</h1>
             <p>This is the Dashboard sdfasd</p>
             <button type="button" onClick={this.handleClick_1}>
@@ -223,15 +251,18 @@ class Dashboard extends React.Component {
       return (
         <div>
           <NavigationJH pageName="Dashboard" />
-          <div>
-            <h1>SUM :$ {this.state.sum}</h1>
-            <p>This is the Dashboard sdfasd</p>
+          <div className="dashboard">
+            <div className="welcome">
+              <h2 class="welcome-text">
+                Cost To Date, <span class="welcome-text-color purple">${this.state.sum}</span>
+              </h2>
+            </div>
+
+            <div className="dashboard__bois">{this.mapCostCodes()}</div>
+
             <button type="button" onClick={this.calcCost}>
               refresh
             </button>
-            {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
-            <div>{this.mapCostCodes()}</div>
-            {/* {console.log(`holder issssssss ${holder}`)} */}
           </div>
         </div>
       );

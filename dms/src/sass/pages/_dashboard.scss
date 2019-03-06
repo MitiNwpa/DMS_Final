@@ -1,0 +1,13 @@
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+    &__bois{
+        flex: 1;
+        width: 90%; 
+        margin-top: 1.5rem;
+    }
+}
