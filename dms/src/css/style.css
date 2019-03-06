@@ -205,7 +205,7 @@ body {
       background-color: transparent;
       height: 100%;
       z-index: 10;
-      background-image: linear-gradient(to right, #23ca23, #ffbb00, #fd3a36);
+      background-image: linear-gradient(to right, #23ca23, #ffdd7e, #fd3a36);
       background-size: inherit;
       display: flex;
       justify-content: center;
@@ -251,6 +251,8 @@ body {
     height: 2.5rem;
     width: 2.5rem;
     fill: #fff; }
+    .navigation-heading__icon-large {
+      width: 5rem; }
   .navigation-heading__logo-box {
     position: absolute;
     top: 2rem;

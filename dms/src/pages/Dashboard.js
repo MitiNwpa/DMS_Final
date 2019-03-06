@@ -21,7 +21,7 @@ class Dashboard extends React.Component {
       test: [],
       neee: [],
       flag: 0,
-      budget: [850, 600, 500, 600, 700, 800, 250, 421, 8704]
+      budget: [675, 600, 500, 600, 700, 800, 250, 421, 8704]
     };
 
     this.calcSum = this.calcSum.bind(this);
@@ -250,11 +250,11 @@ class Dashboard extends React.Component {
     } else {
       return (
         <div>
-          <NavigationJH pageName="Dashboard" />
+          <NavigationJH pageName="High Street" />
           <div className="dashboard">
             <div className="welcome">
               <h2 class="welcome-text">
-                Cost To Date, <span class="welcome-text-color purple">${this.state.sum}</span>
+                Cost To Date:  <span class="welcome-text-color purple">${this.state.sum}</span>
               </h2>
             </div>
 
