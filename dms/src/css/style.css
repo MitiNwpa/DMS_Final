@@ -360,14 +360,14 @@ body {
     text-align: center; }
     .docketdetails__time-a {
       padding: .7rem;
-      background-color: #daf9da;
+      background-color: #83ea83;
       border-radius: 8px;
       margin-right: 1rem;
       flex: 1;
       box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
     .docketdetails__time-b {
       padding: .7rem;
-      background-color: #daf9da;
+      background-color: #83ea83;
       border-radius: 8px;
       flex: 1;
       box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
@@ -393,13 +393,18 @@ body {
       border-radius: 8px; }
 
 .yellow {
-  background-color: #ffebb3; }
+  background-color: #ffcf4d; }
 
 .blue {
-  background-color: #b3e0ff; }
+  background-color: #80ccff; }
 
 .red {
-  background-color: #ffe7e7; }
+  background-color: #ffe7e7;
+  background-image: linear-gradient(to bottom, #ad0f1f, #EB1E32); }
+
+.details {
+  display: flex;
+  flex-direction: column; }
 
 .activity {
   z-index: 5000;

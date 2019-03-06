@@ -4,7 +4,7 @@ import { Router, navigate, Link } from "@reach/router";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
 
-class Login extends Component {
+class LoginJH extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +18,7 @@ class Login extends Component {
     return (
       <div className="loginbg">
         <div className="login">
-          <h4 id="login">Welcome to DMS</h4>
+          <h4 id="login">JOhn Holland Welcome</h4>
 
           {/* <label className='login' for="uName">UserName</label> */}
 
@@ -38,7 +38,7 @@ class Login extends Component {
           />
           <br />
 
-          <Link to="/home">
+          <Link to="/homejh">
             <button id="login">Login</button>
           </Link>
           <span>
@@ -50,4 +50,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default LoginJH;

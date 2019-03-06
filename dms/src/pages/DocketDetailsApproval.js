@@ -1,7 +1,7 @@
 import React from "react";
 import "firebase/firestore";
 import firebase from "./firestore";
-import Navigation from "./Navigation";
+import NavigationJH from "./NavigationJH";
 import { Link, navigate } from "@reach/router";
 
 const db = firebase.firestore();
@@ -117,7 +117,7 @@ class DocketDetailsApproval extends React.Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Docket Details" />
+        <NavigationJH pageName="Docket Details" />
 
         <div className="docketDetails">
           Company name {this.state.companyName}

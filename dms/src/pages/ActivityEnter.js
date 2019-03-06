@@ -2,7 +2,7 @@ import React from 'react';
 import 'firebase/firestore';
 import firebase from "./firestore";
 import { Link } from '@reach/router';
-import Navigation from './Navigation';
+import NavigationJH from './NavigationJH';
 
 
 
@@ -62,7 +62,7 @@ class ActivityEnter extends React.Component {
     render() {
 
         return (<div>
-                        <Navigation pageName="Enter Activity"/>
+                        <NavigationJH pageName="Enter Activity"/>
 
             <div style={divStyle}>
                 <br />

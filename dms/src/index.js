@@ -20,6 +20,9 @@ import TimeEnter from './pages/TimeEnter';
 import Confirmation from './pages/Confirmation';
 import ListDocketsEngineer from './pages/ListDocketsEngineer';
 import BottomNavigation from './pages/BottomNavigation';
+import UserSelect from './pages/UserSelect';
+import LoginJH from './pages/LoginJH';
+import HomeJH from './pages/HomeJH';
 
 
 
@@ -27,8 +30,11 @@ ReactDOM.render(
 
     <div>  
         <Router>
-            <Login path='/' />
+            <UserSelect path='/' />
+            <Login path='/login' />
+            <LoginJH path='/loginjh' />
             <Home path='/home' />
+            <HomeJH path='/homejh' />
             <Activity path='/activity' />
             <ActivityEnter path='/activityenter' />
             <DocketEntry path='/docketentry/:userID' />

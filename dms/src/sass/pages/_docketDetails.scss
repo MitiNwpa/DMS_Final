@@ -103,6 +103,8 @@
 
 .red{
   background-color: lighten($cred, 35%);
+  background-image: linear-gradient(to bottom, $c-jh-red-dark,$c-jh-red);
+
 }
 .details{
   display: flex;

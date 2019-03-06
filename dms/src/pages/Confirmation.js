@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "./firestore";
-import Navigation from "./Navigation";
+import NavigationJH from "./NavigationJH";
 import SignatureCanvas from "react-signature-canvas";
 
 
@@ -33,7 +33,7 @@ class Confirmation extends React.Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Confirmation" />
+        <NavigationJH pageName="Confirmation" />
         <div>
            <p>This is the Confirmation {this.props.status} {this.props.userID}</p>
 

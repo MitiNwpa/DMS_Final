@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase from "./firestore";
 import { navigate } from "@reach/router";
-import Navigation from "./Navigation";
+import NavigationJH from "./NavigationJH";
 
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
@@ -61,7 +61,7 @@ class Approval extends Component {
     // this.calcSum();
     return (
       <div className="father">
-        <Navigation pageName="Docket Approval" />
+        <NavigationJH pageName="Docket Approval" />
 
         <div className="approval">
 

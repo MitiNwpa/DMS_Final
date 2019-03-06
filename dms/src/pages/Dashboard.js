@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import firebase from "./firestore";
-import Navigation from "./Navigation";
+import NavigationJH from "./NavigationJH";
 
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
@@ -175,7 +175,7 @@ class Dashboard extends React.Component {
     if (this.state.flag == 0) {
       return (
         <div>
-          <Navigation pageName="Dashboard" />
+          <NavigationJH pageName="Dashboard" />
           <div>
             <h1>SUM :$ {this.state.sum}</h1>
             <p>This is the Dashboard sdfasd</p>
@@ -190,7 +190,7 @@ class Dashboard extends React.Component {
     if (this.state.flag == 1) {
       return (
         <div>
-          <Navigation pageName="Dashboard" />
+          <NavigationJH pageName="Dashboard" />
           <div>
             <h1>SUM :$ {this.state.sum}</h1>
             <p>This is the Dashboard sdfasd</p>
@@ -206,7 +206,7 @@ class Dashboard extends React.Component {
     } else {
       return (
         <div>
-          <Navigation pageName="Dashboard" />
+          <NavigationJH pageName="Dashboard" />
           <div>
             <h1>SUM :$ {this.state.sum}</h1>
             <p>This is the Dashboard sdfasd</p>

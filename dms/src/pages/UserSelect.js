@@ -4,7 +4,7 @@ import { Router, navigate, Link } from "@reach/router";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
 
-class Login extends Component {
+class UserSelect extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,28 +18,15 @@ class Login extends Component {
     return (
       <div className="loginbg">
         <div className="login">
-          <h4 id="login">Welcome to DMS</h4>
+          <h4 id="login">Choose your user</h4>
 
           {/* <label className='login' for="uName">UserName</label> */}
+          <Link to="/login">
+            <button id="login">Subcontractor</button>
+          </Link>
 
-          <input
-            className="login"
-            type="text"
-            name="uName"
-            placeholder="Username"
-          />
-          {/* <br/>
-<label className='login' for="pName">Password</label> */}
-          <input
-            className="login"
-            type="password"
-            name="pName"
-            placeholder="Password"
-          />
-          <br />
-
-          <Link to="/home">
-            <button id="login">Login</button>
+          <Link to="/loginjh">
+            <button id="login">Supervisor</button>
           </Link>
           <span>
             <h6>Forgot Password</h6>
@@ -50,4 +37,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default UserSelect;
