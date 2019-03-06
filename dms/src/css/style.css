@@ -146,6 +146,26 @@ body {
     font-weight: 400; }
   .list__value {
     font-weight: 700; }
+  .list__percent {
+    width: calc(100%/3);
+    background-color: red;
+    height: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background: black;
+    background-repeat: no-repeat;
+    background-size: 12rem; }
+    .list__percent_bg {
+      width: 100%;
+      position: absolute;
+      background-color: transparent;
+      height: 10px;
+      z-index: 10;
+      background-image: linear-gradient(to right, #23ca23, #ffbb00, #fd3a36);
+      background-size: inherit; }
 
 .btn {
   margin-top: 1rem;

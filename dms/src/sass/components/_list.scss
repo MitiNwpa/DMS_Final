@@ -53,4 +53,37 @@
     // display: inline-flex;
     font-weight: 700;
   }
+
+  &__percent {
+    // display: block;
+    width: calc(100%/3);
+    background-color: red;
+    height: 20px;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background: black; 
+    background-repeat: no-repeat;
+    background-size:12rem;
+
+    &_bg {
+      width: 100%;
+      position: absolute;
+      background-color: transparent;
+      height: 10px;
+      z-index: 10;
+      background-image: linear-gradient(
+        to right,
+        $cgreen,
+        $cyellow,
+        $cred,
+      );
+      background-size:inherit;
+
+ 
+
+    }
+  }
 }

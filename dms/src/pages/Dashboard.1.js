@@ -20,8 +20,7 @@ class Dashboard extends React.Component {
       loading: true,
       test: [],
       neee: [],
-      flag: 0,
-      budget:[500,6144,500,600,700,800,6543,421,8704]
+      flag: 0
     };
 
     this.calcSum = this.calcSum.bind(this);
@@ -109,7 +108,7 @@ class Dashboard extends React.Component {
           holder[item] = addd;
           this.setState({
             neee: holder,
-            // CostCodeMap
+            CostCodeMap
           });
           console.log(`this is the final sum bruhssss ${this.state.neee}`);
           console.log(addd);
@@ -124,26 +123,11 @@ class Dashboard extends React.Component {
       });
 
       console.log("---------Im rendering-------");
-      const percent=parseFloat(100-(((((this.state.budget[item])-(this.state.neee[item]))) / (this.state.budget[item])) *100)).toFixed(1);
-      var divStyle = {
-        width:`${percent}%`
-      }
-
 
       return (
         <div key={item}>
           <li className="list" key={item}>
             the cost code of {index} cost is {this.state.neee[item]}
-            <br/>
-            and the budget is {this.state.budget[item]}
-            <br/>
-            budget remaining is {(this.state.budget[item])-(this.state.neee[item])}
-            <br/>
-            Budget Spent Percentage {percent}%
-            
-            <div className="list__percent">
-            <span className="list__percent_bg" style={divStyle}>{percent}%</span>
-            </div>
           </li>
         </div>
       );
