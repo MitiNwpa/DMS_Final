@@ -153,7 +153,7 @@ class DocketDetailsApproval extends React.Component {
             <button
               className="approved"
               name="status"
-              value="approvd"
+              value="approved"
               onClick={this.sendForConfirmation}
             >
               {" "}
