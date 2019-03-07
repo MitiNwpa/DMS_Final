@@ -156,33 +156,6 @@ class DocketDetails extends React.Component {
               {this.state.engineerComment}
               </div>
             </div>
-
-
-
-            {/* Company name {this.state.companyName}
-            <br />
-            Name {this.state.firstName}
-            <br />
-            Activity {this.state.activityName}
-            <br />
-            Start Time {this.state.startTime}
-            <br />
-            End Time {this.state.endTime}
-            <br />
-            Break {this.state.breakTimethis} mins
-            <br />
-            Status {this.state.status}
-            <br />
-            <br />
-            Docket Number {this.state.docketNumber}
-            <br />
-            Date Created {this.state.dateCreated} at {this.state.time}
-            <br />
-            <br />
-            Supervisor Notes {this.state.supervisorComment}
-            <br /> <br />
-            Engineer Notes {this.state.engineerComment}
-            <br /> */}
           </div>
         </div>
       </div>

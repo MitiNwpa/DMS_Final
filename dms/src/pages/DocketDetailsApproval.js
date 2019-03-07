@@ -28,7 +28,7 @@ class DocketDetailsApproval extends React.Component {
       comment: "",
       startTime: "",
       endTime: "",
-      break: "",
+      break: ""
     };
     this.readDocket = this.readDocket.bind(this);
   }
@@ -39,13 +39,34 @@ class DocketDetailsApproval extends React.Component {
   readDocket() {
     const promise = refDoc.doc(`${this.props.userID}`).get();
     promise.then(snapshot => {
+      const fireDate = snapshot.data().timeStamp;
+      console.log(fireDate);
+      const mainDate = fireDate.toDate();
+      console.log(mainDate);
+      const myDay = mainDate.getDate();
+      const myMonth = mainDate.getMonth() + 1;
+      const myYear = mainDate.getFullYear();
+      var hour = mainDate.getHours();
+      var ampm = hour >= 12 ? "pm" : "am";
+      hour = hour % 12;
+      hour = hour ? hour : 12;
+      var min = mainDate.getMinutes();
+      min = min < 10 ? "0" + min : min;
+      const today = `${myDay}-${myMonth}-${myYear}`;
+      const time = `${hour}:${min} ${ampm}`;
+
+      console.log(myDay);
+      console.log(myMonth);
+      console.log(myYear);
+      console.log(today);
+      console.log(time);
+
       this.setState({
         activityName: snapshot.data().activityName,
         ccNumber: snapshot.data().ccNumber,
         company: snapshot.data().company,
         id: snapshot.data().id,
         site: snapshot.data().site,
-        ccNumber: snapshot.data().ccNumber,
         companyName: snapshot.data().companyName,
         contactNumber: snapshot.data().contactNumber,
         firstName: snapshot.data().firstName,
@@ -59,11 +80,15 @@ class DocketDetailsApproval extends React.Component {
         endTime: snapshot.data().endTime,
         breakTimethis: snapshot.data().breakTimethis,
         status: snapshot.data().status,
-        supervisorComment: snapshot.data().supervisorComment
-
+        docketNumber: snapshot.data().docketNumber,
+        dateCreated: today,
+        time: time,
+        supervisorComment: snapshot.data().supervisorComment,
+        engineerComment: snapshot.data().engineerComment
       });
     });
   }
+
   deleteDocket = e => {
     refDoc
       .doc(e.target.value)
@@ -107,10 +132,13 @@ class DocketDetailsApproval extends React.Component {
   };
 
   sendForConfirmation = e => {
-        const promise = this.setState({
-      [e.target.name]: e.target.value
-    },()=>this.navigateConfirm());
-  
+    const promise = this.setState(
+      {
+        [e.target.name]: e.target.value
+      },
+      () => this.navigateConfirm()
+    );
+
     //
   };
 
@@ -119,58 +147,84 @@ class DocketDetailsApproval extends React.Component {
       <div>
         <NavigationJH pageName="Docket Details" />
 
-        <div className="docketDetails">
-          Company name {this.state.companyName}
-          <br />
-          Name {this.state.firstName}
-          <br />
-          Activity {this.state.activityName}
-          <br />
-          CostCode {this.state.ccNumber}
-          <br />
-          Start Time {this.state.startTime}
-          <br />
-          End Time {this.state.endTime}
-          <br />
-          Break {this.state.breakTimethis} mins
-          <br />
-          Status {this.state.status}
-          <br />
-          <h3> Payment Due ${this.state.payAmount}</h3>
-          <br />
-          <h3> Your Comments {this.state.supervisorComment}</h3>
-          <br />
-          <div className="approveButtons">
-             <button
-              className="rejected"
-              name="status"
-              value="rejected"
-              onClick={this.sendForConfirmation}
-            >
-              X
-            </button>
-
-            <button
-              className="approved"
-              name="status"
-              value="approved"
-              onClick={this.sendForConfirmation}
-            >
-              {" "}
-              ✓
-            </button>
-
-            <button
-              className="pending"
-              name="status"
-              value="pending"
-              onClick={this.sendForConfirmation}
-            >
-              II
-            </button>
-            <br />
+        <div className="docketdetails">
+          <div className="welcome details">
+            <h2 class="welcome-text">
+              Docket No&nbsp;:&nbsp;
+              <span class="welcome-text-color">{this.state.docketNumber}</span>
+            </h2>
+            <h2 class="welcome-text">
+              Approval Status&nbsp;:&nbsp;
+              <span class="welcome-text-color">{this.state.status}</span>
+            </h2>
           </div>
+          <div class="docketdetails__main">
+            <div className="docketdetails__name">
+              <div className="docketdetails__name-a">
+                <h2 class="title__details">Name : {this.state.firstName}</h2>
+              </div>
+              <div className="docketdetails__name-b">
+                <h2 class="title__details">
+                  Company : {this.state.companyName}
+                </h2>
+              </div>
+            </div>
 
+            <div class="docketdetails__time">
+              <div className="docketdetails__time-a">
+                <h2 class="title__details">Start Time</h2>
+                <h2 class="title__large">{this.state.startTime}</h2>
+              </div>
+
+              <div className="docketdetails__time-b">
+                <h2 class="title__details">End Time</h2>
+                <h2 class="title__large">{this.state.endTime}</h2>
+              </div>
+            </div>
+
+            <div class="docketdetails__time">
+              <div className="docketdetails__time-a yellow">
+                <h2 class="title__details">Break(mins)</h2>
+                <h2 class="title__large">{this.state.breakTimethis}</h2>
+              </div>
+
+              <div className="docketdetails__time-b blue">
+                <h2 class="title__details">Total Hours</h2>
+                <h2 class="title__large">{this.state.totalHours}</h2>
+              </div>
+            </div>
+
+            <div className="docketdetails__approveButtons">
+              <button
+                className="rejected"
+                name="status"
+                value="rejected"
+                onClick={this.sendForConfirmation}
+              >
+                X
+              </button>
+
+              <button
+                className="approved"
+                name="status"
+                value="approved"
+                onClick={this.sendForConfirmation}
+              >
+                {" "}
+                ✓
+              </button>
+
+              <button
+                className="pending"
+                name="status"
+                value="pending"
+                onClick={this.sendForConfirmation}
+              >
+                II
+              </button>
+              <br />
+            </div>
+          </div>
         </div>
       </div>
     );
