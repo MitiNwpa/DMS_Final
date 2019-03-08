@@ -36,12 +36,11 @@ class DocketDetails extends React.Component {
     this.fromData = this.fromData.bind(this);
   }
 
-  readPad = {testy};
+  readPad = { testy };
 
   fromData = () => {
-    return this.readPad.fromData(this.state.signature)
-  }
-
+    return this.readPad.fromData(this.state.signature);
+  };
 
   componentWillMount() {
     this.readDocket();
@@ -71,35 +70,37 @@ class DocketDetails extends React.Component {
       console.log(today);
       console.log(time);
 
-      this.setState({
-        activityName: snapshot.data().activityName,
-        ccNumber: snapshot.data().ccNumber,
-        company: snapshot.data().company,
-        id: snapshot.data().id,
-        site: snapshot.data().site,
-        companyName: snapshot.data().companyName,
-        contactNumber: snapshot.data().contactNumber,
-        firstName: snapshot.data().firstName,
-        hourlyRate: snapshot.data().hourlyRate,
-        lastName: snapshot.data().lastName,
-        overtimeRate: snapshot.data().overtimeRate,
-        position: snapshot.data().position,
-        payAmount: snapshot.data().payAmount,
-        totalHours: snapshot.data().totalHours,
-        startTime: snapshot.data().startTime,
-        endTime: snapshot.data().endTime,
-        breakTimethis: snapshot.data().breakTimethis,
-        status: snapshot.data().status,
-        docketNumber: snapshot.data().docketNumber,
-        dateCreated: today,
-        time: time,
-        supervisorComment: snapshot.data().supervisorComment,
-        engineerComment: snapshot.data().engineerComment,
-        signature: [snapshot.data().signature]
-
-      },()=>{
-        this.readPad.fromData(this.state.signature)
-      });
+      this.setState(
+        {
+          activityName: snapshot.data().activityName,
+          ccNumber: snapshot.data().ccNumber,
+          company: snapshot.data().company,
+          id: snapshot.data().id,
+          site: snapshot.data().site,
+          companyName: snapshot.data().companyName,
+          contactNumber: snapshot.data().contactNumber,
+          firstName: snapshot.data().firstName,
+          hourlyRate: snapshot.data().hourlyRate,
+          lastName: snapshot.data().lastName,
+          overtimeRate: snapshot.data().overtimeRate,
+          position: snapshot.data().position,
+          payAmount: snapshot.data().payAmount,
+          totalHours: snapshot.data().totalHours,
+          startTime: snapshot.data().startTime,
+          endTime: snapshot.data().endTime,
+          breakTimethis: snapshot.data().breakTimethis,
+          status: snapshot.data().status,
+          docketNumber: snapshot.data().docketNumber,
+          dateCreated: today,
+          time: time,
+          supervisorComment: snapshot.data().supervisorComment,
+          engineerComment: snapshot.data().engineerComment,
+          signature: [snapshot.data().signature]
+        },
+        () => {
+          this.readPad.fromData(this.state.signature);
+        }
+      );
     });
   }
 
@@ -126,6 +127,17 @@ class DocketDetails extends React.Component {
               <div className="docketdetails__name-b">
                 <h2 class="title__details">
                   Company : {this.state.companyName}
+                </h2>
+              </div>
+            </div>
+
+            <div className="docketdetails__name  docketdetails__name-small">
+              <div className="docketdetails__name-a">
+                <h2 class="title__details">Date : {this.state.dateCreated}</h2>
+              </div>
+              <div className="docketdetails__name-b">
+                <h2 class="title__details">
+                  Activity : {this.state.activityName}
                 </h2>
               </div>
             </div>
@@ -159,31 +171,34 @@ class DocketDetails extends React.Component {
                 <h4 className="title__text">Supervisor Notes :</h4>
               </div>
               <div className="docketdetails__notes-supervisor">
-              {this.state.supervisorComment}
+                {this.state.supervisorComment}
               </div>
 
               <div>
-                <h4 className="title__text">Engineer Notes</h4>
+                <h4 className="title__text">Engineer Notes :</h4>
               </div>
               <div className="docketdetails__notes-engineer">
-              
-              {this.state.engineerComment}
-
+                {this.state.engineerComment}
               </div>
 
-              <SignatureCanvas
-                penColor="black"
-                minWidth="0.8"
-                maxWidth="0.8"
-                canvasProps={{
-                  // width: 200,
-                  // height: 200,
-                  className: "sig__Canvas"
-                }}
-                ref={ref => {
-                  this.readPad = ref;
-                }}
-              />
+              <div>
+                <h4 className="title__text">Authorized Signature :</h4>
+              </div>
+              <div className="sig">
+                <SignatureCanvas
+                  penColor="black"
+                  minWidth="0.8"
+                  maxWidth="0.8"
+                  canvasProps={{
+                    // width: 200,
+                    // height: 200,
+                    className: "sig__Canvas"
+                  }}
+                  ref={ref => {
+                    this.readPad = ref;
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>

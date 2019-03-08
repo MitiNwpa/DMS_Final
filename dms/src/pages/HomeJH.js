@@ -36,7 +36,7 @@ class HomeJH extends Component {
           <div className="home__welcome">
             <h2 class="home__welcome-text">
               Welcome,{" "}
-              <span class="home__welcome-text-color">
+              <span class="welcome-text-color purple">
                 {this.state.firstName} {this.state.lastName}
               </span>
             </h2>

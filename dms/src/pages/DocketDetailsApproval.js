@@ -149,13 +149,13 @@ class DocketDetailsApproval extends React.Component {
 
         <div className="docketdetails">
           <div className="welcome details">
-            <h2 class="welcome-text">
+            <h2 class="welcome-text ">
               Docket No&nbsp;:&nbsp;
-              <span class="welcome-text-color">{this.state.docketNumber}</span>
+              <span class="welcome-text-color purple">{this.state.docketNumber}</span>
             </h2>
             <h2 class="welcome-text">
               Approval Status&nbsp;:&nbsp;
-              <span class="welcome-text-color">{this.state.status}</span>
+              <span class="welcome-text-color purple">{this.state.status}</span>
             </h2>
           </div>
           <div class="docketdetails__main">
@@ -166,6 +166,18 @@ class DocketDetailsApproval extends React.Component {
               <div className="docketdetails__name-b">
                 <h2 class="title__details">
                   Company : {this.state.companyName}
+                </h2>
+              </div>
+              
+            </div>
+
+            <div className="docketdetails__name  docketdetails__name-small">
+              <div className="docketdetails__name-a">
+                <h2 class="title__details">Date : {this.state.dateCreated}</h2>
+              </div>
+              <div className="docketdetails__name-b">
+                <h2 class="title__details">
+                  Activity : {this.state.activityName}
                 </h2>
               </div>
             </div>
@@ -191,6 +203,18 @@ class DocketDetailsApproval extends React.Component {
               <div className="docketdetails__time-b blue">
                 <h2 class="title__details">Total Hours</h2>
                 <h2 class="title__large">{this.state.totalHours}</h2>
+              </div>
+            </div>
+
+            <div class="docketdetails__time">
+              <div className="docketdetails__time-a">
+                <h2 class="title__details">Cost Code</h2>
+                <h2 class="title__large">{this.state.ccNumber}</h2>
+              </div>
+
+              <div className="docketdetails__time-b">
+                <h2 class="title__details">Payment Due</h2>
+                <h2 class="title__large">${this.state.payAmount}</h2>
               </div>
             </div>
 

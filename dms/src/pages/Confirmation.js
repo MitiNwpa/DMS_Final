@@ -17,12 +17,11 @@ class Confirmation extends React.Component {
       signature: ""
     };
     this.docketStatus = this.docketStatus.bind(this);
-
   }
 
   sigPad = {};
 
-  readPad = {testy};
+  readPad = { testy };
 
   clear = () => {
     this.sigPad.clear();
@@ -35,8 +34,8 @@ class Confirmation extends React.Component {
   };
 
   fromData = () => {
-    return this.readPad.fromData(this.state.signature)
-  }
+    return this.readPad.fromData(this.state.signature);
+  };
 
   docketStatus = e => {
     refDoc.doc(this.props.userID).update({
@@ -71,12 +70,12 @@ class Confirmation extends React.Component {
             </div>
             <br />
             <textarea
-              name="Confirmation__sComment"
+              name="sComment"
               className="confirmation__sComment"
               id="sComment"
               // cols="30"
               rows="5"
-              value={this.state.comment}
+              value={this.state.sComment}
               onChange={this.updateInput}
               placeholder="Enter comments here..."
             />
@@ -98,25 +97,24 @@ class Confirmation extends React.Component {
                   this.sigPad = ref;
                 }}
               />
-
-              <SignatureCanvas
-                penColor="black"
-                minWidth="0.8"
-                maxWidth="0.8"
-                canvasProps={{
-                  // width: 200,
-                  // height: 200,
-                  className: "sig__Canvas"
-                }}
-                ref={ref => {
-                  this.readPad = ref;
-                }}
-              />
+              <button
+                onClick={this.clear}
+                className="confirmation__btn confirmation__btn-clear"
+              >
+                &#10060;
+              </button>
+              <button
+                onClick={this.toData}
+                className="confirmation__btn confirmation__btn-save"
+              >
+                &#128190;
+              </button>
             </div>
-            <button onClick={this.clear}>Clear canvas</button>
-            <button onClick={this.toData}>To Data</button>
-            <button onClick={this.fromData}>Frommmmmmm Data</button>
-            <button onClick={this.docketStatus}>hello</button>
+            <div className="align__center-row">
+              <button className="btn btn__purple" onClick={this.docketStatus}>
+                Send
+              </button>
+            </div>
           </div>
         </div>
       </div>

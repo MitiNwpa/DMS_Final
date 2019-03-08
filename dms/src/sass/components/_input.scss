@@ -1,12 +1,15 @@
 .sig {
+  position: relative;
  margin-bottom: 1.5rem;
 
   &__Canvas {
 
     background-color: $cwb;
     width: 100%;
+    height: 18rem;
     border: 1px solid $cg;
     border-radius: 8px;
+    // font-size: 10px;
 
   }
 }
