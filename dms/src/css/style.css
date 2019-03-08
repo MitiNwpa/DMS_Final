@@ -23,7 +23,8 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  font-family: "Roboto", sans-serif; }
 
 body {
   background-color: #f3f3f3;
@@ -337,10 +338,10 @@ body {
 .sig {
   margin-bottom: 1.5rem; }
   .sig__Canvas {
-    background-color: purple;
+    background-color: #f3f3f3;
     width: 100%;
-    margin-top: 10px;
-    border: 2px solid black; }
+    border: 1px solid #C7C6C9;
+    border-radius: 8px; }
 
 .input {
   width: 90%; }
@@ -412,21 +413,32 @@ body {
     filter: drop-shadow(0 0 0.6rem rgba(0, 153, 255, 0.4)); }
 
 .confirmation {
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #EB1E32;
-  margin-top: -100px;
-  height: 100vh; }
+  top: 11.5rem; }
+  .confirmation__red {
+    position: relative;
+    background-color: #EB1E32;
+    height: 150vh;
+    margin-top: -10rem; }
   .confirmation__main {
     background-color: #fff;
     width: 90%;
     display: flex;
     flex-direction: column;
-    margin-top: -6.5rem;
-    border-radius: .8rem;
-    padding: 2rem; }
+    top: -3.5rem;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    padding-top: 0; }
+  .confirmation__sComment {
+    box-sizing: border-box;
+    padding: .8rem;
+    background-color: #f3f3f3;
+    border: 1px solid #C7C6C9;
+    border-radius: 8px; }
 
 .dashboard {
   display: flex;

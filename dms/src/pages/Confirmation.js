@@ -14,6 +14,7 @@ class Confirmation extends React.Component {
       sComment: ""
     };
     this.docketStatus = this.docketStatus.bind(this);
+    this.clearCanvas = this.clearCanvas.bind(this);
   }
 
   docketStatus = e => {
@@ -29,9 +30,13 @@ class Confirmation extends React.Component {
     });
   };
 
+  clearCanvas(){
+    
+  }
+
   render() {
     return (
-      <div>
+      <div className="confirmation__red">
         <NavigationJH pageName="Confirmation" />
 
         <div className="confirmation">
@@ -49,11 +54,13 @@ class Confirmation extends React.Component {
             <br />
             <textarea
               name="Confirmation__sComment"
+              className="confirmation__sComment"
               id="sComment"
               // cols="30"
-              // rows="10"
+              rows="5"
               value={this.state.comment}
               onChange={this.updateInput}
+              placeholder="Enter comments here..."
             />
             <div class="title__container">
               <h4 className="title__text">Signature</h4>
@@ -62,6 +69,8 @@ class Confirmation extends React.Component {
             <div className="sig">
               <SignatureCanvas
                 penColor="black"
+                minWidth="0.8"
+                maxWidth="0.8"
                 canvasProps={{
                   // width: 200,
                   // height: 200,
@@ -69,7 +78,7 @@ class Confirmation extends React.Component {
                 }}
               />
             </div>
-
+                <button onClick={this.clearCanvas}>Clear canvas</button>
             <button onClick={this.docketStatus}>hello</button>
           </div>
         </div>
