@@ -2,9 +2,11 @@ import React from "react";
 import "firebase/firestore";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
+import SignatureCanvas from "react-signature-canvas";
 
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
+var testy;
 
 class DocketDetails extends React.Component {
   constructor(props) {
@@ -31,7 +33,15 @@ class DocketDetails extends React.Component {
       dateCreated: ""
     };
     this.readDocket = this.readDocket.bind(this);
+    this.fromData = this.fromData.bind(this);
   }
+
+  readPad = {testy};
+
+  fromData = () => {
+    return this.readPad.fromData(this.state.signature)
+  }
+
 
   componentWillMount() {
     this.readDocket();
@@ -84,7 +94,11 @@ class DocketDetails extends React.Component {
         dateCreated: today,
         time: time,
         supervisorComment: snapshot.data().supervisorComment,
-        engineerComment: snapshot.data().engineerComment
+        engineerComment: snapshot.data().engineerComment,
+        signature: [snapshot.data().signature]
+
+      },()=>{
+        this.readPad.fromData(this.state.signature)
       });
     });
   }
@@ -154,7 +168,22 @@ class DocketDetails extends React.Component {
               <div className="docketdetails__notes-engineer">
               
               {this.state.engineerComment}
+
               </div>
+
+              <SignatureCanvas
+                penColor="black"
+                minWidth="0.8"
+                maxWidth="0.8"
+                canvasProps={{
+                  // width: 200,
+                  // height: 200,
+                  className: "sig__Canvas"
+                }}
+                ref={ref => {
+                  this.readPad = ref;
+                }}
+              />
             </div>
           </div>
         </div>

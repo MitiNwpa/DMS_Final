@@ -6,21 +6,43 @@ import SignatureCanvas from "react-signature-canvas";
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
 
+var testy;
+
 class Confirmation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       status: this.props.status,
-      sComment: ""
+      sComment: "",
+      signature: ""
     };
     this.docketStatus = this.docketStatus.bind(this);
-    this.clearCanvas = this.clearCanvas.bind(this);
+
+  }
+
+  sigPad = {};
+
+  readPad = {testy};
+
+  clear = () => {
+    this.sigPad.clear();
+  };
+
+  toData = () => {
+    this.setState({
+      signature: this.sigPad.toData().flat()
+    });
+  };
+
+  fromData = () => {
+    return this.readPad.fromData(this.state.signature)
   }
 
   docketStatus = e => {
     refDoc.doc(this.props.userID).update({
       status: this.state.status,
-      supervisorComment: this.state.sComment
+      supervisorComment: this.state.sComment,
+      signature: this.state.signature
     });
   };
 
@@ -29,10 +51,6 @@ class Confirmation extends React.Component {
       [e.target.name]: e.target.value
     });
   };
-
-  clearCanvas(){
-    
-  }
 
   render() {
     return (
@@ -76,9 +94,28 @@ class Confirmation extends React.Component {
                   // height: 200,
                   className: "sig__Canvas"
                 }}
+                ref={ref => {
+                  this.sigPad = ref;
+                }}
+              />
+
+              <SignatureCanvas
+                penColor="black"
+                minWidth="0.8"
+                maxWidth="0.8"
+                canvasProps={{
+                  // width: 200,
+                  // height: 200,
+                  className: "sig__Canvas"
+                }}
+                ref={ref => {
+                  this.readPad = ref;
+                }}
               />
             </div>
-                <button onClick={this.clearCanvas}>Clear canvas</button>
+            <button onClick={this.clear}>Clear canvas</button>
+            <button onClick={this.toData}>To Data</button>
+            <button onClick={this.fromData}>Frommmmmmm Data</button>
             <button onClick={this.docketStatus}>hello</button>
           </div>
         </div>
