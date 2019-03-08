@@ -4,7 +4,11 @@
   justify-content: center;
   align-items: center;
 
-  
+  &__actionButtons{
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+  }
 
   &__main {
     margin-top: 1.5rem;
@@ -51,7 +55,8 @@
     &-a {
       // background-color: red;
       padding: .7rem;
-      background-color: lighten($cgreen, 25%);
+      // background-color: lighten($cgreen, 25%);
+      border:2px solid $cgreen;
       border-radius: 8px;
       margin-right: 1rem;
       flex: 1;
@@ -61,7 +66,8 @@
     &-b {
       padding: .7rem;
       // background-color: aliceblue;
-      background-color: lighten($cgreen, 25%);
+      // background-color: lighten($cgreen, 25%);
+      border:2px solid $cgreen;
       border-radius: 8px;
       flex: 1;
       box-shadow: $bxsmall;
@@ -96,11 +102,13 @@
   }
 }
 .yellow{
-  background-color: lighten($cyellow, 15%);
+  // background-color: lighten($cyellow, 15%);
+  border:2px solid $cyellow;
 }
 
 .blue{
-  background-color: lighten($cpl, 25%);
+  // background-color: lighten($cpl, 25%);
+  border:2px solid $cpl;
 }
 
 .red{

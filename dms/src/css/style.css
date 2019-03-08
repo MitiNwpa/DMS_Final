@@ -230,7 +230,21 @@ body {
   background-image: linear-gradient(to bottom, #0099ff, #66c2ff);
   border-radius: 8px;
   text-transform: uppercase;
-  letter-spacing: .1rem; }
+  letter-spacing: 0.1rem; }
+  .btn__small {
+    margin: 1.5rem .6rem;
+    padding: .6rem;
+    border-radius: 20px;
+    font-size: 1.8rem; }
+  .btn__rejected {
+    background-image: none;
+    background-color: #EB1E32; }
+  .btn__approved {
+    background-image: none;
+    background-color: #23ca23; }
+  .btn__pending {
+    background-image: none;
+    background-color: #ffbb00; }
 
 .navigation-heading {
   display: flex;
@@ -321,17 +335,10 @@ body {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 .sig {
-  position: relative;
-  display: block;
-  top: 50%;
-  left: 50%;
-  width: 200px; }
+  margin-bottom: 1.5rem; }
   .sig__Canvas {
-    transform: translate(-50%);
-    position: absolute;
-    display: block;
     background-color: purple;
-    height: 200px;
+    width: 100%;
     margin-top: 10px;
     border: 2px solid black; }
 
@@ -404,6 +411,23 @@ body {
     fill: #0099ff;
     filter: drop-shadow(0 0 0.6rem rgba(0, 153, 255, 0.4)); }
 
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EB1E32;
+  margin-top: -100px;
+  height: 100vh; }
+  .confirmation__main {
+    background-color: #fff;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -6.5rem;
+    border-radius: .8rem;
+    padding: 2rem; }
+
 .dashboard {
   display: flex;
   flex-direction: column;
@@ -419,6 +443,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  .docketdetails__actionButtons {
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem; }
   .docketdetails__main {
     margin-top: 1.5rem;
     width: 90%;
@@ -444,14 +472,14 @@ body {
     text-align: center; }
     .docketdetails__time-a {
       padding: .7rem;
-      background-color: #83ea83;
+      border: 2px solid #23ca23;
       border-radius: 8px;
       margin-right: 1rem;
       flex: 1;
       box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
     .docketdetails__time-b {
       padding: .7rem;
-      background-color: #83ea83;
+      border: 2px solid #23ca23;
       border-radius: 8px;
       flex: 1;
       box-shadow: 0 0 0.5rem rgba(0, 51, 230, 0.1); }
@@ -477,10 +505,10 @@ body {
       border-radius: 8px; }
 
 .yellow {
-  background-color: #ffcf4d; }
+  border: 2px solid #ffbb00; }
 
 .blue {
-  background-color: #80ccff; }
+  border: 2px solid #0099ff; }
 
 .red {
   background-color: #ffe7e7;

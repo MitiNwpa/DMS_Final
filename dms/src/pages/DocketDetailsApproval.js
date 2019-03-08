@@ -194,9 +194,9 @@ class DocketDetailsApproval extends React.Component {
               </div>
             </div>
 
-            <div className="docketdetails__approveButtons">
+            <div className="docketdetails__actionButtons">
               <button
-                className="rejected"
+                className="btn btn__small btn__rejected"
                 name="status"
                 value="rejected"
                 onClick={this.sendForConfirmation}
@@ -205,7 +205,7 @@ class DocketDetailsApproval extends React.Component {
               </button>
 
               <button
-                className="approved"
+                className="btn btn__small btn__approved"
                 name="status"
                 value="approved"
                 onClick={this.sendForConfirmation}
@@ -215,7 +215,7 @@ class DocketDetailsApproval extends React.Component {
               </button>
 
               <button
-                className="pending"
+                className="btn btn__small btn__pending"
                 name="status"
                 value="pending"
                 onClick={this.sendForConfirmation}
