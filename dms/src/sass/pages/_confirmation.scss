@@ -1,11 +1,11 @@
 .confirmation {
-  position: absolute;
+//   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   // margin-top: -170px;
-  // height: 100vh;
+//   height: 100vh;
   top: 11.5rem;
 
   &__red {
@@ -16,13 +16,15 @@
   }
 
   &__main {
+      position: absolute;
+    top: 12rem;
     background-color: $cw;
     width: 90%;
     display: flex;
     flex-direction: column;
     // justify-content: center;
     // align-items: center;
-    top: -3.5rem;
+    // top: -3.5rem;
     border-radius: 0.8rem;
     padding: 2rem;
     padding-top: 0;
