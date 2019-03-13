@@ -31,13 +31,14 @@ class HomeJH extends Component {
   render() {
     return (
       <div>
-        <NavigationJH pageName="John Holland" />
+        <NavigationJH pageName="NWPA" />
         <div className="home">
           <div className="home__welcome">
             <h2 class="home__welcome-text">
               Welcome,{" "}
               <span class="welcome-text-color purple">
-                {this.state.firstName} {this.state.lastName}
+                {/* {this.state.firstName} {this.state.lastName} */}
+                Oliver Smith
               </span>
             </h2>
           </div>

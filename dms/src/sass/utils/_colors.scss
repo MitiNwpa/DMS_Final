@@ -16,12 +16,18 @@
 $cp:#0033E6;  //Color-Primary//
 $cpd:#0324A6;  //Color-Primary-Dark//
 $cpl:#0099ff;  //Color-Primary-Light//
+$cpl-light:lighten(#0099ff, 35%);  //Color-Primary-Light//
+
+$c-black:#000000;
+
 
 $c-jh-red:#EB1E32;
 $c-jh-red-dark:darken($c-jh-red,15%);
 $c-jh-purple:lighten(#5b368e,10%);
 $c-jh-green:#B4D2C3;
 $c-jh-blue:#89D0DD;
+
+$c-nwpa-blue:#047CB6;
 
 $csl:#E8F2FF; //Color-Secondary-Light
 

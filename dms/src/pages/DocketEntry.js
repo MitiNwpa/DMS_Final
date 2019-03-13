@@ -146,7 +146,8 @@ class DocketEntry extends Component {
         docketNumber: this.state.docketNumber,
         supervisorComment: "",
         engineerComment: "",
-        timeStamp: firebase.firestore.FieldValue.serverTimestamp()
+        timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+        signature:[{x: 355.59375, y: 81, time: 1552437279203, color: "black"}]
       },
       this.setState({
         id: ref.id

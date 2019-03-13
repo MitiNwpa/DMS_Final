@@ -14,6 +14,13 @@
     height: 100vh;
     margin-top: -10rem;
   }
+  &__nwpa {
+    position: relative;
+    background-color: $c-nwpa-blue;
+    height: 100vh;
+    margin-top: -10rem;
+  }
+
 
   &__main {
       position: absolute;

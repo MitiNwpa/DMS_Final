@@ -28,6 +28,7 @@ class Confirmation extends React.Component {
   };
 
   toData = () => {
+    console.log(this.sigPad.toData())
     this.setState({
       signature: this.sigPad.toData().flat()
     });
@@ -53,7 +54,7 @@ class Confirmation extends React.Component {
 
   render() {
     return (
-      <div className="confirmation__red">
+      <div className="confirmation__nwpa">
         <NavigationJH pageName="Confirmation" />
 
         <div className="confirmation">
