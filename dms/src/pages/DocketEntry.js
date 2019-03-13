@@ -248,19 +248,7 @@ class DocketEntry extends Component {
             </div>
           </div>
 
-          {/* <h3>
-            Docket Entry for {this.state.activityName} at {this.state.site}
-          </h3> */}
-          {/* <br />
-          <h3>Date:{this.state.date}</h3>
-          <br /> */}
-          {/* <form> */}
           <div class="input">
-            {/* <div class="title__container">
-              <h4 className="title__text">Docket Entry</h4>
-              <span class="title__line" />
-            </div> */}
-
             <div class="title__container">
               <h4 className="title__text">Enter Docket</h4>
               <span class="title__line" />
