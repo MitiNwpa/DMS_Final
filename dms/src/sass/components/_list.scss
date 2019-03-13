@@ -1,4 +1,14 @@
+  // Set delay per List Item
+  @for $i from 1 through $total-items {
+    .list{
+      &:nth-child(#{$i}) {
+      animation-delay: .07s * $i;
+    }
+  }
+  }
+
 .list {
+
   overflow: hidden;
   margin-top: 1.5rem;
   width: 100%;
@@ -9,7 +19,25 @@
   display: flex;
   justify-content: flex-start;
   font-size: 1.4rem;
-  transition: all 0.2s ease-in-out;
+  // transition: all 0.2s ease-in-out;
+  animation: fadeIn .6s cubic-bezier(.54,-0.78,0,1.58);
+  animation-fill-mode: both;
+
+
+
+// Keyframe animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    // top: 100px;
+    transform: translateX(-100%)
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
 
   &:hover {
     box-shadow: $bxlarge;

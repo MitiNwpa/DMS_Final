@@ -51,7 +51,7 @@ class HomeJH extends Component {
 
 
           
-          <div className="home__snapshot" onClick={()=>{navigate(`/listdockets`)}}>
+          <div className="home__snapshot" onClick={()=>{navigate(`/approval`)}}>
             {/* <div className="home__snapshot-heading">Docket Status</div> */}
 
             <div className="home__snapshot-status-box">

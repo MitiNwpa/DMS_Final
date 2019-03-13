@@ -85,7 +85,6 @@ body {
     left: 0;
     flex: 1; }
   .title__line {
-    z-index: 9999999;
     margin-top: 0.5rem;
     margin-bottom: -0.5rem;
     height: 0.2rem;
@@ -111,6 +110,306 @@ body {
     font-weight: 300;
     font-size: 3rem; }
 
+.list:nth-child(1) {
+  animation-delay: 0.07s; }
+
+.list:nth-child(2) {
+  animation-delay: 0.14s; }
+
+.list:nth-child(3) {
+  animation-delay: 0.21s; }
+
+.list:nth-child(4) {
+  animation-delay: 0.28s; }
+
+.list:nth-child(5) {
+  animation-delay: 0.35s; }
+
+.list:nth-child(6) {
+  animation-delay: 0.42s; }
+
+.list:nth-child(7) {
+  animation-delay: 0.49s; }
+
+.list:nth-child(8) {
+  animation-delay: 0.56s; }
+
+.list:nth-child(9) {
+  animation-delay: 0.63s; }
+
+.list:nth-child(10) {
+  animation-delay: 0.7s; }
+
+.list:nth-child(11) {
+  animation-delay: 0.77s; }
+
+.list:nth-child(12) {
+  animation-delay: 0.84s; }
+
+.list:nth-child(13) {
+  animation-delay: 0.91s; }
+
+.list:nth-child(14) {
+  animation-delay: 0.98s; }
+
+.list:nth-child(15) {
+  animation-delay: 1.05s; }
+
+.list:nth-child(16) {
+  animation-delay: 1.12s; }
+
+.list:nth-child(17) {
+  animation-delay: 1.19s; }
+
+.list:nth-child(18) {
+  animation-delay: 1.26s; }
+
+.list:nth-child(19) {
+  animation-delay: 1.33s; }
+
+.list:nth-child(20) {
+  animation-delay: 1.4s; }
+
+.list:nth-child(21) {
+  animation-delay: 1.47s; }
+
+.list:nth-child(22) {
+  animation-delay: 1.54s; }
+
+.list:nth-child(23) {
+  animation-delay: 1.61s; }
+
+.list:nth-child(24) {
+  animation-delay: 1.68s; }
+
+.list:nth-child(25) {
+  animation-delay: 1.75s; }
+
+.list:nth-child(26) {
+  animation-delay: 1.82s; }
+
+.list:nth-child(27) {
+  animation-delay: 1.89s; }
+
+.list:nth-child(28) {
+  animation-delay: 1.96s; }
+
+.list:nth-child(29) {
+  animation-delay: 2.03s; }
+
+.list:nth-child(30) {
+  animation-delay: 2.1s; }
+
+.list:nth-child(31) {
+  animation-delay: 2.17s; }
+
+.list:nth-child(32) {
+  animation-delay: 2.24s; }
+
+.list:nth-child(33) {
+  animation-delay: 2.31s; }
+
+.list:nth-child(34) {
+  animation-delay: 2.38s; }
+
+.list:nth-child(35) {
+  animation-delay: 2.45s; }
+
+.list:nth-child(36) {
+  animation-delay: 2.52s; }
+
+.list:nth-child(37) {
+  animation-delay: 2.59s; }
+
+.list:nth-child(38) {
+  animation-delay: 2.66s; }
+
+.list:nth-child(39) {
+  animation-delay: 2.73s; }
+
+.list:nth-child(40) {
+  animation-delay: 2.8s; }
+
+.list:nth-child(41) {
+  animation-delay: 2.87s; }
+
+.list:nth-child(42) {
+  animation-delay: 2.94s; }
+
+.list:nth-child(43) {
+  animation-delay: 3.01s; }
+
+.list:nth-child(44) {
+  animation-delay: 3.08s; }
+
+.list:nth-child(45) {
+  animation-delay: 3.15s; }
+
+.list:nth-child(46) {
+  animation-delay: 3.22s; }
+
+.list:nth-child(47) {
+  animation-delay: 3.29s; }
+
+.list:nth-child(48) {
+  animation-delay: 3.36s; }
+
+.list:nth-child(49) {
+  animation-delay: 3.43s; }
+
+.list:nth-child(50) {
+  animation-delay: 3.5s; }
+
+.list:nth-child(51) {
+  animation-delay: 3.57s; }
+
+.list:nth-child(52) {
+  animation-delay: 3.64s; }
+
+.list:nth-child(53) {
+  animation-delay: 3.71s; }
+
+.list:nth-child(54) {
+  animation-delay: 3.78s; }
+
+.list:nth-child(55) {
+  animation-delay: 3.85s; }
+
+.list:nth-child(56) {
+  animation-delay: 3.92s; }
+
+.list:nth-child(57) {
+  animation-delay: 3.99s; }
+
+.list:nth-child(58) {
+  animation-delay: 4.06s; }
+
+.list:nth-child(59) {
+  animation-delay: 4.13s; }
+
+.list:nth-child(60) {
+  animation-delay: 4.2s; }
+
+.list:nth-child(61) {
+  animation-delay: 4.27s; }
+
+.list:nth-child(62) {
+  animation-delay: 4.34s; }
+
+.list:nth-child(63) {
+  animation-delay: 4.41s; }
+
+.list:nth-child(64) {
+  animation-delay: 4.48s; }
+
+.list:nth-child(65) {
+  animation-delay: 4.55s; }
+
+.list:nth-child(66) {
+  animation-delay: 4.62s; }
+
+.list:nth-child(67) {
+  animation-delay: 4.69s; }
+
+.list:nth-child(68) {
+  animation-delay: 4.76s; }
+
+.list:nth-child(69) {
+  animation-delay: 4.83s; }
+
+.list:nth-child(70) {
+  animation-delay: 4.9s; }
+
+.list:nth-child(71) {
+  animation-delay: 4.97s; }
+
+.list:nth-child(72) {
+  animation-delay: 5.04s; }
+
+.list:nth-child(73) {
+  animation-delay: 5.11s; }
+
+.list:nth-child(74) {
+  animation-delay: 5.18s; }
+
+.list:nth-child(75) {
+  animation-delay: 5.25s; }
+
+.list:nth-child(76) {
+  animation-delay: 5.32s; }
+
+.list:nth-child(77) {
+  animation-delay: 5.39s; }
+
+.list:nth-child(78) {
+  animation-delay: 5.46s; }
+
+.list:nth-child(79) {
+  animation-delay: 5.53s; }
+
+.list:nth-child(80) {
+  animation-delay: 5.6s; }
+
+.list:nth-child(81) {
+  animation-delay: 5.67s; }
+
+.list:nth-child(82) {
+  animation-delay: 5.74s; }
+
+.list:nth-child(83) {
+  animation-delay: 5.81s; }
+
+.list:nth-child(84) {
+  animation-delay: 5.88s; }
+
+.list:nth-child(85) {
+  animation-delay: 5.95s; }
+
+.list:nth-child(86) {
+  animation-delay: 6.02s; }
+
+.list:nth-child(87) {
+  animation-delay: 6.09s; }
+
+.list:nth-child(88) {
+  animation-delay: 6.16s; }
+
+.list:nth-child(89) {
+  animation-delay: 6.23s; }
+
+.list:nth-child(90) {
+  animation-delay: 6.3s; }
+
+.list:nth-child(91) {
+  animation-delay: 6.37s; }
+
+.list:nth-child(92) {
+  animation-delay: 6.44s; }
+
+.list:nth-child(93) {
+  animation-delay: 6.51s; }
+
+.list:nth-child(94) {
+  animation-delay: 6.58s; }
+
+.list:nth-child(95) {
+  animation-delay: 6.65s; }
+
+.list:nth-child(96) {
+  animation-delay: 6.72s; }
+
+.list:nth-child(97) {
+  animation-delay: 6.79s; }
+
+.list:nth-child(98) {
+  animation-delay: 6.86s; }
+
+.list:nth-child(99) {
+  animation-delay: 6.93s; }
+
+.list:nth-child(100) {
+  animation-delay: 7s; }
+
 .list {
   overflow: hidden;
   margin-top: 1.5rem;
@@ -121,7 +420,16 @@ body {
   display: flex;
   justify-content: flex-start;
   font-size: 1.4rem;
-  transition: all 0.2s ease-in-out; }
+  animation: fadeIn 0.6s cubic-bezier(0.54, -0.78, 0, 1.58);
+  animation-fill-mode: both; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
   .list:hover {
     box-shadow: 0 0 2.5rem rgba(3, 36, 166, 0.3);
     background-color: #f0f3ff;
