@@ -207,7 +207,7 @@ class Dashboard extends React.Component {
     if (this.state.flag == 0) {
       return (
         <div>
-          <NavigationJH pageName="Dashboard" />
+          <NavigationJH pageName="Dashboard" active="dashboard-active"/>
 
           <div className="dashboard">
             <div className="welcome">
@@ -228,7 +228,7 @@ class Dashboard extends React.Component {
     if (this.state.flag == 1) {
       return (
         <div>
-          <NavigationJH pageName="Dashboard" />
+          <NavigationJH pageName="Dashboard" active="dashboard-active"/>
 
           <div className="dashboard">
             <div className="welcome">
@@ -250,7 +250,7 @@ class Dashboard extends React.Component {
     } else {
       return (
         <div>
-          <NavigationJH pageName="High Street" />
+          <NavigationJH pageName="High Street" active="dashboard-active"/>
           <div className="dashboard">
             <div className="welcome">
               <h2 class="welcome-text">

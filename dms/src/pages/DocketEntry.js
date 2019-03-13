@@ -170,7 +170,7 @@ class DocketEntry extends Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Docket Entry" />
+        <Navigation pageName="Docket Entry" active="activity-active"/>
 
         <div className="docketentry">
           <div className="welcome welcome__spaced">

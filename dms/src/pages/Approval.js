@@ -61,7 +61,7 @@ class Approval extends Component {
     // this.calcSum();
     return (
       <div className="father">
-        <NavigationJH pageName="Docket Approval" />
+        <NavigationJH pageName="Docket Approval" active="dockets-active"/>
 
         <div className="approval">
 

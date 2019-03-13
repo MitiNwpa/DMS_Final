@@ -145,7 +145,7 @@ class DocketDetailsApproval extends React.Component {
   render() {
     return (
       <div>
-        <NavigationJH pageName="Docket Details" />
+        <NavigationJH pageName="Docket Details" active="dockets-active"/>
 
         <div className="docketdetails">
           <div className="welcome details">

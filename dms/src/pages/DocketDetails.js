@@ -107,7 +107,7 @@ class DocketDetails extends React.Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Docket Details" />
+        <Navigation pageName="Docket Details" active="dockets-active"/>
         <div className="docketdetails">
           <div className="welcome details">
             <h2 class="welcome-text">

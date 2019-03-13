@@ -70,7 +70,7 @@ class Confirmation extends React.Component {
   render() {
     return (
       <div className="confirmation__nwpa">
-        <NavigationJH pageName="Confirmation" />
+        <NavigationJH pageName="Confirmation" active="dockets-active"/>
 
         <div className="confirmation">
           <div className="welcome">

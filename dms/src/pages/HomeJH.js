@@ -33,7 +33,7 @@ class HomeJH extends Component {
   render() {
     return (
       <div>
-        <NavigationJH pageName="NWPA" />
+        <NavigationJH pageName="NWPA" active="home-active"/>
         <div className="home">
           <div className="home__welcome">
             <h2 class="home__welcome-text">

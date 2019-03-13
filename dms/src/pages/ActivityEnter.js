@@ -62,7 +62,7 @@ class ActivityEnter extends React.Component {
     render() {
 
         return (<div>
-                        <NavigationJH pageName="Enter Activity"/>
+                        <NavigationJH pageName="Enter Activity" active="activity-active"/>
 
             <div style={divStyle}>
                 <br />

@@ -47,11 +47,11 @@ class Navigation extends Component {
         </div>
 
         <div className="navigation">
-          <div class="navigation__container">
+          <div class={`navigation__container container-activity-${this.props.active}`}>
             <Link style={{ textDecoration: "none" }} to="/activity">
               <div className="navigation__item">
                 <svg
-                  className="navigation__icon"
+                  className={`navigation__icon activity-${this.props.active}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -60,18 +60,18 @@ class Navigation extends Component {
                   <path fill="none" d="M0 0h24v24H0V0z" />
                   <path d="M7 15h7v2H7zm0-4h10v2H7zm0-4h10v2H7zm12-4h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04-.39.08-.74.28-1.01.55-.18.18-.33.4-.43.64-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z" />
                 </svg>
-                <a className="navigation__text" href="">
+                <a className={`navigation__text text-activity-${this.props.active}`} href="">
                   Add
                 </a>
               </div>
             </Link>
           </div>
 
-          <div class="navigation__container">
+          <div class={`navigation__container container-home-${this.props.active}`}>
             <Link style={{ textDecoration: "none" }} to="/home">
               <div className="navigation__item">
                 <svg
-                  className="navigation__icon"
+                  className={`navigation__icon home-${this.props.active}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -80,18 +80,18 @@ class Navigation extends Component {
                   <path fill="none" d="M0 0h24v24H0V0z" />
                   <path d="M12 5.69l5 4.5V18h-2v-6H9v6H7v-7.81l5-4.5M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" />
                 </svg>
-                <a className="navigation__text" href="#">
+                <a className={`navigation__text text-home-${this.props.active}`} href="#">
                   Home
                 </a>
               </div>
             </Link>
           </div>
 
-          <div class="navigation__container">
+          <div class={`navigation__container container-dockets-${this.props.active}`}>
             <Link style={{ textDecoration: "none" }} to="/listdockets">
               <div className="navigation__item">
                 <svg
-                  className="navigation__icon"
+                  className={`navigation__icon dockets-${this.props.active}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
@@ -100,7 +100,7 @@ class Navigation extends Component {
                   <path fill="none" d="M0 0h24v24H0V0z" />
                   <path d="M18 9l-1.41-1.42L10 14.17l-2.59-2.58L6 13l4 4zm1-6h-4.18C14.4 1.84 13.3 1 12 1c-1.3 0-2.4.84-2.82 2H5c-.14 0-.27.01-.4.04-.39.08-.74.28-1.01.55-.18.18-.33.4-.43.64-.1.23-.16.49-.16.77v14c0 .27.06.54.16.78s.25.45.43.64c.27.27.62.47 1.01.55.13.02.26.03.4.03h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7-.25c.41 0 .75.34.75.75s-.34.75-.75.75-.75-.34-.75-.75.34-.75.75-.75zM19 19H5V5h14v14z" />
                 </svg>
-                <a className="navigation__text" href="#">
+                <a className={`navigation__text text-dockets-${this.props.active}`} href="#">
                   Status
                 </a>
               </div>

@@ -63,7 +63,7 @@ class Activity extends React.Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Activity Selection" />
+        <Navigation pageName="Activity Selection" active="activity-active"/>
         <div class="activity">
           <div className="welcome">
             <h2 class="welcome-text">

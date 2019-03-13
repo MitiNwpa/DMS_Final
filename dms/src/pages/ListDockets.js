@@ -203,7 +203,7 @@ class ListDockets extends Component {
   render() {
     return (
       <div>
-        <Navigation pageName="Docket List" />
+        <Navigation pageName="Docket List" active="dockets-active"/>
         <div class="listdockets">
           <div className="welcome">
             <h2 class="welcome-text">

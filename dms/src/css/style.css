@@ -353,6 +353,58 @@ body {
     transition: all 0.2s cubic-bezier(0.77, 0, 0.175, 1);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
+.home-home-active {
+  fill: #0099ff;
+  transform: scale(1.3);
+  margin-bottom: .2em; }
+
+.container-home-home-active {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.05); }
+
+.text-home-home-active {
+  color: #0099ff;
+  transform: scale(1.1); }
+
+.activity-activity-active {
+  fill: #0099ff;
+  transform: scale(1.3);
+  margin-bottom: .2em; }
+
+.container-activity-activity-active {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.05); }
+
+.text-activity-activity-active {
+  color: #0099ff;
+  transform: scale(1.1); }
+
+.dashboard-dashboard-active {
+  fill: #0099ff;
+  transform: scale(1.3);
+  margin-bottom: .2em; }
+
+.container-dashboard-dashboard-active {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.05); }
+
+.text-dashboard-dashboard-active {
+  color: #0099ff;
+  transform: scale(1.1); }
+
+.dockets-dockets-active {
+  fill: #0099ff;
+  transform: scale(1.3);
+  margin-bottom: .2em; }
+
+.container-dockets-dockets-active {
+  color: #0099ff;
+  background-color: rgba(0, 153, 255, 0.05); }
+
+.text-dockets-dockets-active {
+  color: #0099ff;
+  transform: scale(1.1); }
+
 .sig {
   position: relative;
   margin-bottom: 1.5rem; }
