@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import firebase from "./firestore";
 import NavigationJH from "./NavigationJH";
 import SignatureCanvas from "react-signature-canvas";
+import { Link, navigate } from "@reach/router";
 
 const db = firebase.firestore();
 const refDoc = db.collection("docket");
@@ -12,11 +13,14 @@ class Confirmation extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      userID:this.props.userID,
       status: this.props.status,
       sComment: "",
-      signature: ""
+      signature: "",
+      docketNumber: this.props.docketNumber
     };
     this.docketStatus = this.docketStatus.bind(this);
+    this.navigateHome = this.navigateHome.bind(this);
   }
 
   sigPad = {};
@@ -38,12 +42,23 @@ class Confirmation extends React.Component {
     return this.readPad.fromData(this.state.signature);
   };
 
+  navigateHome = e => {
+    navigate(`/homejh`);
+    console.log("Im navigating")
+  };
+
+
   docketStatus = e => {
-    refDoc.doc(this.props.userID).update({
+    refDoc.doc(this.state.userID).update({
       status: this.state.status,
       supervisorComment: this.state.sComment,
       signature: this.state.signature
     });
+
+    this.setState({
+      move:true
+    },()=> this.navigateHome()
+    );
   };
 
   updateInput = e => {
@@ -61,8 +76,11 @@ class Confirmation extends React.Component {
           <div className="welcome">
             <h2 class="welcome-text">
               Confrim docket:{" "}
-              <span class="welcome-text-color purple">${this.state.sum}</span>
+              <span class="welcome-text-color purple">{this.state.docketNumber}</span>
+              {" "}as{" "}
+              <span class="welcome-text-color purple">{this.state.status}</span>
             </h2>
+            
           </div>
 
           <div class="confirmation__main">

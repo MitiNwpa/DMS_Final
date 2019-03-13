@@ -235,7 +235,11 @@ body {
   .btn__purple {
     background-image: none;
     background-color: #047CB6;
-    box-shadow: 0 0 2.5rem rgba(4, 124, 182, 0.3); }
+    box-shadow: 0 0 2.5rem rgba(4, 124, 182, 0.3);
+    transition: all .1s ease-out; }
+    .btn__purple:active {
+      transform: scale(0.95);
+      box-shadow: none; }
   .btn__small {
     margin: 1.5rem .6rem;
     padding: .6rem;

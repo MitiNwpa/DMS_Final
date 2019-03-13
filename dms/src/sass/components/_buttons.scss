@@ -19,6 +19,13 @@
     background-image: none;
     background-color: $c-nwpa-blue;
     box-shadow: $bx-nwpa-large;
+    transition: all .1s ease-out;
+
+     &:active{
+      transform: scale(.95);
+      box-shadow: none;
+
+    }
   }
 
   &__small {

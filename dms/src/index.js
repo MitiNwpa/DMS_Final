@@ -43,7 +43,7 @@ ReactDOM.render(
             <Approval path='/approval' />
             <DocketDetailsApproval path='docketdetailsapproval/:userID'/>
             <Dashboard path='/dashboard'/>
-            <Confirmation path='/confirmation/:userID/:status' />
+            <Confirmation path='/confirmation/:userID/:status/:docketNumber' />
             <ListDocketsEngineer path='/listdocketsengineer' />
         </Router>
     </div>

@@ -126,7 +126,7 @@ class DocketDetailsApproval extends React.Component {
   };
 
   navigateConfirm = e => {
-    navigate(`/confirmation/${this.state.id}/${this.state.status}`, {
+    navigate(`/confirmation/${this.state.id}/${this.state.status}/${this.state.docketNumber}`, {
       name: this.state.firstName
     });
   };
