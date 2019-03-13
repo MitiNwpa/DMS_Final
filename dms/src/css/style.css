@@ -549,18 +549,21 @@ div {
   border-radius: 8px;
   text-transform: uppercase;
   letter-spacing: 0.1rem; }
+  .btn__login {
+    width: 100%;
+    font-size: 2rem; }
   .btn__purple {
     background-image: none;
     background-color: #047CB6;
     box-shadow: 0 0 2.5rem rgba(4, 124, 182, 0.3);
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     margin: 2rem 0; }
     .btn__purple:active {
       transform: scale(0.95);
       box-shadow: none; }
   .btn__small {
-    margin: 1.5rem .6rem;
-    padding: .6rem;
+    margin: 1.5rem 0.6rem;
+    padding: 0.6rem;
     border-radius: 20px;
     font-size: 1.8rem; }
   .btn__rejected {
@@ -1116,10 +1119,53 @@ div {
     align-items: center; }
 
 .login {
+  margin-top: -14.5rem;
+  height: 100vh;
   z-index: 5000;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: red; }
+  background-image: linear-gradient(to right, #0033E6, #0099ff); }
+  .login__nwpa {
+    background-image: linear-gradient(to bottom, #fff, #0099ff); }
+  .login__main {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1);
+    background-color: #fff; }
+  .login__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .login__logo-svg {
+      height: 7rem;
+      width: 7rem;
+      fill: #0099ff; }
+    .login__logo-name {
+      font-size: 3rem; }
+    .login__logo-png {
+      height: 8rem;
+      margin-bottom: 1rem; }
+  .login__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1; }
+    .login__input-text {
+      margin: .75rem 0;
+      font-size: 1.7rem;
+      padding: .8rem;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      background-color: #E8F2FF; }
+    .login__input-forgot {
+      margin-top: 1rem;
+      font-size: 1.4rem; }

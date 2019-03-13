@@ -15,28 +15,29 @@
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 
+  &__login {
+    width: 100%;
+    font-size: 2rem;
+  }
 
-
-  &__purple{
+  &__purple {
     background-image: none;
     background-color: $c-nwpa-blue;
     box-shadow: $bx-nwpa-large;
-    transition: all .2s ease-out;
+    transition: all 0.2s ease-out;
     margin: 2rem 0;
 
-     &:active{
-      transform: scale(.95);
+    &:active {
+      transform: scale(0.95);
       box-shadow: none;
-
     }
   }
 
   &__small {
-    margin: 1.5rem .6rem;
-    padding: .6rem;
+    margin: 1.5rem 0.6rem;
+    padding: 0.6rem;
     border-radius: 20px;
     font-size: 1.8rem;
-
   }
 
   &__rejected {

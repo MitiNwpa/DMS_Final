@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { Router, navigate, Link } from "@reach/router";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
+import lxra from "../img/NWPA_LXRA_logo.png";
 
 class LoginJH extends Component {
   constructor(props) {
@@ -16,34 +17,38 @@ class LoginJH extends Component {
 
   render() {
     return (
-      <div className="loginbg">
-        <div className="login">
-          <h4 id="login">JOhn Holland Welcome</h4>
+      <div className="login login__nwpa">
+        <div className="login__main">
 
-          {/* <label className='login' for="uName">UserName</label> */}
+          <div class="login__logo">
+          <img src={lxra} alt=""  class="login__logo-png"/>
+            
+          </div>
 
-          <input
-            className="login"
-            type="text"
-            name="uName"
-            placeholder="Username"
-          />
-          {/* <br/>
-<label className='login' for="pName">Password</label> */}
-          <input
-            className="login"
-            type="password"
-            name="pName"
-            placeholder="Password"
-          />
-          <br />
+          <div class="login__input">
+            <input
+              className="login__input-text"
+              type="text"
+              name="uName"
+              placeholder="Username"
+            />
 
-          <Link to="/homejh">
-            <button id="login">Login</button>
-          </Link>
-          <span>
-            <h6>Forgot Password</h6>
-          </span>
+            <input
+              className="login__input-text"
+              type="password"
+              name="pName"
+              placeholder="Password"
+            />
+
+            <Link to="/homejh">
+              <button className="btn btn__login" id="login">
+                Login
+              </button>
+            </Link>
+            <span className="login__input-forgot">
+              <h6>Forgot Password</h6>
+            </span>
+          </div>
         </div>
       </div>
     );

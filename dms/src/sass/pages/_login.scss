@@ -1,9 +1,69 @@
-.login{
-    z-index: 5000;
+.login {
+  margin-top: -14.5rem;
+height: 100vh;
+  z-index: 5000;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, $cp, $cpl);
+
+  &__nwpa{
+    background-image: linear-gradient(to bottom, $cw, $cpl);
+  }
+
+  &__main {
+    width: 90%;
+    // height: 50vh;
     display: flex;
-    flex:1;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: $bxfull;
+    background-color: $cw;
+  }
+
+  &__logo {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:red;
+    &-svg {
+      height: 7rem;
+      width: 7rem;
+      fill: $cpl;
+    }
+    &-name {
+      font-size: 3rem;
+    }
+    &-png{
+        height: 8rem;
+        margin-bottom: 1rem;
+        // width: 7rem;
+    }
+  }
+
+  
+  &__input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    &-text{
+        margin: .75rem 0;
+        font-size: 1.7rem;
+        padding: .8rem;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        background-color: $csl;
+    }
+
+    &-forgot{
+        margin-top: 1rem;
+        font-size: 1.4rem;
+    }
+}
 }

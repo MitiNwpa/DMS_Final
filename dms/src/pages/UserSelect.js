@@ -22,11 +22,11 @@ class UserSelect extends Component {
 
           {/* <label className='login' for="uName">UserName</label> */}
           <Link to="/login">
-            <button id="login">Subcontractor</button>
+            <button className="btn btn__login" id="login">Subcontractor</button>
           </Link>
 
           <Link to="/loginjh">
-            <button id="login">Supervisor</button>
+            <button className="btn btn__login" id="login">Supervisor</button>
           </Link>
           <span>
             <h6>Forgot Password</h6>
