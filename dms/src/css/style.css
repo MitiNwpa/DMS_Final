@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.align__center-row { 
+.align__center-row {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -629,6 +629,7 @@ body {
   flex-direction: column;
   font-size: 1.5rem;
 }
+
 .docketdetails__notes-supervisor {
   flex: 1;
   padding: 1rem;

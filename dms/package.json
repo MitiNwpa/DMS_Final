@@ -9,8 +9,9 @@
     "react": "^16.7.0",
     "react-burger-menu": "^2.6.3",
     "react-dom": "^16.7.0",
-    "react-scripts": "^2.1.5",
-    "react-signature-canvas": "^1.0.1"
+    "react-scripts": "^2.1.8",
+    "react-signature-canvas": "^1.0.1",
+    "signature_pad": "^3.0.0-beta.3"
   },
   "scripts": {
     "compile:sass": "node-sass src/sass/main.scss src/css/style.css -w",
