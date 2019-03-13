@@ -46,7 +46,7 @@ class HomeJH extends Component {
           </div>
 
           <div className="home__calendar" >
-          <Calendar/>
+          <Calendar value={new Date}/>
           </div>
 
 

@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { Router, navigate, Link } from "@reach/router";
 import firebase from "./firestore";
 import Navigation from "./Navigation";
+import Calendar from 'react-calendar';
+
 
 const db = firebase.firestore();
 const refDoc = db.collection("user").doc("joe");
@@ -41,7 +43,10 @@ class Home extends Component {
               </span>
             </h2>
           </div>
-          <div className="home__calendar" />
+
+          <div className="home__calendar" >
+          <Calendar value={new Date}/>
+          </div>
 
 
           
