@@ -16,27 +16,26 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="loginbg">
-        <div className="login">
+      <div className="login">
+
+
+        <div className="login__main">
           <h4 id="login">Welcome to DMS</h4>
 
-          {/* <label className='login' for="uName">UserName</label> */}
 
           <input
-            className="login"
+            className="input__login"
             type="text"
             name="uName"
             placeholder="Username"
           />
-          {/* <br/>
-<label className='login' for="pName">Password</label> */}
+
           <input
-            className="login"
+            className="input__login"
             type="password"
             name="pName"
             placeholder="Password"
           />
-          <br />
 
           <Link to="/home">
             <button id="login">Login</button>

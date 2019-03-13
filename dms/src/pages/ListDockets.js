@@ -207,7 +207,7 @@ class ListDockets extends Component {
         <div class="listdockets">
           <div className="welcome">
             <h2 class="welcome-text">
-              Welcome, <span class="welcome-text-color purple">Poop</span>
+              Total Dockets, <span class="welcome-text-color purple">22</span>
             </h2>
           </div>
           {this.renderDockets()}

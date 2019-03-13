@@ -140,13 +140,19 @@ class Dashboard extends React.Component {
         <li className="list__dashboard" key={item}>
           <div className="list__dashboard_container">
             <div className="list__dashboard_container-left">
-              <span className="list__value list__value_big purple">{index}</span>
-              <span className="list__key">{this.state.activityArray[item]}</span>
+              <span className="list__value list__value_big purple">
+                {index}
+              </span>
+              <span className="list__key">
+                {this.state.activityArray[item]}
+              </span>
             </div>
 
             <div className="list__dashboard_container-right">
               <div className="list__dashboard_container-right-box">
-                <span className="list__value list__value_big purple">Budget</span>
+                <span className="list__value list__value_big purple">
+                  Budget
+                </span>
                 <span className="list__key">
                   ${this.state.neee[item]} / ${this.state.budget[item]}{" "}
                 </span>
@@ -207,54 +213,94 @@ class Dashboard extends React.Component {
     if (this.state.flag == 0) {
       return (
         <div>
-          <NavigationJH pageName="Dashboard" active="dashboard-active"/>
+          <NavigationJH pageName="Dashboard" active="dashboard-active" />
 
           <div className="dashboard">
             <div className="welcome">
               <h2 class="welcome-text">
-                Welcome, <span class="welcome-text-color purple">Poop</span>
+                Site <span class="welcome-text-color purple">Selection</span>
               </h2>
             </div>
-            <h1>SUM :${this.state.sum}</h1>
-            <p>This is the Dashboard sdfasd</p>
-            <button type="button" onClick={this.handleClick}>
-              Project
-            </button>
-            {/* {console.log(`holder issssssss ${holder}`)} */}
+
+
+            <div class="dashboard__main">
+              <div class="input">
+                <div class="title__container">
+                  <h4 className="title__text">Active Sites</h4>
+                  <span class="title__line" />
+                </div>
+              </div>
+
+             
+               <button type="button" className="btn btn__purple" onClick={this.handleClick}>
+                High Street
+              </button>
+
+              <button type="button" className="btn btn__purple" onClick={this.handleClick}>
+                Skye Road
+              </button>
+              {/* {console.log(`holder issssssss ${holder}`)} */}
+            </div>
+
+
           </div>
         </div>
       );
     }
+
+
+
     if (this.state.flag == 1) {
       return (
-        <div>
-          <NavigationJH pageName="Dashboard" active="dashboard-active"/>
+         <div>
+          <NavigationJH pageName="Dashboard" active="dashboard-active" />
 
           <div className="dashboard">
             <div className="welcome">
               <h2 class="welcome-text">
-                Welcome, <span class="welcome-text-color purple">Poop</span>
+                High <span class="welcome-text-color purple">Street</span>
               </h2>
             </div>
-            <h1>SUM :$ {this.state.sum}</h1>
-            <p>This is the Dashboard sdfasd</p>
-            <button type="button" onClick={this.handleClick_1}>
-              Cost to Date
-            </button>
-            {/* <button type="button" onClick={this.handleClick}>cliccck</button> */}
-            {/* <div>{this.mapCostCodes()}</div> */}
-            {/* {console.log(`holder issssssss ${holder}`)} */}
+
+
+            <div class="dashboard__main">
+              <div class="input">
+                <div class="title__container">
+                  <h4 className="title__text">Cost Breakdowns by</h4>
+                  <span class="title__line" />
+                </div>
+              </div>
+
+             
+               <button type="button" className="btn btn__purple" onClick={this.handleClick_1}>
+                Cost Code
+              </button>
+
+              <button type="button" className="btn btn__purple" onClick={this.handleClick_1}>
+                Company
+              </button>
+
+              
+              <button type="button" className="btn btn__purple" onClick={this.handleClick_1}>
+                Activity
+              </button>
+
+
+            </div>
+
+
           </div>
         </div>
       );
     } else {
       return (
         <div>
-          <NavigationJH pageName="High Street" active="dashboard-active"/>
+          <NavigationJH pageName="High Street" active="dashboard-active" />
           <div className="dashboard">
             <div className="welcome">
               <h2 class="welcome-text">
-                Cost To Date:  <span class="welcome-text-color purple">${this.state.sum}</span>
+                Cost To Date:{" "}
+                <span class="welcome-text-color purple">${this.state.sum}</span>
               </h2>
             </div>
 

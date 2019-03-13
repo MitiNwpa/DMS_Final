@@ -58,6 +58,15 @@ body {
 .purple {
   color: #047CB6; }
 
+div {
+  animation: fade .4s ease-out; }
+
+@keyframes fade {
+  0% {
+    opacity: .1; }
+  100% {
+    opacity: 1; } }
+
 .title {
   display: flex; }
   .title__container {
@@ -544,7 +553,8 @@ body {
     background-image: none;
     background-color: #047CB6;
     box-shadow: 0 0 2.5rem rgba(4, 124, 182, 0.3);
-    transition: all .1s ease-out; }
+    transition: all .2s ease-out;
+    margin: 2rem 0; }
     .btn__purple:active {
       transform: scale(0.95);
       box-shadow: none; }
@@ -872,6 +882,20 @@ body {
     flex: 1;
     width: 90%;
     margin-top: 1.5rem; }
+  .dashboard__main {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    margin-top: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 1.75rem rgba(0, 51, 230, 0.1);
+    padding: 0 2rem;
+    padding-bottom: 2rem; }
 
 .docketdetails {
   display: flex;
@@ -1090,3 +1114,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center; }
+
+.login {
+  z-index: 5000;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: red; }
