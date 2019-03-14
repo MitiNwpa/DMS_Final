@@ -7,7 +7,7 @@ height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to right, $cp, $cpl);
+  background-image: linear-gradient(to right, $cpy, $cply);
 
   &__nwpa{
     background-image: linear-gradient(to bottom, $cw, $cpl);
@@ -32,7 +32,7 @@ height: 100vh;
     &-svg {
       height: 7rem;
       width: 7rem;
-      fill: $cpl;
+      fill: $cply;
     }
     &-name {
       font-size: 3rem;

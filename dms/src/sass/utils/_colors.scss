@@ -10,12 +10,19 @@
 // $c-black:#000000;
 // #F46F6C
 // #37BA9D
-
+ 
+// $cpl-light:lighten(#0099ff, 35%);
 
 //COLOR
-$cp:#0033E6;  //Color-Primary//
-$cpd:#0324A6;  //Color-Primary-Dark//
-$cpl:#0099ff;  //Color-Primary-Light//
+
+$cp:#0033E6; 
+$cpd:#0324A6; 
+$cpl:#0099ff; 
+
+$cpy:#0033E6;  //Color-Primary//
+$cpdy:#0324A6;  //Color-Primary-Dark//
+$cply:#0099ff;  //Color-Primary-Light//
+
 $cpl-light:lighten(#0099ff, 35%);  //Color-Primary-Light//
 
 $c-black:#000000;
