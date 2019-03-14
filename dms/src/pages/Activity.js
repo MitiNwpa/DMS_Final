@@ -48,8 +48,8 @@ class Activity extends React.Component {
           </span>
 
           <span className="list__line">
-          <span class="list__key">Company :</span>
-          <span class="list__value">{item.company}</span>
+          <span class="list__key">Assigned By :</span>
+          <span class="list__value">{item.supervisor}</span>
           </span>   
 
          </div>

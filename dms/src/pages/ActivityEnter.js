@@ -11,11 +11,13 @@ class ActivityEnter extends React.Component {
   constructor() {
     super();
     this.state = {
+      supervisor:"Oliver Smith",
       activityName: "",
       company: "",
       ccNumber: "",
       site: "",
-      id: ""
+      id: "",
+   
     };
   }
 
@@ -28,20 +30,29 @@ class ActivityEnter extends React.Component {
   addDocket = e => {
     e.preventDefault();
 
+    // this.setState({
+    //   supervisor:'Oliver Smith',
+    // })
+
     const userRef = refDoc.doc();
     userRef.set({
+      supervisor:this.state.supervisor,
       id: userRef.id,
       activityName: this.state.activityName,
       company: this.state.company,
       site: this.state.site,
-      ccNumber: this.state.ccNumber
+      ccNumber: this.state.ccNumber,
+      
     });
     this.setState({
+      supervisor:'Oliver Smith',
       activityName: "",
       company: "",
       ccNumber: "",
       site: "",
-      id: ""
+      id: "",
+      
+
     },()=>{navigate(`/homejh`)});
   };
 
